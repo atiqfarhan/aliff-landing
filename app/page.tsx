@@ -1,115 +1,130 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-aliff-black text-aliff-cream islamic-pattern">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-aliff-black/90 backdrop-blur-lg border-b border-aliff-gold/20">
-        <div className="container mx-auto px-6 py-4">
+      {/* Enhanced Navigation */}
+      <nav className="sticky top-0 z-50 bg-aliff-black/95 backdrop-blur-lg border-b border-aliff-gold/20">
+        <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="text-3xl font-playfair text-aliff-gold font-bold">A</div>
+            <div className="flex items-center space-x-4">
+              <div className="text-3xl font-playfair text-aliff-gold font-bold float">A</div>
               <div>
                 <div className="text-xl font-playfair font-bold">ALIFF</div>
                 <div className="text-xs text-aliff-sand">Modesty, intelligently styled.</div>
               </div>
             </div>
             
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#how-it-works" className="text-aliff-cream hover:text-aliff-gold transition-colors">How It Works</a>
-              <a href="#features" className="text-aliff-cream hover:text-aliff-gold transition-colors">Features</a>
-              <a href="#privacy" className="text-aliff-cream hover:text-aliff-gold transition-colors">Privacy</a>
-              <a href="#waitlist" className="btn-premium">Join Waitlist</a>
+            <div className="hidden md:flex items-center space-x-10">
+              <a href="#how-it-works" className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">How It Works</a>
+              <a href="#features" className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">Features</a>
+              <a href="#privacy" className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">Privacy</a>
+              <a href="#waitlist" className="btn-premium px-6 py-3">Join Waitlist</a>
             </div>
+            
+            <button className="md:hidden text-aliff-gold">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section - Premium & Elegant */}
-      <section className="section-spacing relative overflow-hidden">
+      {/* Enhanced Hero Section */}
+      <section className="section-spacing gradient-bg relative overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center fade-in-up">
-            <div className="mb-8">
-              <span className="inline-block px-4 py-2 bg-aliff-gold/10 text-aliff-gold rounded-full text-sm font-semibold mb-4">
+          <div className="max-w-5xl mx-auto text-center fade-in-up">
+            <div className="mb-10">
+              <span className="subtitle inline-block px-6 py-3 bg-aliff-gold/10 text-aliff-gold rounded-full mb-6">
                 AI-Powered Modest Styling
               </span>
+              <div className="gold-accent"></div>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-8 leading-tight">
+            <h1 className="text-sixxl md:text-7xl lg:text-8xl font-playfair font-bold mb-10 leading-tight">
               Outfits that
-              <span className="block text-aliff-gold mt-4">respect your values</span>
+              <span className="block text-aliff-gold mt-6">respect your values</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-aliff-sand mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="lead text-2xl md:text-3xl text-aliff-sand mb-16 max-w-3xl mx-auto">
               ALIFF is your personal AI stylist for modest dressing. From the clothes in your closet to looks you love, 
               aligned with your coverage, comfort, and values.
             </p>
             
-            <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-16">
+            <div className="flex flex-col md:flex-row gap-8 justify-center items-center mb-20">
               <a 
                 href="#waitlist" 
-                className="btn-premium px-10 py-4 text-lg"
+                className="btn-premium px-12 py-5 text-lg"
               >
                 Join the Waitlist
               </a>
               <a 
                 href="#how-it-works" 
-                className="btn-premium-outline px-10 py-4 text-lg"
+                className="btn-premium-outline px-12 py-5 text-lg"
               >
                 See How It Works
               </a>
             </div>
             
-            <div className="flex items-center justify-center space-x-6 text-sm text-aliff-sand">
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                Privacy-first
+            <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-aliff-sand">
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span>Privacy-first AI</span>
               </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                Delete controls
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span>Full delete controls</span>
               </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                Consent-based
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span>Consent-based design</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span>Modesty-first approach</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem Section - Elegant Cards */}
-      <section id="problem" className="section-spacing bg-aliff-navy/50">
+      {/* Enhanced Problem Section */}
+      <section id="problem" className="section-spacing gradient-gold">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-8">
               Tired of the morning struggle?
             </h2>
-            <p className="text-aliff-sand max-w-2xl mx-auto">
+            <p className="lead text-aliff-sand max-w-2xl mx-auto">
               Modern styling tools weren't built with modesty in mind. ALIFF changes that.
             </p>
+            <div className="gold-accent"></div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             {[
               {
                 title: 'Decision Fatigue',
-                description: '"What do I wear?" every morning drains your mental energy before the day even begins.'
+                description: '"What do I wear?" every morning drains your mental energy before the day even begins.',
+                icon: '🧠'
               },
               {
                 title: 'Closet Underused',
-                description: 'Pieces exist in your wardrobe, but complete outfits don\'t. You own clothes but feel like you have nothing to wear.'
+                description: 'Pieces exist in your wardrobe, but complete outfits don\'t. You own clothes but feel like you have nothing to wear.',
+                icon: '👗'
               },
               {
                 title: 'Tools Ignore Modesty',
-                description: 'Most styling apps don\'t understand modest dressing. You waste time filtering through inappropriate suggestions.'
+                description: 'Most styling apps don\'t understand modest dressing. You waste time filtering through inappropriate suggestions.',
+                icon: '🚫'
               }
             ].map((problem, index) => (
               <div 
                 key={index}
-                className="premium-card rounded-2xl p-8 fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="premium-card rounded-3xl p-10 fade-in-up"
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="text-aliff-gold text-2xl mb-6">•</div>
-                <h3 className="text-xl font-playfair font-bold mb-4">{problem.title}</h3>
+                <div className="text-4xl mb-8">{problem.icon}</div>
+                <h3 className="text-2xl font-playfair font-bold mb-6">{problem.title}</h3>
                 <p className="text-aliff-sand leading-relaxed">{problem.description}</p>
               </div>
             ))}
@@ -117,96 +132,168 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Works - Premium Steps */}
+      {/* Enhanced How It Works Section */}
       <section id="how-it-works" className="section-spacing">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-8">
               How ALIFF Works
             </h2>
-            <p className="text-aliff-sand max-w-2xl mx-auto">
+            <p className="lead text-aliff-sand max-w-2xl mx-auto">
               Three simple steps to confident dressing every day
             </p>
+            <div className="gold-accent"></div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-16">
             {[
               {
-                step: '01',
+                step: '1',
                 title: 'Upload Your Wardrobe',
-                description: 'Snap photos of your clothes or upload existing ones. Our AI identifies each item automatically.'
+                description: 'Snap photos of your clothes or upload existing ones. Our AI identifies each item and understands modest constraints.',
+                features: ['AI garment recognition', 'Modesty tagging', 'Closet organization']
               },
               {
-                step: '02',
+                step: '2',
                 title: 'Set Your Preferences',
-                description: 'Tell us your coverage level, colors, lifestyle, and dress codes. Modesty is your design language.'
+                description: 'Tell us your coverage level, colors, lifestyle, and dress codes. Modesty becomes your design language.',
+                features: ['Coverage preferences', 'Style profiles', 'Context awareness']
               },
               {
-                step: '03',
+                step: '3',
                 title: 'Get Outfit Plans',
-                description: 'Receive personalized outfit recommendations for the week, tailored to your style and context.'
+                description: 'Receive personalized outfit recommendations for the week, tailored to your style, weather, and occasions.',
+                features: ['Daily outfit plans', 'Weather adaptation', 'Occasion matching']
               }
             ].map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="text-aliff-gold text-5xl font-playfair font-bold mb-6">{step.step}</div>
-                <h3 className="text-xl font-playfair font-bold mb-4">{step.title}</h3>
-                <p className="text-aliff-sand">{step.description}</p>
+              <div key={index} className="text-center fade-in-up">
+                <div className="step-circle">{step.step}</div>
+                <h3 className="text-2xl font-playfair font-bold mb-6">{step.title}</h3>
+                <p className="text-aliff-sand mb-8">{step.description}</p>
+                <ul className="space-y-3">
+                  {step.features.map((feature, i) => (
+                    <li key={i} className="text-sm text-aliff-sand flex items-center">
+                      <div className="w-2 h-2 bg-aliff-gold rounded-full mr-3"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Waitlist Section - Premium Form */}
-      <section id="waitlist" className="section-spacing bg-aliff-navy/50">
+      {/* Enhanced Features Section */}
+      <section id="features" className="section-spacing gradient-gold">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-8">
+              Designed for Modest Women
+            </h2>
+            <p className="lead text-aliff-sand max-w-2xl mx-auto">
+              Features built specifically for your needs
+            </p>
+            <div className="gold-accent"></div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-16">
+            <div className="premium-card rounded-3xl p-10">
+              <h3 className="text-2xl font-playfair font-bold mb-6">Coverage First Design</h3>
+              <p className="text-aliff-sand mb-8">
+                Modesty isn't a filter—it's the foundation. Every outfit respects your chosen coverage levels.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-aliff-gold rounded-full mr-4"></div>
+                  <span>Arm coverage settings</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-aliff-gold rounded-full mr-4"></div>
+                  <span>Leg length preferences</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-aliff-gold rounded-full mr-4"></div>
+                  <span>Head covering integration</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="premium-card rounded-3xl p-10">
+              <h3 className="text-2xl font-playfair font-bold mb-6">Context Aware Suggestions</h3>
+              <p className="text-aliff-sand mb-8">
+                Outfit recommendations adapt to your daily activities, weather, and cultural context.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-aliff-gold rounded-full mr-4"></div>
+                  <span>Workplace appropriateness</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-aliff-gold rounded-full mr-4"></div>
+                  <span>Social event matching</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-aliff-gold rounded-full mr-4"></div>
+                  <span>Weather adaptation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Waitlist Section */}
+      <section id="waitlist" className="section-spacing">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto">
-            <div className="premium-card rounded-3xl p-10">
-              <div className="text-center mb-10">
-                <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-4">
+            <div className="premium-card rounded-3xl p-12">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6">
                   Join the ALIFF Waitlist
                 </h2>
-                <p className="text-aliff-sand">
+                <p className="lead text-aliff-sand">
                   Be among the first to experience AI-powered modest styling. Beta access starts soon.
                 </p>
+                <div className="gold-accent"></div>
               </div>
               
-              <form className="space-y-6">
+              <form className="space-y-8">
                 <div>
-                  <label className="block text-aliff-cream mb-2 font-medium">Full Name *</label>
+                  <label className="block text-aliff-cream mb-4 font-medium">Full Name *</label>
                   <input 
                     type="text" 
-                    className="w-full px-5 py-3 bg-aliff-black/50 border border-aliff-gold/30 rounded-lg focus:ring-2 focus:ring-aliff-gold focus:border-transparent text-aliff-cream placeholder-aliff-sand"
+                    className="form-input"
                     placeholder="Your name"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-aliff-cream mb-2 font-medium">Email Address *</label>
+                  <label className="block text-aliff-cream mb-4 font-medium">Email Address *</label>
                   <input 
                     type="email" 
-                    className="w-full px-5 py-3 bg-aliff-black/50 border border-aliff-gold/30 rounded-lg focus:ring-2 focus:ring-aliff-gold focus:border-transparent text-aliff-cream placeholder-aliff-sand"
+                    className="form-input"
                     placeholder="you@example.com"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-aliff-cream mb-2 font-medium">Where are you based? *</label>
+                  <label className="block text-aliff-cream mb-4 font-medium">Where are you based? *</label>
                   <input 
                     type="text" 
-                    className="w-full px-5 py-3 bg-aliff-black/50 border border-aliff-gold/30 rounded-lg focus:ring-2 focus:ring-aliff-gold focus:border-transparent text-aliff-cream placeholder-aliff-sand"
+                    className="form-input"
                     placeholder="City, Country"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-aliff-cream mb-2 font-medium">What is your biggest style struggle as a modest woman? *</label>
+                  <label className="block text-aliff-cream mb-4 font-medium">What is your biggest style struggle as a modest woman? *</label>
                   <textarea 
-                    rows={3}
-                    className="w-full px-5 py-3 bg-aliff-black/50 border border-aliff-gold/30 rounded-lg focus:ring-2 focus:ring-aliff-gold focus:border-transparent text-aliff-cream placeholder-aliff-sand resize-none"
+                    rows={4}
+                    className="form-input resize-none"
                     placeholder="e.g., Finding work-appropriate outfits that are still modest, coordinating hijab with outfits, dealing with decision fatigue every morning..."
                     required
                   />
@@ -214,13 +301,13 @@ export default function Home() {
                 
                 <button 
                   type="submit" 
-                  className="w-full btn-premium py-4 text-lg"
+                  className="w-full btn-premium py-5 text-lg"
                 >
                   Join the ALIFF Waitlist
                 </button>
                 
-                <p className="text-xs text-aliff-sand text-center">
-                  We respect your privacy. No spam, ever.
+                <p className="text-sm text-aliff-sand text-center">
+                  Your information is secure. We never share data and respect your privacy.
                 </p>
               </form>
             </div>
@@ -228,30 +315,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-aliff-navy py-12 border-t border-aliff-gold/20">
+      {/* Enhanced Footer */}
+      <footer className="bg-aliff-navy py-16 border-t border-aliff-gold/20">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <div className="flex items-center justify-center space-x-3 mb-8">
-              <div className="text-4xl font-playfair text-aliff-gold font-bold">A</div>
+            <div className="flex items-center justify-center space-x-4 mb-12">
+              <div className="text-4xl font-playfair text-aliff-gold font-bold float">A</div>
               <div>
                 <div className="text-2xl font-playfair font-bold">ALIFF</div>
                 <div className="text-sm text-aliff-sand">Modesty, intelligently styled.</div>
               </div>
             </div>
             
-            <p className="text-aliff-sand mb-6 max-w-lg mx-auto">
+            <p className="lead text-aliff-sand mb-10 max-w-lg mx-auto">
               Your AI modest fashion consultant that learns your taste and makes you feel understood.
             </p>
             
-            <a href="mailto:hello@aliff.app" className="text-aliff-gold hover:underline mb-8 inline-block">
-              hello@aliff.app
-            </a>
+            <div className="mb-10">
+              <a href="mailto:hello@aliff.app" className="text-aliff-gold hover:text-aliff-sand transition-colors duration-300 text-lg">
+                hello@aliff.app
+              </a>
+            </div>
             
-            <div className="pt-8 border-t border-aliff-gold/10">
-              <p className="text-xs text-aliff-sand">
+            <div className="pt-10 border-t border-aliff-gold/10">
+              <p className="text-sm text-aliff-sand">
                 © 2024 ALIFF. All rights reserved.<br />
-                Built with community feedback.
+                Built with community feedback from Muslim women worldwide.
               </p>
             </div>
           </div>
