@@ -372,12 +372,28 @@ export default function Home() {
                   />
                 </div>
                 
+                <div className="flex items-center mb-6">
+                  <input 
+                    type="checkbox" 
+                    id="privacy" 
+                    className="mr-3 h-5 w-5 accent-aliff-gold"
+                    required
+                  />
+                  <label htmlFor="privacy" className="text-aliff-sand text-sm">
+                    I agree to receive updates about ALIFF and understand my data will be handled according to the <a href="#privacy" className="text-aliff-gold hover:underline">Privacy Policy</a>
+                  </label>
+                </div>
+                
                 <button 
                   type="submit" 
-                  className="w-full btn-premium py-4 text-lg"
+                  className="w-full btn-premium py-4 text-lg hover:scale-105 transition-transform duration-300"
                 >
                   Join the ALIFF Waitlist
                 </button>
+                
+                <p className="text-center text-aliff-sand text-sm mt-4">
+                  Your information is secure. We respect your privacy and will never share your data.
+                </p>
                 
                 <p className="text-sm text-aliff-sand text-center">
                   Your information is secure. We never share data and respect your privacy.
