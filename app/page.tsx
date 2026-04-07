@@ -118,7 +118,7 @@ export default function Home() {
             <div className="gold-accent"></div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-12 items-stretch">
             {[
               {
                 title: 'Decision Fatigue',
@@ -138,7 +138,11 @@ export default function Home() {
                 className="premium-card rounded-3xl p-10 fade-in-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="text-4xl text-aliff-gold mb-8">•</div>
+                <div className="flex items-center justify-center mb-8">
+                  <div className="w-12 h-12 flex items-center justify-center bg-aliff-gold/20 rounded-full">
+                    <div className="w-6 h-6 bg-aliff-gold rounded-full"></div>
+                  </div>
+                </div>
                 <h3 className="text-2xl font-playfair font-bold mb-6">{problem.title}</h3>
                 <p className="text-aliff-sand leading-relaxed">{problem.description}</p>
               </div>
@@ -185,11 +189,11 @@ export default function Home() {
                 <div className="step-circle">{step.step}</div>
                 <h3 className="text-2xl font-playfair font-bold mb-6">{step.title}</h3>
                 <p className="text-aliff-sand mb-8">{step.description}</p>
-                <ul className="space-y-3">
+                <ul className="space-y-3 flex flex-col items-center">
                   {step.features.map((feature, i) => (
-                    <li key={i} className="text-sm text-aliff-sand flex items-center">
+                    <li key={i} className="text-sm text-aliff-sand flex items-center justify-center w-full max-w-xs">
                       <div className="w-2 h-2 bg-aliff-gold rounded-full mr-3"></div>
-                      {feature}
+                      <span className="text-center">{feature}</span>
                     </li>
                   ))}
                 </ul>
