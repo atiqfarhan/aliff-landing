@@ -1,13 +1,13 @@
 import { Metadata } from 'next'
-import Hero from '@/components/Hero'
-import ProblemSection from '@/components/ProblemSection'
-import HowItWorks from '@/components/HowItWorks'
-import WhatYouGet from '@/components/WhatYouGet'
-import WhoItsFor from '@/components/WhoItsFor'
-import TrustPrivacy from '@/components/TrustPrivacy'
-import WaitlistSection from '@/components/WaitlistSection'
-import FAQ from '@/components/FAQ'
-import Header from '@/components/Header'
+import Hero from '../components/Hero'
+import ProblemSection from '../components/ProblemSection'
+import HowItWorks from '../components/HowItWorks'
+import WhatYouGet from '../components/WhatYouGet'
+import WhoItsFor from '../components/WhoItsFor'
+import TrustPrivacy from '../components/TrustPrivacy'
+import WaitlistSection from '../components/WaitlistSection'
+import FAQ from '../components/FAQ'
+import Header from '../components/Header'
 
 export const metadata: Metadata = {
   title: 'ALIFF — Modesty, intelligently styled.',
