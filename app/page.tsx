@@ -1,3 +1,5 @@
+"use client";
+
 export default function Home() {
   // Smooth scroll function for anchor links accounting for fixed navbar
   const smoothScrollTo = (elementId: string) => {
@@ -33,7 +35,6 @@ export default function Home() {
             <div className="hidden md:flex items-center space-x-10">
               <a href="#how-it-works" onClick={(e) => { e.preventDefault(); smoothScrollTo('how-it-works'); }} className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">How It Works</a>
               <a href="#features" onClick={(e) => { e.preventDefault(); smoothScrollTo('features'); }} className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">Features</a>
-              <a href="#privacy" onClick={(e) => { e.preventDefault(); smoothScrollTo('privacy'); }} className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">Privacy</a>
               <a href="#waitlist" onClick={(e) => { e.preventDefault(); smoothScrollTo('waitlist'); }} className="btn-premium px-6 py-3">Join Waitlist</a>
             </div>
 
