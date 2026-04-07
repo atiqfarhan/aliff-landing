@@ -18,10 +18,10 @@ export default function Home() {
     <main className="min-h-screen bg-aliff-black text-aliff-cream">
       {/* Enhanced Navigation */}
       <nav className="sticky top-0 z-50 bg-aliff-black/95 backdrop-blur-lg border-b border-aliff-gold/20">
-        <div className="container mx-auto px-6 py-5">
+        <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 flex items-center justify-center">
+              <div className="w-24 h-24 flex items-center justify-center">
                 <img 
                   src="/logo.png" 
                   alt="ALIFF Logo" 
@@ -339,7 +339,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center">
             <div className="flex items-center justify-center mb-12">
-              <div className="w-20 h-20 flex items-center justify-center">
+              <div className="w-32 h-32 flex items-center justify-center">
                 <img 
                   src="/logo.png" 
                   alt="ALIFF Logo" 
