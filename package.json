@@ -17,6 +17,7 @@
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
     "framer-motion": "^10.0.0",
+    "lucide-react": "^0.375.0",
     "@heroicons/react": "^2.0.0",
     "react-hook-form": "^7.0.0",
     "axios": "^1.0.0"
