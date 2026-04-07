@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-aliff-black text-aliff-cream">
       {/* Enhanced Navigation */}
-      <nav className="sticky top-0 z-50 bg-aliff-black/95 backdrop-blur-lg border-b border-aliff-gold/20">
+      <nav className="sticky top-0 z-50 bg-aliff-black/95 backdrop-blur-lg border-b border-aliff-gold/20" aria-label="Main navigation">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -36,14 +36,16 @@ export default function Home() {
             </div>
             
             <div className="hidden md:flex items-center space-x-10">
-              <a href="#how-it-works" onClick={(e) => { e.preventDefault(); smoothScrollTo('how-it-works'); }} className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">How It Works</a>
-              <a href="#features" onClick={(e) => { e.preventDefault(); smoothScrollTo('features'); }} className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">Features</a>
-              <a href="#waitlist" onClick={(e) => { e.preventDefault(); smoothScrollTo('waitlist'); }} className="btn-premium px-6 py-3">Join Waitlist</a>
+              <a href="#how-it-works" onClick={(e) => { e.preventDefault(); smoothScrollTo('how-it-works'); }} className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300" aria-label="Navigate to How It Works section">How It Works</a>
+              <a href="#features" onClick={(e) => { e.preventDefault(); smoothScrollTo('features'); }} className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300" aria-label="Navigate to Features section">Features</a>
+              <a href="#waitlist" onClick={(e) => { e.preventDefault(); smoothScrollTo('waitlist'); }} className="btn-premium px-6 py-3" aria-label="Join the waitlist for ALIFF">Join Waitlist</a>
             </div>
             
             <button 
               className="md:hidden text-aliff-gold"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,6 +68,7 @@ export default function Home() {
                     href="#how-it-works" 
                     onClick={(e) => { e.preventDefault(); smoothScrollTo('how-it-works'); }}
                     className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300 py-2"
+                    aria-label="Navigate to How It Works section"
                   >
                     How It Works
                   </a>
@@ -73,6 +76,7 @@ export default function Home() {
                     href="#features" 
                     onClick={(e) => { e.preventDefault(); smoothScrollTo('features'); }}
                     className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300 py-2"
+                    aria-label="Navigate to Features section"
                   >
                     Features
                   </a>
@@ -80,6 +84,7 @@ export default function Home() {
                     href="#waitlist" 
                     onClick={(e) => { e.preventDefault(); smoothScrollTo('waitlist'); }}
                     className="btn-premium py-3 text-center"
+                    aria-label="Join the waitlist for ALIFF"
                   >
                     Join Waitlist
                   </a>
