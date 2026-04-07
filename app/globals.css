@@ -3,15 +3,142 @@
 @tailwind utilities;
 
 /* Font imports */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-/* Base styles */
+/* Dark theme with gold accents - premium modest fashion aesthetic */
+:root {
+  --aliff-black: #0a0a0a;
+  --aliff-gold: #d4af37;
+  --aliff-cream: #f5f1e6;
+  --aliff-navy: #1a1a2e;
+  --aliff-sand: #e6d5b8;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
-  @apply bg-aliff-offwhite text-aliff-black;
+  background-color: var(--aliff-black);
+  color: var(--aliff-cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
-  @apply font-bold;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Premium geometric pattern for backgrounds */
+.geometric-pattern {
+  background-image: 
+    radial-gradient(circle at 25px 25px, rgba(212, 175, 55, 0.1) 2%, transparent 0%),
+    radial-gradient(circle at 75px 75px, rgba(212, 175, 55, 0.08) 2%, transparent 0%);
+  background-size: 100px 100px;
+}
+
+/* Subtle Islamic geometric pattern */
+.islamic-pattern {
+  background-image: 
+    linear-gradient(30deg, rgba(212, 175, 55, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(212, 175, 55, 0.05) 87.5%, rgba(212, 175, 55, 0.05)),
+    linear-gradient(150deg, rgba(212, 175, 55, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(212, 175, 55, 0.05) 87.5%, rgba(212, 175, 55, 0.05)),
+    linear-gradient(30deg, rgba(212, 175, 55, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(212, 175, 55, 0.05) 87.5%, rgba(212, 175, 55, 0.05)),
+    linear-gradient(150deg, rgba(212, 175, 55, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(212, 175, 55, 0.05) 87.5%, rgba(212, 175, 55, 0.05)),
+    linear-gradient(60deg, rgba(212, 175, 55, 0.08) 25%, transparent 25.5%, transparent 75%, rgba(212, 175, 55, 0.08) 75%, rgba(212, 175, 55, 0.08)),
+    linear-gradient(60deg, rgba(212, 175, 55, 0.08) 25%, transparent 25.5%, transparent 75%, rgba(212, 175, 55, 0.08) 75%, rgba(212, 175, 55, 0.08));
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+
+/* Elegant gold border */
+.gold-border {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.gold-border-thick {
+  border: 2px solid var(--aliff-gold);
+}
+
+/* Premium card styling */
+.premium-card {
+  background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(10, 10, 10, 0.9));
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Animation for premium feel */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive typography */
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+/* Premium button styles */
+.btn-premium {
+  background: linear-gradient(135deg, var(--aliff-gold), #b8941f);
+  color: var(--aliff-black);
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.btn-premium-outline {
+  background: transparent;
+  color: var(--aliff-gold);
+  border: 2px solid var(--aliff-gold);
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-premium-outline:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Section spacing */
+.section-spacing {
+  padding: 5rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .section-spacing {
+    padding: 3rem 1rem;
+  }
 }

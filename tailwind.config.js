@@ -8,9 +8,10 @@ module.exports = {
     extend: {
       colors: {
         'aliff-black': '#0a0a0a',
-        'aliff-gold': '#bc9c22',
-        'aliff-offwhite': '#faf9f6',
-        'aliff-sand': '#eae1d1',
+        'aliff-gold': '#d4af37',
+        'aliff-cream': '#f5f1e6',
+        'aliff-navy': '#1a1a2e',
+        'aliff-sand': '#e6d5b8',
       },
     },
   },
