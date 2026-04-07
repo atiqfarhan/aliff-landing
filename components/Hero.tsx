@@ -13,15 +13,11 @@ export default function Hero() {
         className="max-w-4xl mx-auto"
       >
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-aliff-black mb-6">
-          Outfits from your closet—
-          <span className="block text-aliff-gold mt-4">
-            without the mental load of modest dressing.
-          </span>
+          Outfits that respect your values
         </h1>
         
         <p className="text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
-          ALIFF is an AI styling service that turns your wardrobe photos into outfit plans, 
-          built for Muslim modest women, with modesty as a first-class constraint.
+          ALIFF is your personal AI stylist for modest dressing. From the clothes in your closet to looks you love, aligned with your coverage, comfort, and values.
         </p>
         
         <div className="flex flex-col md:flex-row gap-4 justify-center">

@@ -13,8 +13,8 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-aliff-gold rounded-full flex items-center justify-center text-white font-playfair font-bold">
-              A
+            <div className="w-10 h-10 flex items-center justify-center">
+              <div className="font-playfair font-bold text-2xl text-aliff-gold">A</div>
             </div>
             <div>
               <div className="font-playfair font-bold text-xl">ALIFF</div>

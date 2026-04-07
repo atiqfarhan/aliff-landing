@@ -14,18 +14,15 @@ export default function ProblemSection() {
           {[
             {
               title: 'Decision fatigue',
-              description: '"What do I wear?" every single morning drains your mental energy before the day even starts.',
-              emoji: '😫'
+              description: '"What do I wear?" every single morning drains your mental energy before the day even starts.'
             },
             {
               title: 'Closet underused',
-              description: 'Pieces exist in your wardrobe, but complete outfits don\'t. You own clothes but feel like you have nothing to wear.',
-              emoji: '👗'
+              description: 'Pieces exist in your wardrobe, but complete outfits don\'t. You own clothes but feel like you have nothing to wear.'
             },
             {
               title: 'Tools ignore modesty',
-              description: 'Most styling apps don\'t understand modest dressing. You waste time filtering through inappropriate suggestions.',
-              emoji: '🚫'
+              description: 'Most styling apps don\'t understand modest dressing. You waste time filtering through inappropriate suggestions.'
             }
           ].map((problem, index) => (
             <motion.div
@@ -35,7 +32,7 @@ export default function ProblemSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-aliff-offwhite p-6 rounded-xl shadow-sm border border-aliff-sand"
             >
-              <div className="text-4xl mb-4">{problem.emoji}</div>
+              <div className="text-2xl mb-4 text-aliff-gold font-bold">•</div>
               <h3 className="text-xl font-playfair font-bold mb-3">{problem.title}</h3>
               <p className="text-gray-700 font-montserrat">{problem.description}</p>
             </motion.div>
