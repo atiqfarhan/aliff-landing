@@ -1,25 +1,42 @@
 export default function Home() {
+  // Smooth scroll function for anchor links accounting for fixed navbar
+  const smoothScrollTo = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const offset = 80; // Account for fixed navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <main className="min-h-screen bg-aliff-black text-aliff-cream islamic-pattern">
+    <main className="min-h-screen bg-aliff-black text-aliff-cream">
       {/* Enhanced Navigation */}
       <nav className="sticky top-0 z-50 bg-aliff-black/95 backdrop-blur-lg border-b border-aliff-gold/20">
         <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="text-3xl font-playfair text-aliff-gold font-bold float">A</div>
+              <div className="w-10 h-10 flex items-center justify-center">
+                <img
+                  src="/logo.png"
+                  alt="ALIFF Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <div>
                 <div className="text-xl font-playfair font-bold">ALIFF</div>
                 <div className="text-xs text-aliff-sand">Modesty, intelligently styled.</div>
               </div>
             </div>
-            
+
             <div className="hidden md:flex items-center space-x-10">
-              <a href="#how-it-works" className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">How It Works</a>
-              <a href="#features" className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">Features</a>
-              <a href="#privacy" className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">Privacy</a>
-              <a href="#waitlist" className="btn-premium px-6 py-3">Join Waitlist</a>
+              <a href="#how-it-works" onClick={(e) => { e.preventDefault(); smoothScrollTo('how-it-works'); }} className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">How It Works</a>
+              <a href="#features" onClick={(e) => { e.preventDefault(); smoothScrollTo('features'); }} className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">Features</a>
+              <a href="#privacy" onClick={(e) => { e.preventDefault(); smoothScrollTo('privacy'); }} className="text-aliff-cream hover:text-aliff-gold transition-colors duration-300">Privacy</a>
+              <a href="#waitlist" onClick={(e) => { e.preventDefault(); smoothScrollTo('waitlist'); }} className="btn-premium px-6 py-3">Join Waitlist</a>
             </div>
-            
+
             <button className="md:hidden text-aliff-gold">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -30,7 +47,7 @@ export default function Home() {
       </nav>
 
       {/* Enhanced Hero Section */}
-      <section className="section-spacing gradient-bg relative overflow-hidden">
+      <section id="hero" className="section-spacing gradient-bg relative overflow-hidden pt-24">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center fade-in-up">
             <div className="mb-10">
@@ -39,32 +56,34 @@ export default function Home() {
               </span>
               <div className="gold-accent"></div>
             </div>
-            
+
             <h1 className="text-sixxl md:text-7xl lg:text-8xl font-playfair font-bold mb-10 leading-tight">
               Outfits that
               <span className="block text-aliff-gold mt-6">respect your values</span>
             </h1>
-            
+
             <p className="lead text-2xl md:text-3xl text-aliff-sand mb-16 max-w-3xl mx-auto">
-              ALIFF is your personal AI stylist for modest dressing. From the clothes in your closet to looks you love, 
+              ALIFF is your personal AI stylist for modest dressing. From the clothes in your closet to looks you love,
               aligned with your coverage, comfort, and values.
             </p>
-            
+
             <div className="flex flex-col md:flex-row gap-8 justify-center items-center mb-20">
-              <a 
-                href="#waitlist" 
+              <a
+                href="#waitlist"
+                onClick={(e) => { e.preventDefault(); smoothScrollTo('waitlist'); }}
                 className="btn-premium px-12 py-5 text-lg"
               >
                 Join the Waitlist
               </a>
-              <a 
-                href="#how-it-works" 
+              <a
+                href="#how-it-works"
+                onClick={(e) => { e.preventDefault(); smoothScrollTo('how-it-works'); }}
                 className="btn-premium-outline px-12 py-5 text-lg"
               >
                 See How It Works
               </a>
             </div>
-            
+
             <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-aliff-sand">
               <div className="flex items-center space-x-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
@@ -88,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced Problem Section */}
-      <section id="problem" className="section-spacing gradient-gold">
+      <section id="problem" className="section-spacing gradient-gold pt-16 pb-24">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-8">
@@ -99,7 +118,7 @@ export default function Home() {
             </p>
             <div className="gold-accent"></div>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-12">
             {[
               {
@@ -118,7 +137,7 @@ export default function Home() {
                 icon: '🚫'
               }
             ].map((problem, index) => (
-              <div 
+              <div
                 key={index}
                 className="premium-card rounded-3xl p-10 fade-in-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
@@ -133,7 +152,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced How It Works Section */}
-      <section id="how-it-works" className="section-spacing">
+      <section id="how-it-works" className="section-spacing pt-16 pb-24">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-8">
@@ -144,7 +163,7 @@ export default function Home() {
             </p>
             <div className="gold-accent"></div>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-16">
             {[
               {
@@ -185,7 +204,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced Features Section */}
-      <section id="features" className="section-spacing gradient-gold">
+      <section id="features" className="section-spacing gradient-gold pt-16 pb-24">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-8">
@@ -196,12 +215,12 @@ export default function Home() {
             </p>
             <div className="gold-accent"></div>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-16">
             <div className="premium-card rounded-3xl p-10">
               <h3 className="text-2xl font-playfair font-bold mb-6">Coverage First Design</h3>
               <p className="text-aliff-sand mb-8">
-                Modesty isn't a filter—it's the foundation. Every outfit respects your chosen coverage levels.
+                Modesty isn't a filter-it's the foundation. Every outfit respects your chosen coverage levels.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">
@@ -218,7 +237,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
             <div className="premium-card rounded-3xl p-10">
               <h3 className="text-2xl font-playfair font-bold mb-6">Context Aware Suggestions</h3>
               <p className="text-aliff-sand mb-8">
@@ -244,7 +263,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced Waitlist Section */}
-      <section id="waitlist" className="section-spacing">
+      <section id="waitlist" className="section-spacing pt-16 pb-24">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto">
             <div className="premium-card rounded-3xl p-12">
@@ -257,55 +276,55 @@ export default function Home() {
                 </p>
                 <div className="gold-accent"></div>
               </div>
-              
+
               <form className="space-y-8">
                 <div>
                   <label className="block text-aliff-cream mb-4 font-medium">Full Name *</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     className="form-input"
                     placeholder="Your name"
                     required
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-aliff-cream mb-4 font-medium">Email Address *</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     className="form-input"
                     placeholder="you@example.com"
                     required
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-aliff-cream mb-4 font-medium">Where are you based? *</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     className="form-input"
                     placeholder="City, Country"
                     required
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-aliff-cream mb-4 font-medium">What is your biggest style struggle as a modest woman? *</label>
-                  <textarea 
+                  <textarea
                     rows={4}
                     className="form-input resize-none"
                     placeholder="e.g., Finding work-appropriate outfits that are still modest, coordinating hijab with outfits, dealing with decision fatigue every morning..."
                     required
                   />
                 </div>
-                
-                <button 
-                  type="submit" 
+
+                <button
+                  type="submit"
                   className="w-full btn-premium py-5 text-lg"
                 >
                   Join the ALIFF Waitlist
                 </button>
-                
+
                 <p className="text-sm text-aliff-sand text-center">
                   Your information is secure. We never share data and respect your privacy.
                 </p>
@@ -320,23 +339,29 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-4 mb-12">
-              <div className="text-4xl font-playfair text-aliff-gold font-bold float">A</div>
+              <div className="w-12 h-12 flex items-center justify-center">
+                <img
+                  src="/logo.png"
+                  alt="ALIFF Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <div>
                 <div className="text-2xl font-playfair font-bold">ALIFF</div>
                 <div className="text-sm text-aliff-sand">Modesty, intelligently styled.</div>
               </div>
             </div>
-            
+
             <p className="lead text-aliff-sand mb-10 max-w-lg mx-auto">
               Your AI modest fashion consultant that learns your taste and makes you feel understood.
             </p>
-            
+
             <div className="mb-10">
               <a href="mailto:hello@aliff.app" className="text-aliff-gold hover:text-aliff-sand transition-colors duration-300 text-lg">
                 hello@aliff.app
               </a>
             </div>
-            
+
             <div className="pt-10 border-t border-aliff-gold/10">
               <p className="text-sm text-aliff-sand">
                 © 2024 ALIFF. All rights reserved.<br />
