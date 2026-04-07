@@ -1,18 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display, Montserrat } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  weight: ['700'],
-  variable: '--font-playfair',
-})
-const montserrat = Montserrat({ 
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-montserrat',
-})
+// Fonts are loaded via globals.css for better performance
 
 export const metadata: Metadata = {
   title: 'ALIFF — Modesty, intelligently styled.',
@@ -31,12 +20,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${montserrat.variable}`}>
+    <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${inter.className} bg-aliff-offwhite text-aliff-black`}>
+      <body className="bg-aliff-offwhite text-aliff-black font-montserrat">
         {children}
       </body>
     </html>
