@@ -432,7 +432,7 @@ export default function Home() {
             
             <div className="pt-10 border-t border-aliff-gold/10">
               <p className="text-sm text-aliff-sand">
-                © 2026 ALIFF. All rights reserved.<br />
+                © {new Date().getFullYear()} ALIFF. All rights reserved.<br />
                 Built with community feedback from Muslim women worldwide.
               </p>
             </div>
