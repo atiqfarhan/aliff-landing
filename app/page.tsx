@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,10 +28,13 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <div className="w-24 h-24 flex items-center justify-center">
-                <img 
+                <Image 
                   src="/logo.png" 
                   alt="ALIFF Logo" 
+                  width={96}
+                  height={96}
                   className="w-full h-full object-contain"
+                  priority
                 />
               </div>
             </div>
@@ -390,9 +394,11 @@ export default function Home() {
           <div className="text-center">
             <div className="flex items-center justify-center mb-12">
               <div className="w-32 h-32 flex items-center justify-center">
-                <img 
+                <Image 
                   src="/logo.png" 
                   alt="ALIFF Logo" 
+                  width={128}
+                  height={128}
                   className="w-full h-full object-contain"
                 />
               </div>
