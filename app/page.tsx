@@ -22,6 +22,13 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-aliff-black text-aliff-cream">
+      {/* Skip to content link for accessibility */}
+      <a 
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-aliff-gold text-aliff-black px-4 py-2 rounded-md z-50"
+      >
+        Skip to main content
+      </a>
       {/* Enhanced Navigation */}
       <nav className="sticky top-0 z-50 bg-aliff-black/95 backdrop-blur-lg border-b border-aliff-gold/20" aria-label="Main navigation">
         <div className="container mx-auto px-6 py-4">
@@ -100,7 +107,7 @@ export default function Home() {
       </nav>
 
       {/* Enhanced Hero Section */}
-      <section id="hero" className="section-spacing gradient-bg relative overflow-hidden pt-24">
+      <section id="main-content" className="section-spacing gradient-bg relative overflow-hidden pt-24">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center fade-in-up">
             <div className="mb-10">
