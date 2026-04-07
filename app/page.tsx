@@ -46,7 +46,7 @@ export default function Home() {
             </div>
             
             <button 
-              className="md:hidden text-aliff-gold"
+              className="md:hidden text-aliff-gold p-3 -mr-3"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}
