@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALIFF — Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --black: #0A0A0A;
+    --dark: #111111;
+    --card: #161616;
+    --card-border: rgba(255,255,255,0.08);
+    --white: #FFFFFF;
+    --off-white: #CCCCCC;
+    --gold: #bc9c22;
+    --gold-50: rgba(188, 156, 34, 0.5);
+    --gold-70: rgba(188, 156, 34, 0.7);
+    --font: 'Montserrat', -apple-system, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font);
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* === HEADER === */
+.header {
+    padding: 24px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.header-logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.header-back {
+    color: var(--off-white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-back:hover {
+    color: var(--gold);
+}
+
+/* === HERO === */
+.privacy-hero {
+    padding: 80px 40px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.privacy-hero h1 {
+    font-family: var(--font);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.privacy-hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+}
+
+.privacy-hero .lead {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* === BELIEFS === */
+.beliefs {
+    padding: 60px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.beliefs-heading {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.beliefs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.belief-item {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.belief-item:hover {
+    border-color: rgba(188, 156, 34, 0.3);
+}
+
+.belief-icon {
+    color: var(--gold);
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.belief-text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* === POLICY SECTIONS === */
+.policy-sections {
+    padding: 40px 40px 100px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.policy-card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-top: 2px solid var(--gold);
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 24px;
+    transition: border-color 0.3s ease;
+}
+
+.policy-card:hover {
+    border-color: rgba(188, 156, 34, 0.3);
+    border-top-color: var(--gold);
+}
+
+.policy-card h2 {
+    font-family: var(--font);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.policy-card h2 .icon {
+    color: var(--gold);
+    font-size: 24px;
+}
+
+.policy-card p {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.policy-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* === SUMMARY === */
+.summary {
+    padding: 80px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.summary-card {
+    background: var(--dark);
+    border: 1px solid rgba(188, 156, 34, 0.3);
+    border-radius: 16px;
+    padding: 60px 40px;
+}
+
+.summary h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.summary p {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1.7;
+}
+
+.summary .emphasis {
+    font-size: 18px;
+    color: var(--off-white);
+    margin-top: 16px;
+    font-style: italic;
+}
+
+/* === BACK LINK === */
+.back-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 48px;
+    background: var(--gold-50);
+    color: var(--black);
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: var(--gold-70);
+    transform: translateY(-2px);
+}
+
+/* === FOOTER === */
+.footer {
+    padding: 60px 40px;
+    text-align: center;
+    border-top: 1px solid var(--card-border);
+}
+
+.footer-tagline {
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+.footer-copy {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 4px;
+}
+
+.footer-rights {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.4);
+}
+
+/* === ANIMATIONS === */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .header {
+        padding: 16px 20px;
+    }
+
+    .header-logo img {
+        height: 50px;
+    }
+
+    .privacy-hero {
+        padding: 60px 20px 30px;
+    }
+
+    .privacy-hero h1 {
+        font-size: 32px;
+    }
+
+    .privacy-hero .lead {
+        font-size: 17px;
+    }
+
+    .beliefs {
+        padding: 40px 20px;
+    }
+
+    .beliefs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .policy-sections {
+        padding: 20px 20px 60px;
+    }
+
+    .policy-card {
+        padding: 28px;
+    }
+
+    .policy-card h2 {
+        font-size: 19px;
+    }
+
+    .summary {
+        padding: 40px 20px;
+    }
+
+    .summary-card {
+        padding: 40px 24px;
+    }
+
+    .summary h2 {
+        font-size: 24px;
+    }
+
+    .footer {
+        padding: 40px 20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <a href="index.html" class="header-logo">
+        <img src="images/black-logo.png" alt="ALIFF">
+    </a>
+    <a href="index.html" class="header-back">← Back to Home</a>
+</header>
+
+<!-- HERO -->
+<section class="privacy-hero fade-in">
+    <h1>Privacy is an <em>Amanah</em></h1>
+    <p class="lead">At ALIFF, your data is an amanah. We treat it with responsibility, restraint, and respect.</p>
+</section>
+
+<!-- WHAT WE BELIEVE -->
+<section class="beliefs fade-in">
+    <h2 class="beliefs-heading">What We Believe</h2>
+    <div class="beliefs-grid">
+        <div class="belief-item">
+            <span class="belief-icon">✦</span>
+            <span class="belief-text">Your photos belong to you</span>
+        </div>
+        <div class="belief-item">
+            <span class="belief-icon">✦</span>
+            <span class="belief-text">Your closet is private</span>
+        </div>
+        <div class="belief-item">
+            <span class="belief-icon">✦</span>
+            <span class="belief-text">Your consent is required</span>
+        </div>
+        <div class="belief-item">
+            <span class="belief-icon">✦</span>
+            <span class="belief-text">Your data is not for sale</span>
+        </div>
+    </div>
+</section>
+
+<!-- POLICY SECTIONS -->
+<section class="policy-sections">
+
+    <div class="policy-card fade-in">
+        <h2><span class="icon">✦</span> Your Photos, Your Control</h2>
+        <p>You own everything you upload.</p>
+        <p>We use your photos only to generate your outfit recommendations.</p>
+        <p>We do not take rights over your content.</p>
+    </div>
+
+    <div class="policy-card fade-in">
+        <h2><span class="icon">✦</span> No Face Photos</h2>
+        <p>ALIFF does not require your face.</p>
+        <p>We encourage you to keep your identity private.</p>
+    </div>
+
+    <div class="policy-card fade-in">
+        <h2><span class="icon">✦</span> No Selling. Ever.</h2>
+        <p>We do not sell, rent, or trade your photos or data.</p>
+        <p>Your wardrobe is not a product.</p>
+    </div>
+
+    <div class="policy-card fade-in">
+        <h2><span class="icon">✦</span> Consent First</h2>
+        <p>We only use your data with your clear permission.</p>
+        <p>No hidden usage. No assumptions.</p>
+    </div>
+
+    <div class="policy-card fade-in">
+        <h2><span class="icon">✦</span> No Marketing Use</h2>
+        <p>We do not use your photos for ads, marketing, or social media.</p>
+        <p>Nothing you upload will be posted publicly by us.</p>
+    </div>
+
+    <div class="policy-card fade-in">
+        <h2><span class="icon">✦</span> Your Closet Stays Private</h2>
+        <p>We do not share, publish, or display your wardrobe.</p>
+        <p>It is visible only to you.</p>
+    </div>
+
+    <div class="policy-card fade-in">
+        <h2><span class="icon">✦</span> Delete Anytime</h2>
+        <p>You can delete your photos or your entire data at any time.</p>
+        <p>Once deleted, your data is permanently removed.</p>
+    </div>
+
+    <div class="policy-card fade-in">
+        <h2><span class="icon">✦</span> Minimal Data Only</h2>
+        <p>We collect only what is needed to make ALIFF work.</p>
+        <p>Nothing extra.</p>
+    </div>
+
+</section>
+
+<!-- SUMMARY -->
+<section class="summary fade-in">
+    <div class="summary-card">
+        <h2>In Simple Terms</h2>
+        <p>Your photos are an amanah.</p>
+        <p class="emphasis">You own them. You control them. We protect them.</p>
+    </div>
+</section>
+
+<!-- BACK TO HOME -->
+<section class="back-section fade-in">
+    <a href="index.html" class="back-link">← Back to Home</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p class="footer-tagline">Woman-owned. Built in public. Shaped by real women, real needs, and real feedback.</p>
+    <p class="footer-copy">© 2026</p>
+    <p class="footer-rights">All Rights Reserved | ALIFF</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
