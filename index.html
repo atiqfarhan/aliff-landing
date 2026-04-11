@@ -246,7 +246,7 @@ body {
 
     align-items: center;
 
-    justify-content: flex-start;
+    justify-content: space-between;
 
 }
 
@@ -1123,7 +1123,24 @@ body {
 
     </a>
 
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </header>
+
+<!-- Navigation Overlay -->
+<div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
+
+<!-- Slide-out Navigation Menu -->
+<nav class="nav-menu" id="navMenu">
+    <span class="nav-label nav-menu a">ALIFF</span>
+    <a href="index.html">Home <span class="nav-arrow">→</span></a>
+    <a href="founder.html">Our Founder <span class="nav-arrow">→</span></a>
+    <a href="privacy.html">Privacy Policy <span class="nav-arrow">→</span></a>
+    <a href="#waitlist" onclick="toggleMenu()">Join the Waitlist <span class="nav-arrow">→</span></a>
+</nav>
 
 
 
