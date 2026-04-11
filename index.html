@@ -972,27 +972,47 @@ body {
 }
 
 
-/* === MOBILE CTA (below phone) === */
-.mobile-cta {
+
+/* === MOBILE: CTA below phone === */
+.hero-cta-mobile {
     display: none;
 }
 
 @media (max-width: 768px) {
-    .hero-content .hero-cta {
-        display: none;
+    /* Hide the CTA in the text content area on mobile */
+    .hero-content > .hero-cta {
+        display: none !important;
     }
 
-    .mobile-cta {
-        display: inline-flex;
-        margin-top: 32px;
-        width: 100%;
-        min-width: auto;
-    }
-
-    .hero-visual {
-        display: flex;
-        flex-direction: column;
+    /* Show the CTA below the phone on mobile */
+    .hero-cta-mobile {
+        display: flex !important;
+        justify-content: center;
         align-items: center;
+        gap: 8px;
+        margin-top: 32px;
+        padding: 18px 64px;
+        width: 100%;
+        background: var(--gold-50);
+        color: var(--black);
+        font-family: var(--font);
+        font-weight: 600;
+        font-size: 18px;
+        border: none;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .hero-cta-mobile:hover {
+        background: var(--gold-70);
+    }
+
+    /* Make hero-visual a flex column so button sits below phone */
+    .hero-visual {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 }
 
@@ -1065,7 +1085,10 @@ body {
 
         </div>
 
-    </div>
+    
+        <!-- Mobile CTA Button -->
+        <a href="#waitlist" class="hero-cta hero-cta-mobile">Join the Waitlist →</a>
+</div>
 
 </section>
 
