@@ -971,6 +971,31 @@ body {
     color: var(--gold);
 }
 
+
+/* === MOBILE CTA (below phone) === */
+.mobile-cta {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hero-content .hero-cta {
+        display: none;
+    }
+
+    .mobile-cta {
+        display: inline-flex;
+        margin-top: 32px;
+        width: 100%;
+        min-width: auto;
+    }
+
+    .hero-visual {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 </style>
 
 </head>
