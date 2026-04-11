@@ -39,145 +39,13 @@
 <meta name="twitter:image" content="https://aliff.app/images/og-image.jpg">
 
 <!-- Structured Data: Organization -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ALIFF",
-    "url": "https://aliff.app",
-    "logo": "https://aliff.app/images/black-logo.png",
-    "description": "AI-powered styling assistant built for Muslim women with modesty-first design.",
-    "sameAs": [
-        "https://www.instagram.com/aliff.app",
-        "https://www.linkedin.com/in/khansakhatoon/"
-    ],
-    "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "info@aliff.app",
-        "contactType": "customer service"
-    }
-}
 
-// Hamburger menu
-function toggleMenu() {
-    document.getElementById('hamburger').classList.toggle('active');
-    document.getElementById('navMenu').classList.toggle('open');
-    document.getElementById('navOverlay').classList.toggle('open');
-}
-
-// Close menu when clicking a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.getElementById('hamburger').classList.remove('active');
-        document.getElementById('navMenu').classList.remove('open');
-        document.getElementById('navOverlay').classList.remove('open');
-    });
-});
-
-</script>
 
 <!-- Structured Data: SoftwareApplication -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "ALIFF",
-    "applicationCategory": "LifestyleApplication",
-    "description": "AI-powered modest fashion styling assistant for Muslim women. Upload your wardrobe, set modesty preferences, get weekly outfit plans.",
-    "url": "https://aliff.app",
-    "operatingSystem": "Web",
-    "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/PreOrder"
-    }
-}
 
-// Hamburger menu
-function toggleMenu() {
-    document.getElementById('hamburger').classList.toggle('active');
-    document.getElementById('navMenu').classList.toggle('open');
-    document.getElementById('navOverlay').classList.toggle('open');
-}
-
-// Close menu when clicking a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.getElementById('hamburger').classList.remove('active');
-        document.getElementById('navMenu').classList.remove('open');
-        document.getElementById('navOverlay').classList.remove('open');
-    });
-});
-
-</script>
 
 <!-- Structured Data: FAQPage -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "What is ALIFF?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ALIFF is an AI-powered styling assistant built for Muslim women. It turns your existing wardrobe into weekly outfit plans with modesty as a first-class design principle."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is ALIFF free?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ALIFF is currently in beta. Join the waitlist for free early access. Limited spots available."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is my data private on ALIFF?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. ALIFF is privacy-first. Your photos are never sold, shared, or used for marketing. You can delete your data at any time."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Do I need to upload face photos?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. ALIFF does not require face photos. We encourage you to keep your identity private."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Who is ALIFF for?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ALIFF is designed for Muslim women who dress modestly — whether hijabi, non-hijabi modest, or exploring modest fashion."
-            }
-        }
-    ]
-}
 
-// Hamburger menu
-function toggleMenu() {
-    document.getElementById('hamburger').classList.toggle('active');
-    document.getElementById('navMenu').classList.toggle('open');
-    document.getElementById('navOverlay').classList.toggle('open');
-}
-
-// Close menu when clicking a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.getElementById('hamburger').classList.remove('active');
-        document.getElementById('navMenu').classList.remove('open');
-        document.getElementById('navOverlay').classList.remove('open');
-    });
-});
-
-</script>
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1312,78 +1180,167 @@ body {
 
 
 
-<script>
 
-const observer = new IntersectionObserver((entries) => {
 
-    entries.forEach(entry => {
 
-        if (entry.isIntersecting) {
 
-            entry.target.classList.add('visible');
 
+<!-- Structured Data: Organization -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ALIFF",
+    "url": "https://aliff.app",
+    "logo": "https://aliff.app/images/black-logo.png",
+    "description": "AI-powered styling assistant built for Muslim women with modesty-first design.",
+    "sameAs": [
+        "https://www.instagram.com/aliff.app",
+        "https://www.linkedin.com/in/khansakhatoon/"
+    ],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@aliff.app",
+        "contactType": "customer service"
+    }
+}
+</script>
+
+<!-- Structured Data: SoftwareApplication -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ALIFF",
+    "applicationCategory": "LifestyleApplication",
+    "description": "AI-powered modest fashion styling assistant for Muslim women. Upload your wardrobe, set modesty preferences, get weekly outfit plans.",
+    "url": "https://aliff.app",
+    "operatingSystem": "Web",
+    "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/PreOrder"
+    }
+}
+</script>
+
+<!-- Structured Data: FAQPage -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is ALIFF?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ALIFF is an AI-powered styling assistant built for Muslim women. It turns your existing wardrobe into weekly outfit plans with modesty as a first-class design principle."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is ALIFF free?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ALIFF is currently in beta. Join the waitlist for free early access. Limited spots available."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is my data private on ALIFF?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. ALIFF is privacy-first. Your photos are never sold, shared, or used for marketing. You can delete your data at any time."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do I need to upload face photos?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. ALIFF does not require face photos. We encourage you to keep your identity private."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Who is ALIFF for?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ALIFF is designed for Muslim women who dress modestly, whether hijabi, non-hijabi modest, or exploring modest fashion. It serves students, professionals, and anyone who wants to feel put-together in their modesty."
+            }
         }
+    ]
+}
+</script>
 
+<!-- Page Scripts -->
+<script>
+// Fade in on scroll
+var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
     });
-
 }, { threshold: 0.1 });
 
-
-
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-
-
-document.getElementById('waitlistForm').addEventListener('submit', function(e) {
-
-    const btn = this.querySelector('.submit-btn');
-
-    const form = this;
-
-
-
-    setTimeout(() => {
-
-        btn.textContent = "You're on the list \u2726";
-
-        btn.style.background = 'var(--gold-70)';
-
-        btn.disabled = true;
-
-
-
-        form.querySelectorAll('input, textarea').forEach(el => {
-
-            el.disabled = true;
-
-            el.style.opacity = '0.5';
-
-        });
-
-    }, 500);
-
+document.querySelectorAll('.fade-in').forEach(function(el) {
+    observer.observe(el);
 });
 
+// Form submit to Google Forms
+var waitlistForm = document.getElementById('waitlistForm');
+if (waitlistForm) {
+    waitlistForm.addEventListener('submit', function(e) {
+        var btn = this.querySelector('.submit-btn');
+        var form = this;
+        setTimeout(function() {
+            btn.textContent = "You're on the list \u2726";
+            btn.style.background = 'var(--gold-70)';
+            btn.disabled = true;
+            form.querySelectorAll('input, textarea').forEach(function(el) {
+                el.disabled = true;
+                el.style.opacity = '0.5';
+            });
+        }, 500);
+    });
+}
 
-// Hamburger menu
+// Sticky header
+window.addEventListener('scroll', function() {
+    var header = document.getElementById('header');
+    if (header) {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    }
+});
+
+// Hamburger menu toggle
 function toggleMenu() {
     document.getElementById('hamburger').classList.toggle('active');
     document.getElementById('navMenu').classList.toggle('open');
     document.getElementById('navOverlay').classList.toggle('open');
 }
 
-// Close menu when clicking a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
+// Close menu when clicking nav links
+document.querySelectorAll('.nav-menu a').forEach(function(link) {
+    link.addEventListener('click', function() {
         document.getElementById('hamburger').classList.remove('active');
         document.getElementById('navMenu').classList.remove('open');
         document.getElementById('navOverlay').classList.remove('open');
     });
 });
 
+// Close menu on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.getElementById('hamburger').classList.remove('active');
+        document.getElementById('navMenu').classList.remove('open');
+        document.getElementById('navOverlay').classList.remove('open');
+    }
+});
 </script>
-
-
 
 </body>
 
