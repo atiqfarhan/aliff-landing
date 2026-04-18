@@ -4,77 +4,62 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Founder | ALIFF — AI Stylist for Muslim Women</title>
-<meta name="description" content="Meet the founder of ALIFF — a creative strategist and Muslim woman who built the AI styling assistant she wished existed. Read her story.">
-<meta name="keywords" content="ALIFF founder, Khansa Khatoon, muslim women tech, modest fashion founder, women in tech, muslim entrepreneur">
+<meta name="description" content="Meet Khansa Khatoon, founder of ALIFF. A creative strategist who built the AI styling assistant she wished existed for Muslim women.">
+<meta name="keywords" content="ALIFF founder, Khansa Khatoon, muslim women tech, modest fashion founder">
 <link rel="canonical" href="https://aliff.app/founder.html">
 <meta property="og:title" content="Our Founder | ALIFF">
-<meta property="og:description" content="ALIFF didn't start with technology. It started with a daily frustration. Meet the woman behind the AI stylist for Muslim women.">
+<meta property="og:description" content="Meet the woman behind the AI stylist for Muslim women.">
 <meta property="og:image" content="https://aliff.app/images/og-image.jpg">
 <meta property="og:url" content="https://aliff.app/founder.html">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Our Founder | ALIFF">
-<meta name="twitter:description" content="Meet the founder of ALIFF, the AI stylist for Muslim women.">
+<meta name="twitter:description" content="Meet Khansa Khatoon, founder of ALIFF.">
 <meta name="twitter:image" content="https://aliff.app/images/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
 :root {
-    --black: #0A0A0A;
-    --dark: #111111;
-    --card: #161616;
-    --card-border: rgba(255,255,255,0.08);
-    --white: #FFFFFF;
-    --off-white: #CCCCCC;
-    --gold: #bc9c22;
-    --gold-50: rgba(188, 156, 34, 0.5);
-    --gold-70: rgba(188, 156, 34, 0.7);
+    --black: #0A0A0A; --dark: #111111; --card: #161616;
+    --card-border: rgba(255,255,255,0.08); --white: #FFFFFF;
+    --off-white: #CCCCCC; --gold: #bc9c22;
+    --gold-50: rgba(188, 156, 34, 0.5); --gold-70: rgba(188, 156, 34, 0.7);
     --font: 'Montserrat', -apple-system, sans-serif;
 }
-
 html { scroll-behavior: smooth; }
+body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-body {
-    font-family: var(--font);
-    background: var(--black);
-    color: var(--white);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-}
-
-.header {
-    padding: 24px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--card-border);
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.header-logo img {
-    height: 190px;
-    width: auto;
-    display: block;
-}
-
-.header-back {
-    color: var(--off-white);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
+.header { padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--card-border); max-width: 900px; margin: 0 auto; }
+.header-logo img { height: 190px; width: auto; display: block; }
+.header-back { color: var(--off-white); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s ease; }
 .header-back:hover { color: var(--gold); }
 
-.founder {
-    max-width: 720px;
+/* Founder Hero */
+.founder-hero {
+    max-width: 900px;
     margin: 0 auto;
     padding: 60px 40px 40px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.founder-image {
+    flex-shrink: 0;
+}
+
+.founder-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgba(188, 156, 34, 0.3);
+}
+
+.founder-intro {
+    flex: 1;
 }
 
 .founder-label {
@@ -83,331 +68,184 @@ body {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .founder-name {
     font-size: 32px;
-    font-weight: 500;
-    color: var(--gold);
-    margin-bottom: 8px;
-    letter-spacing: 0.05em;
-}
-
-.founder h1 {
-    font-size: 48px;
     font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 48px;
+    margin-bottom: 4px;
 }
 
-.founder h1 em {
-    font-style: italic;
+.founder-title {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--off-white);
+}
+
+/* Story */
+.story {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+}
+
+.story-opening {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    color: var(--white);
+}
+
+.story-opening em {
     color: var(--gold);
+    font-style: italic;
 }
 
-.founder-body p {
-    font-size: 18px;
+.story p {
+    font-size: 17px;
     font-weight: 300;
     color: var(--off-white);
     line-height: 1.8;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
 }
 
-.founder-body p strong {
+.story p strong {
     color: var(--white);
     font-weight: 600;
 }
 
-.founder-body p em {
-    color: var(--gold);
-    font-style: italic;
-}
-
-.founder-badge {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 40px 40px;
-    text-align: center;
-}
-
-.founder-badge-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 16px;
-}
-
-.badge-card-link {
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.badge-card-link:hover { transform: scale(1.02); }
-
-.badge-card {
-    background: var(--card);
-    border: 1px solid rgba(188, 156, 34, 0.3);
-    border-radius: 16px;
-    padding: 32px 48px;
-    display: inline-block;
-    text-align: center;
-}
-
-.badge-card-icon { font-size: 36px; color: var(--gold); margin-bottom: 12px; }
-.badge-card-title { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-.badge-card-source { font-size: 13px; color: var(--off-white); margin-bottom: 12px; }
-.badge-card-name { font-size: 14px; font-weight: 500; color: var(--gold); }
-
-.alif-section {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 40px 40px;
-}
-
+/* Alif card */
 .alif-card {
     background: var(--card);
     border: 1px solid var(--card-border);
     border-left: 3px solid var(--gold);
     border-radius: 12px;
-    padding: 40px;
-    margin-bottom: 48px;
+    padding: 32px;
+    margin-bottom: 32px;
 }
 
 .alif-card p {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 300;
     color: var(--off-white);
     line-height: 1.8;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .alif-card p:last-child { margin-bottom: 0; }
 
 .alif-card .first-line {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--white);
-}
-
-.mission {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 40px 40px;
-}
-
-.mission p {
     font-size: 18px;
-    font-weight: 300;
-    color: var(--off-white);
-    line-height: 1.8;
-    margin-bottom: 28px;
-}
-
-.mission p strong {
-    color: var(--white);
     font-weight: 600;
+    color: var(--white);
 }
 
-.beliefs {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 40px 40px;
-}
-
+/* Beliefs */
 .beliefs-card {
     background: var(--dark);
     border: 1px solid rgba(188, 156, 34, 0.3);
     border-radius: 16px;
-    padding: 48px 40px;
+    padding: 40px;
     text-align: center;
+    margin-bottom: 32px;
 }
 
 .belief-line {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 400;
     color: var(--white);
     line-height: 1.8;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .belief-line .sparkle { color: var(--gold); }
 
-.closing {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 60px 40px 40px;
-    text-align: center;
-}
-
-.closing p {
-    font-size: 24px;
-    font-weight: 300;
-    color: var(--gold);
-    font-style: italic;
-}
-
-.back-section {
-    padding: 40px;
-    text-align: center;
-}
-
+/* Back */
+.back-section { padding: 20px 40px 40px; text-align: center; }
 .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 48px;
-    background: var(--gold-50);
-    color: var(--black);
-    font-weight: 600;
-    font-size: 16px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 48px; background: var(--gold-50); color: var(--black);
+    font-weight: 600; font-size: 16px; border-radius: 50px;
+    text-decoration: none; transition: all 0.3s ease;
 }
+.back-link:hover { background: var(--gold-70); transform: translateY(-2px); }
 
-.back-link:hover {
-    background: var(--gold-70);
-    transform: translateY(-2px);
-}
-
-.footer {
-    padding: 60px 40px;
-    text-align: center;
-    border-top: 1px solid var(--card-border);
-}
-
-.footer-tagline {
-    font-size: 15px;
-    font-weight: 300;
-    color: var(--gold);
-    font-style: italic;
-    margin-bottom: 16px;
-}
-
-.footer-copy { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.4); margin-bottom: 4px; }
-.footer-rights { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.4); margin-bottom: 24px; }
-
-.footer-socials { display: flex; justify-content: center; gap: 20px; }
+/* Footer */
+.footer { padding: 32px 40px; border-top: 1px solid var(--card-border); }
+.footer-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.footer-left { display: flex; align-items: center; gap: 8px; position: relative; }
+.footer-talk { font-size: 14px; font-weight: 500; color: var(--white); }
+.footer-email { font-size: 14px; font-weight: 300; color: var(--off-white); cursor: pointer; display: flex; align-items: center; gap: 6px; transition: color 0.3s ease; }
+.footer-email:hover { color: var(--gold); }
+.copy-icon { opacity: 0.5; transition: opacity 0.3s ease; }
+.footer-email:hover .copy-icon { opacity: 1; stroke: var(--gold); }
+.copy-toast { position: absolute; bottom: -28px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--black); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 4px; opacity: 0; transition: opacity 0.3s ease; pointer-events: none; }
+.copy-toast.show { opacity: 1; }
+.footer-right { display: flex; align-items: center; gap: 20px; }
+.footer-copyright { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.4); }
+.footer-socials { display: flex; gap: 12px; }
 .footer-socials a { color: rgba(255,255,255,0.4); transition: color 0.3s ease; }
 .footer-socials a:hover { color: var(--gold); }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
 
 @media (max-width: 768px) {
     .header { padding: 16px 20px; }
     .header-logo img { height: 95px; }
-    .founder { padding: 40px 20px 30px; }
-    .founder h1 { font-size: 32px; }
-    .founder-body p { font-size: 16px; }
-    .alif-section { padding: 0 20px 30px; }
-    .alif-card { padding: 28px; }
-    .mission { padding: 0 20px 30px; }
-    .mission p { font-size: 16px; }
-    .beliefs { padding: 0 20px 30px; }
-    .beliefs-card { padding: 32px 24px; }
-    .belief-line { font-size: 17px; }
-    .closing { padding: 40px 20px 30px; }
-    .closing p { font-size: 20px; }
-    .footer { padding: 40px 20px; }
-    .founder-badge { padding: 0 20px 30px; }
-    .badge-card { padding: 24px 32px; }
-    .badge-card-title { font-size: 17px; }
+    .founder-hero { flex-direction: column; text-align: center; padding: 40px 20px 30px; gap: 24px; }
+    .founder-image img { width: 160px; height: 160px; }
+    .founder-name { font-size: 26px; }
+    .story { padding: 0 20px 30px; }
+    .story-opening { font-size: 22px; }
+    .story p { font-size: 16px; }
+    .alif-card { padding: 24px; }
+    .beliefs-card { padding: 28px 20px; }
+    .belief-line { font-size: 16px; }
+    .back-section { padding: 16px 20px 30px; }
+    .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+    .footer-left { flex-direction: column; gap: 4px; }
+    .footer-right { flex-direction: column; gap: 12px; }
 }
-
-.badge-outer img {
-    width: 180px;
-    display: block;
-    margin: 0 auto;
-}
-
-.badge-client-name {
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--gold);
-    margin-top: 8px;
-}
-
-.badge-client-name a {
-    color: var(--gold);
-    text-decoration: none;
-}
-
-.badge-client-name a:hover {
-    text-decoration: underline;
-}
-
 </style>
 </head>
 <body>
 
 <header class="header">
     <a href="index.html" class="header-logo">
-        <img src="images/black-logo.png" alt="ALIFF | AI Stylist for Muslim Women and Modest Fashion">
+        <img src="images/black-logo.png" alt="ALIFF | AI Stylist for Muslim Women">
     </a>
     <a href="index.html" class="header-back">← Back to Home</a>
 </header>
 
-<section class="founder fade-in">
-    <p class="founder-label">Founder Story</p>
-    <p class="founder-name">Khansa Khatoon</p>
-    <h1>It Started with a <em>Full Wardrobe</em> and Nothing to Wear</h1>
-
-    <div class="founder-body">
-        <p>ALIFF didn't start with technology. It started with a daily frustration.</p>
-
-        <p>Every morning, I stood in front of a full wardrobe and still felt like I had nothing to wear. Not because I lacked options, but because none of them felt <em>right</em>. As a Muslim woman, getting dressed is never just about style. It's about modesty, context, comfort, and identity, all at once.</p>
-
-        <p>And yet every solution I found ignored that reality.</p>
-
-        <p>Fashion apps pushed trends that didn't fit my values. Styling advice assumed a different lifestyle. Even AI tools treated modesty as an afterthought, something to adjust <em>after</em> the outfit was already built.</p>
-
-        <p><strong>So I stopped looking for a solution and built one.</strong></p>
+<section class="founder-hero fade-in">
+    <div class="founder-image">
+        <img src="images/founder.jpeg" alt="Khansa Khatoon, Founder of ALIFF">
+    </div>
+    <div class="founder-intro">
+        <p class="founder-label">Founder</p>
+        <h1 class="founder-name">Khansa Khatoon</h1>
+        <p class="founder-title">Creative Strategist & Founder of ALIFF</p>
     </div>
 </section>
 
-<section class="founder-badge fade-in">
-    
-    <div class="badge-outer">
-        <div class="badge-inner">
-            <a class="badge-link" href="https://influentialwomen.com/" target="_blank" rel="noopener noreferrer">
-                <img class="badge-img" src="https://cdn.bmapinc.com/configurations/config_68454009b3957.png" alt="Khansa Khatoon — Influential Women in AI Badge">
-            </a>
-        </div>
-        <div class="badge-client-name"><a href="https://influentialwomen.com/profile/khansa-khatoon" target="_blank" rel="noopener noreferrer">Khansa Khatoon</a></div>
-    </div>
-</section>
+<section class="story fade-in">
+    <p class="story-opening">A full wardrobe.<br><em>Nothing to wear.</em></p>
+    <p>Every morning, I stood in front of a full wardrobe and still felt stuck. As a Muslim woman, getting dressed isn't just about style. It's about modesty, context, comfort, and identity, all at once.</p>
 
-<section class="alif-section fade-in">
+    <p>Every tool I found ignored that. Fashion apps pushed trends that didn't fit my values. AI styling tools treated modesty as an afterthought. So I stopped looking for a solution and built one.</p>
+
     <div class="alif-card">
         <p class="first-line">Aliff is the first letter of the Arabic alphabet. The beginning.</p>
-        <p>That's intentional.</p>
-        <p>Because this is a beginning for a tool that finally treats modesty as a first principle, not a constraint. One that turns your own wardrobe into thoughtful, wearable outfit plans without asking you to compromise who you are.</p>
+        <p>A tool that treats modesty as a first principle, turning your own wardrobe into thoughtful, wearable outfits without asking you to compromise who you are.</p>
     </div>
+
+    <p>I'm a creative strategist and food photographer. I understand behavior and the small decisions that shape how we show up each day. I built this from lived experience, not a whiteboard.</p>
 </section>
 
-<section class="mission fade-in">
-    <p>This is not about more clothes. It's about <strong>clarity</strong>. About removing decision fatigue. About helping women feel put together in a way that aligns with their values.</p>
-
-    <p>I'm a creative strategist and food photographer. I understand people, behavior, and the small decisions that shape how we show up every day. I'm not a traditional technologist, and that's exactly why I built this differently, starting from lived experience and building outward.</p>
-
-    <p>ALIFF is built in public, shaped by real women, grounded in one belief:</p>
-</section>
-
-<section class="beliefs fade-in">
+<section class="story fade-in">
     <div class="beliefs-card">
         <p class="belief-line"><span class="sparkle">✦</span> You shouldn't have to choose between modesty and style.</p>
         <p class="belief-line"><span class="sparkle">✦</span> You shouldn't have to overthink getting dressed.</p>
@@ -415,43 +253,48 @@ body {
     </div>
 </section>
 
-<section class="closing fade-in">
-    <p>This is just the beginning.</p>
-</section>
-
 <section class="back-section fade-in">
     <a href="index.html" class="back-link">← Back to Home</a>
 </section>
 
 <footer class="footer">
-    <p class="footer-tagline">Woman-owned. Built in public. Shaped by real women, real needs, and real feedback.</p>
-    <p class="footer-copy">© 2026</p>
-    <p class="footer-rights">All Rights Reserved | ALIFF</p>
-    <div class="footer-socials">
-        <a href="https://www.instagram.com/aliff.app?igsh=MWloNnJrZGVteXBiYg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/khansakhatoon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-        <a href="mailto:info@aliff.app" aria-label="Email">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
-        </a>
+    <div class="footer-inner">
+        <div class="footer-left">
+            <span class="footer-talk">Let's Talk</span>
+            <span class="footer-email" id="footerEmail" onclick="copyEmail()">info@aliff.app
+                <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </span>
+            <span class="copy-toast" id="copyToast">Copied!</span>
+        </div>
+        <div class="footer-right">
+            <span class="footer-copyright">Copyright © 2026 ALIFF</span>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/aliff.app?igsh=MWloNnJrZGVteXBiYg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/khansakhatoon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
+        </div>
     </div>
 </footer>
 
 <script>
 var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
     });
 }, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
 
-document.querySelectorAll('.fade-in').forEach(function(el) {
-    observer.observe(el);
-});
+function copyEmail() {
+    navigator.clipboard.writeText('info@aliff.app').then(function() {
+        var toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(function() { toast.classList.remove('show'); }, 1500);
+    });
+}
 </script>
 
 </body>
