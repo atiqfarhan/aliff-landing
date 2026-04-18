@@ -3,15 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Founder | ALIFF. AI Stylist for Muslim Women</title>
-<meta name="description" content="Meet the founder of ALIFF. a creative strategist and Muslim woman who built the AI styling assistant she wished existed. Read her story.">
-<meta name="keywords" content="ALIFF founder, muslim women tech, modest fashion founder, women in tech, muslim entrepreneur">
+<title>Our Founder | ALIFF — AI Stylist for Muslim Women</title>
+<meta name="description" content="Meet the founder of ALIFF — a creative strategist and Muslim woman who built the AI styling assistant she wished existed. Read her story.">
+<meta name="keywords" content="ALIFF founder, Khansa Khatoon, muslim women tech, modest fashion founder, women in tech, muslim entrepreneur">
 <link rel="canonical" href="https://aliff.app/founder.html">
 <meta property="og:title" content="Our Founder | ALIFF">
 <meta property="og:description" content="ALIFF didn't start with technology. It started with a daily frustration. Meet the woman behind the AI stylist for Muslim women.">
 <meta property="og:image" content="https://aliff.app/images/og-image.jpg">
 <meta property="og:url" content="https://aliff.app/founder.html">
 <meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Founder | ALIFF">
+<meta name="twitter:description" content="Meet the founder of ALIFF, the AI stylist for Muslim women.">
+<meta name="twitter:image" content="https://aliff.app/images/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -41,17 +45,18 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* === HEADER === */
 .header {
     padding: 24px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--card-border);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header-logo img {
-    height: 95px;
+    height: 190px;
     width: auto;
     display: block;
 }
@@ -64,15 +69,12 @@ body {
     transition: color 0.3s ease;
 }
 
-.header-back:hover {
-    color: var(--gold);
-}
+.header-back:hover { color: var(--gold); }
 
-/* === CONTENT === */
 .founder {
     max-width: 720px;
     margin: 0 auto;
-    padding: 80px 40px 40px;
+    padding: 60px 40px 40px;
 }
 
 .founder-label {
@@ -81,11 +83,18 @@ body {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 24px;
+    margin-bottom: 8px;
+}
+
+.founder-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--gold);
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
 }
 
 .founder h1 {
-    font-family: var(--font);
     font-size: 48px;
     font-weight: 700;
     line-height: 1.1;
@@ -115,7 +124,44 @@ body {
     font-style: italic;
 }
 
-/* === ALIF MEANING === */
+.founder-badge {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+    text-align: center;
+}
+
+.founder-badge-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+}
+
+.badge-card-link {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.badge-card-link:hover { transform: scale(1.02); }
+
+.badge-card {
+    background: var(--card);
+    border: 1px solid rgba(188, 156, 34, 0.3);
+    border-radius: 16px;
+    padding: 32px 48px;
+    display: inline-block;
+    text-align: center;
+}
+
+.badge-card-icon { font-size: 36px; color: var(--gold); margin-bottom: 12px; }
+.badge-card-title { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.badge-card-source { font-size: 13px; color: var(--off-white); margin-bottom: 12px; }
+.badge-card-name { font-size: 14px; font-weight: 500; color: var(--gold); }
+
 .alif-section {
     max-width: 720px;
     margin: 0 auto;
@@ -139,9 +185,7 @@ body {
     margin-bottom: 16px;
 }
 
-.alif-card p:last-child {
-    margin-bottom: 0;
-}
+.alif-card p:last-child { margin-bottom: 0; }
 
 .alif-card .first-line {
     font-size: 20px;
@@ -149,7 +193,6 @@ body {
     color: var(--white);
 }
 
-/* === MISSION === */
 .mission {
     max-width: 720px;
     margin: 0 auto;
@@ -164,7 +207,11 @@ body {
     margin-bottom: 28px;
 }
 
-/* === BELIEFS === */
+.mission p strong {
+    color: var(--white);
+    font-weight: 600;
+}
+
 .beliefs {
     max-width: 720px;
     margin: 0 auto;
@@ -179,13 +226,6 @@ body {
     text-align: center;
 }
 
-.beliefs-card .intro {
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--off-white);
-    margin-bottom: 32px;
-}
-
 .belief-line {
     font-size: 19px;
     font-weight: 400;
@@ -194,11 +234,8 @@ body {
     margin-bottom: 8px;
 }
 
-.belief-line .sparkle {
-    color: var(--gold);
-}
+.belief-line .sparkle { color: var(--gold); }
 
-/* === CLOSING === */
 .closing {
     max-width: 720px;
     margin: 0 auto;
@@ -213,7 +250,6 @@ body {
     font-style: italic;
 }
 
-/* === BACK LINK === */
 .back-section {
     padding: 40px;
     text-align: center;
@@ -226,7 +262,6 @@ body {
     padding: 14px 48px;
     background: var(--gold-50);
     color: var(--black);
-    font-family: var(--font);
     font-weight: 600;
     font-size: 16px;
     border-radius: 50px;
@@ -239,7 +274,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* === FOOTER === */
 .footer {
     padding: 60px 40px;
     text-align: center;
@@ -254,36 +288,13 @@ body {
     margin-bottom: 16px;
 }
 
-.footer-copy {
-    font-size: 14px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.4);
-    margin-bottom: 4px;
-}
+.footer-copy { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.4); margin-bottom: 4px; }
+.footer-rights { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.4); margin-bottom: 24px; }
 
-.footer-rights {
-    font-size: 14px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.4);
-    margin-bottom: 24px;
-}
+.footer-socials { display: flex; justify-content: center; gap: 20px; }
+.footer-socials a { color: rgba(255,255,255,0.4); transition: color 0.3s ease; }
+.footer-socials a:hover { color: var(--gold); }
 
-.footer-socials {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.footer-socials a {
-    color: rgba(255,255,255,0.4);
-    transition: color 0.3s ease;
-}
-
-.footer-socials a:hover {
-    color: var(--gold);
-}
-
-/* === ANIMATIONS === */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -295,11 +306,10 @@ body {
     transform: translateY(0);
 }
 
-/* === RESPONSIVE === */
 @media (max-width: 768px) {
     .header { padding: 16px 20px; }
     .header-logo img { height: 95px; }
-    .founder { padding: 60px 20px 30px; }
+    .founder { padding: 40px 20px 30px; }
     .founder h1 { font-size: 32px; }
     .founder-body p { font-size: 16px; }
     .alif-section { padding: 0 20px 30px; }
@@ -312,62 +322,14 @@ body {
     .closing { padding: 40px 20px 30px; }
     .closing p { font-size: 20px; }
     .footer { padding: 40px 20px; }
+    .founder-badge { padding: 0 20px 30px; }
+    .badge-card { padding: 24px 32px; }
+    .badge-card-title { font-size: 17px; }
 }
-
-/* === FOUNDER BADGE === */
-.founder-badge {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 40px 40px;
-    text-align: center;
-}
-
-.founder-badge-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #bc9c22;
-    margin-bottom: 16px;
-}
-
-.founder-badge a {
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.founder-badge a:hover {
-    transform: scale(1.03);
-}
-
-.founder-badge img {
-    max-width: 240px;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-}
-
-@media (max-width: 768px) {
-    .founder-badge {
-        padding: 0 20px 30px;
-    }
-    .founder-badge img {
-        max-width: 200px;
-    }
-}
-
 </style>
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Our Founder | ALIFF — AI Stylist for Muslim Women">
-<meta name="twitter:description" content="ALIFF didn't start with technology. It started with a daily frustration. Meet the woman behind the AI stylist for Muslim women.">
-<meta name="twitter:image" content="https://aliff.app/images/og-image.jpg">
-
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
     <a href="index.html" class="header-logo">
         <img src="images/black-logo.png" alt="ALIFF | AI Stylist for Muslim Women and Modest Fashion">
@@ -375,10 +337,9 @@ body {
     <a href="index.html" class="header-back">← Back to Home</a>
 </header>
 
-<!-- FOUNDER INTRO -->
 <section class="founder fade-in">
     <p class="founder-label">Founder Story</p>
-    <p class="founder-name" style="font-family: var(--font); font-size: 16px; font-weight: 500; color: #bc9c22; margin-bottom: 8px; letter-spacing: 0.05em;">Khansa Khatoon</p>
+    <p class="founder-name">Khansa Khatoon</p>
     <h1>It Started with a <em>Full Wardrobe</em> and Nothing to Wear</h1>
 
     <div class="founder-body">
@@ -394,16 +355,18 @@ body {
     </div>
 </section>
 
-
-<!-- Founder Badge -->
 <section class="founder-badge fade-in">
     <p class="founder-badge-label">Recognized By</p>
-    <a href="https://influentialwomen.com/shareable/badge/20028813?utm_medium=email&_hsmi=369323404&utm_content=369323404&utm_source=hs_automation" target="_blank" rel="noopener noreferrer">
-        <img src="https://influentialwomen.com/shareable/badge/20028813" alt="Khansa Khatoon — Most Influential Women in AI" onerror="this.parentElement.parentElement.parentElement.style.display='none'">
+    <a href="https://influentialwomen.com/shareable/badge/20028813?utm_medium=email&_hsmi=369323404&utm_content=369323404&utm_source=hs_automation" target="_blank" rel="noopener noreferrer" class="badge-card-link">
+        <div class="badge-card">
+            <div class="badge-card-icon">✦</div>
+            <div class="badge-card-title">Most Influential Women in AI</div>
+            <div class="badge-card-source">InfluentialWomen.com</div>
+            <div class="badge-card-name">Khansa Khatoon, Founder & CEO</div>
+        </div>
     </a>
 </section>
 
-<!-- ALIF MEANING -->
 <section class="alif-section fade-in">
     <div class="alif-card">
         <p class="first-line">Aliff is the first letter of the Arabic alphabet. The beginning.</p>
@@ -412,7 +375,6 @@ body {
     </div>
 </section>
 
-<!-- MISSION -->
 <section class="mission fade-in">
     <p>This is not about more clothes. It's about <strong>clarity</strong>. About removing decision fatigue. About helping women feel put together in a way that aligns with their values.</p>
 
@@ -421,7 +383,6 @@ body {
     <p>ALIFF is built in public, shaped by real women, grounded in one belief:</p>
 </section>
 
-<!-- BELIEFS -->
 <section class="beliefs fade-in">
     <div class="beliefs-card">
         <p class="belief-line"><span class="sparkle">✦</span> You shouldn't have to choose between modesty and style.</p>
@@ -430,17 +391,14 @@ body {
     </div>
 </section>
 
-<!-- CLOSING -->
 <section class="closing fade-in">
     <p>This is just the beginning.</p>
 </section>
 
-<!-- BACK TO HOME -->
 <section class="back-section fade-in">
     <a href="index.html" class="back-link">← Back to Home</a>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
     <p class="footer-tagline">Woman-owned. Built in public. Shaped by real women, real needs, and real feedback.</p>
     <p class="footer-copy">© 2026</p>
@@ -459,15 +417,17 @@ body {
 </footer>
 
 <script>
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
         }
     });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.fade-in').forEach(function(el) {
+    observer.observe(el);
+});
 </script>
 
 </body>
