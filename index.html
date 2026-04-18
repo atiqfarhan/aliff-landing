@@ -107,11 +107,11 @@ body {
 
 
 .header {
-    padding: 12px 60px;
+    padding: 12px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
@@ -133,8 +133,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 60px 10px;
-    max-width: 1200px;
+    padding: 10px 0 10px;
+    max-width: 1080px;
     margin: 0 auto;
     gap: 20px;
 }
@@ -254,9 +254,8 @@ body {
 
 .phone-frame {
 
-    width: 300px;
-
-    height: 620px;
+    width: 260px;
+    height: 540px;
 
     background: #1a1a1a;
 
@@ -375,13 +374,9 @@ body {
 
 
 .features {
-
-    padding: 0px 40px 40px;
-
-    max-width: 1200px;
-
+    padding: 0px 0 40px;
+    max-width: 1080px;
     margin: 0 auto;
-
 }
 
 
@@ -702,91 +697,31 @@ body {
 
 
 
-.footer {
-
-    padding: 60px 40px;
-
-    text-align: center;
-
-    border-top: 1px solid var(--card-border);
-
-}
 
 
 
-.footer-tagline {
-
-    font-family: var(--font);
-
-    font-size: 15px;
-
-    font-weight: 300;
-
-    color: var(--gold);
-
-    font-style: italic;
-
-    margin-bottom: 16px;
-
-}
 
 
 
-.footer-copy {
-
-    font-size: 14px;
-
-    font-weight: 300;
-
-    color: rgba(255,255,255,0.4);
-
-    margin-bottom: 4px;
-
-}
 
 
 
-.footer-rights {
-
-    font-size: 14px;
-
-    font-weight: 300;
-
-    color: rgba(255,255,255,0.4);
-
-    margin-bottom: 24px;
-
-}
 
 
 
-.footer-socials {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 20px;
-
-}
 
 
 
-.footer-socials a {
-
-    color: rgba(255,255,255,0.4);
-
-    transition: color 0.3s ease;
-
-}
 
 
 
-.footer-socials a:hover {
 
-    color: var(--gold);
 
-}
+
+
+
+
+
 
 
 
@@ -833,7 +768,7 @@ body {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 20px 20px 10px;
+        padding: 10px 60px 10px;
         gap: 20px;
     }
 
@@ -885,8 +820,8 @@ body {
     }
 
     .phone-frame {
-        width: 240px;
-        height: 500px;
+        width: 260px;
+    height: 540px;
     }
 
     .features {
@@ -910,9 +845,7 @@ body {
         font-size: 22px;
     }
 
-    .footer {
-        padding: 40px 20px;
-    }
+    
 }
 
 
@@ -1192,54 +1125,225 @@ body {
 
 
 
-/* === OFFICIAL BADGE === */
-.social-proof {
-    padding: 40px 40px;
-    max-width: 1200px;
+
+/* === NEW FOOTER === */
+.footer {
+    padding: 32px 40px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-inner {
+    max-width: 1080px;
     margin: 0 auto;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.social-proof-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #bc9c22;
-    margin-bottom: 20px;
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
 }
 
-.badge-outer img {
-    width: 180px;
-    display: block;
-    margin: 0 auto;
-}
-
-.badge-client-name {
-    text-align: center;
+.footer-talk {
     font-size: 14px;
     font-weight: 500;
-    color: #bc9c22;
-    margin-top: 8px;
+    color: #FFFFFF;
 }
 
-.badge-client-name a {
+.footer-email {
+    font-size: 14px;
+    font-weight: 300;
+    color: #CCCCCC;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease;
+}
+
+.footer-email:hover {
     color: #bc9c22;
-    text-decoration: none;
+}
+
+.copy-icon {
+    opacity: 0.5;
     transition: opacity 0.3s ease;
 }
 
-.badge-client-name a:hover {
-    text-decoration: underline;
-    opacity: 0.8;
+.footer-email:hover .copy-icon {
+    opacity: 1;
+    stroke: #bc9c22;
+}
+
+.copy-toast {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #bc9c22;
+    color: #0A0A0A;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.copy-toast.show {
+    opacity: 1;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.4);
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .footer-inner {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+    .footer-left {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .footer-right {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+
+/* === NEW FOOTER === */
+.footer {
+    padding: 32px 40px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.footer-talk {
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.footer-email {
+    font-size: 14px;
+    font-weight: 300;
+    color: #CCCCCC;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease;
+}
+
+.footer-email:hover {
+    color: #bc9c22;
+}
+
+.copy-icon {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.footer-email:hover .copy-icon {
+    opacity: 1;
+    stroke: #bc9c22;
+}
+
+.copy-toast {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #bc9c22;
+    color: #0A0A0A;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.copy-toast.show {
+    opacity: 1;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.4);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials a {
+    color: rgba(255,255,255,0.4);
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #bc9c22;
 }
 
 @media (max-width: 768px) {
-    .social-proof {
-        padding: 30px 20px;
+    .footer-inner {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
     }
-    .badge-outer img {
-        width: 150px;
+    .footer-left {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .footer-right {
+        flex-direction: column;
+        gap: 12px;
     }
 }
 
@@ -1393,21 +1497,7 @@ body {
 
 
 
-            <hr class="form-divider">
-
-
-
-            <h3 class="feedback-heading">Feedback & Suggestion</h3>
-
-            <p class="feedback-sub">We listen. We adapt. Let us know!</p>
-
-
-
-            <div class="form-group">
-
-                <textarea name="entry.839337160" placeholder="Share your thoughts, ideas, or suggestions..."></textarea>
-
-            </div>
+            
 
 
 
@@ -1432,25 +1522,26 @@ body {
 
 
 <footer class="footer">
-
-    <p class="footer-tagline">Woman-owned. Built in public. Shaped by real women, real needs, and real feedback.</p>
-
-    <p class="footer-copy">© 2026</p>
-
-    <p class="footer-rights">All Rights Reserved | ALIFF</p>
-
-    <div class="footer-socials">
-        <a href="https://www.instagram.com/aliff.app?igsh=MWloNnJrZGVteXBiYg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/khansakhatoon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-        <a href="mailto:info@aliff.app" aria-label="Email">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
-        </a>
+    <div class="footer-inner">
+        <div class="footer-left">
+            <span class="footer-talk">Let's Talk</span>
+            <span class="footer-email" id="footerEmail" onclick="copyEmail()">info@aliff.app
+                <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </span>
+            <span class="copy-toast" id="copyToast">Copied!</span>
+        </div>
+        <div class="footer-right">
+            <span class="footer-copyright">Copyright © 2026 ALIFF</span>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/aliff.app?igsh=MWloNnJrZGVteXBiYg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/khansakhatoon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
+        </div>
     </div>
-
 </footer>
 
 
@@ -1479,6 +1570,40 @@ body {
         "contactType": "customer service"
     }
 }
+
+function closePopup() {
+    document.getElementById('confirmPopup').classList.remove('show');
+}
+
+document.getElementById('confirmPopup').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closePopup();
+    }
+});
+
+// Copy email to clipboard
+function copyEmail() {
+    navigator.clipboard.writeText('info@aliff.app').then(function() {
+        var toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(function() {
+            toast.classList.remove('show');
+        }, 1500);
+    });
+}
+
+
+// Copy email to clipboard
+function copyEmail() {
+    navigator.clipboard.writeText('info@aliff.app').then(function() {
+        var toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(function() {
+            toast.classList.remove('show');
+        }, 1500);
+    });
+}
+
 </script>
 
 <!-- Structured Data: SoftwareApplication -->
@@ -1498,6 +1623,40 @@ body {
         "availability": "https://schema.org/PreOrder"
     }
 }
+
+function closePopup() {
+    document.getElementById('confirmPopup').classList.remove('show');
+}
+
+document.getElementById('confirmPopup').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closePopup();
+    }
+});
+
+// Copy email to clipboard
+function copyEmail() {
+    navigator.clipboard.writeText('info@aliff.app').then(function() {
+        var toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(function() {
+            toast.classList.remove('show');
+        }, 1500);
+    });
+}
+
+
+// Copy email to clipboard
+function copyEmail() {
+    navigator.clipboard.writeText('info@aliff.app').then(function() {
+        var toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(function() {
+            toast.classList.remove('show');
+        }, 1500);
+    });
+}
+
 </script>
 
 <!-- Structured Data: FAQPage -->
@@ -1548,6 +1707,40 @@ body {
         }
     ]
 }
+
+function closePopup() {
+    document.getElementById('confirmPopup').classList.remove('show');
+}
+
+document.getElementById('confirmPopup').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closePopup();
+    }
+});
+
+// Copy email to clipboard
+function copyEmail() {
+    navigator.clipboard.writeText('info@aliff.app').then(function() {
+        var toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(function() {
+            toast.classList.remove('show');
+        }, 1500);
+    });
+}
+
+
+// Copy email to clipboard
+function copyEmail() {
+    navigator.clipboard.writeText('info@aliff.app').then(function() {
+        var toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(function() {
+            toast.classList.remove('show');
+        }, 1500);
+    });
+}
+
 </script>
 
 <!-- Page Scripts -->
@@ -1618,6 +1811,40 @@ document.addEventListener('keydown', function(e) {
         document.getElementById('navOverlay').classList.remove('open');
     }
 });
+
+function closePopup() {
+    document.getElementById('confirmPopup').classList.remove('show');
+}
+
+document.getElementById('confirmPopup').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closePopup();
+    }
+});
+
+// Copy email to clipboard
+function copyEmail() {
+    navigator.clipboard.writeText('info@aliff.app').then(function() {
+        var toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(function() {
+            toast.classList.remove('show');
+        }, 1500);
+    });
+}
+
+
+// Copy email to clipboard
+function copyEmail() {
+    navigator.clipboard.writeText('info@aliff.app').then(function() {
+        var toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(function() {
+            toast.classList.remove('show');
+        }, 1500);
+    });
+}
+
 </script>
 
 
