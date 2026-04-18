@@ -107,22 +107,19 @@ body {
 
 
 .header {
-
-    padding: 24px 40px;
-
+    padding: 12px 40px;
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 
 
 .header-logo img {
 
-    height: 320px;
+    height: 95px;
 
     width: auto;
 
@@ -138,7 +135,7 @@ body {
 
     align-items: center;
 
-    padding: 40px 40px 40px;
+    padding: 20px 40px 40px;
 
     max-width: 1200px;
 
@@ -390,7 +387,7 @@ body {
 
 .features {
 
-    padding: 40px 40px 100px;
+    padding: 20px 40px 60px;
 
     max-width: 1200px;
 
@@ -436,7 +433,7 @@ body {
 
 .waitlist {
 
-    padding: 100px 40px;
+    padding: 60px 40px;
 
     background: var(--dark);
 
@@ -464,7 +461,7 @@ body {
 
     text-align: center;
 
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
 }
 
@@ -480,7 +477,7 @@ body {
 
     font-weight: 300;
 
-    margin-bottom: 48px;
+    margin-bottom: 24px;
 
 }
 
@@ -488,7 +485,7 @@ body {
 
 .form-group {
 
-    margin-bottom: 24px;
+    margin-bottom: 14px;
 
 }
 
@@ -520,7 +517,7 @@ body {
 
     width: 100%;
 
-    padding: 16px 20px;
+    padding: 12px 16px;
 
     background: var(--card);
 
@@ -566,7 +563,7 @@ body {
 
 .form-group textarea {
 
-    min-height: 100px;
+    min-height: 70px;
 
     resize: vertical;
 
@@ -580,7 +577,7 @@ body {
 
     border-top: 1px solid var(--card-border);
 
-    margin: 48px 0;
+    margin: 24px 0;
 
 }
 
@@ -594,7 +591,7 @@ body {
 
     font-weight: 700;
 
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 
 }
 
@@ -608,7 +605,7 @@ body {
 
     font-weight: 300;
 
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 
 }
 
@@ -622,7 +619,7 @@ body {
 
     gap: 12px;
 
-    margin: 32px 0;
+    margin: 16px 0;
 
 }
 
@@ -672,7 +669,7 @@ body {
 
     width: 100%;
 
-    padding: 18px;
+    padding: 14px;
 
     background: var(--gold-50);
 
@@ -838,7 +835,7 @@ body {
 
     .header { padding: 16px 20px; }
 
-    .header-logo img { height: 160px; }
+    .header-logo img { height: 95px; }
 
     .hero {
 
@@ -846,7 +843,7 @@ body {
 
         text-align: center;
 
-        padding: 20px 20px 40px;
+        padding: 20px 40px 40px;
 
     }
 
@@ -860,11 +857,11 @@ body {
 
     .phone-frame { width: 240px; height: 500px; }
 
-    .features { padding: 40px 20px 60px; }
+    .features { padding: 20px 40px 60px; }
 
     .features-grid { grid-template-columns: 1fr; gap: 16px; }
 
-    .waitlist { padding: 60px 20px; }
+    .waitlist { padding: 60px 40px; }
 
     .waitlist h2 { font-size: 32px; }
 
@@ -1013,6 +1010,138 @@ body {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+    }
+}
+
+
+/* === CONFIRMATION POPUP === */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.popup-overlay.show {
+    display: flex;
+}
+
+.popup-card {
+    background: #111111;
+    border: 1px solid rgba(188, 156, 34, 0.4);
+    border-radius: 20px;
+    padding: 48px 40px;
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+    animation: popIn 0.4s ease;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.popup-sparkle {
+    font-size: 48px;
+    color: #bc9c22;
+    margin-bottom: 16px;
+}
+
+.popup-title {
+    font-family: var(--font);
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.popup-text {
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 300;
+    color: #CCCCCC;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.popup-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 48px;
+    background: rgba(188, 156, 34, 0.5);
+    color: #0A0A0A;
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.popup-close:hover {
+    background: rgba(188, 156, 34, 0.7);
+}
+
+
+/* === SOCIAL PROOF / BADGE === */
+.social-proof {
+    padding: 40px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.social-proof-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #bc9c22;
+    margin-bottom: 20px;
+}
+
+.badge-link {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.badge-link:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+.badge-img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.badge-name {
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 500;
+    color: #CCCCCC;
+    margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+    .social-proof {
+        padding: 30px 20px;
+    }
+    .badge-img {
+        max-width: 220px;
     }
 }
 
@@ -1345,13 +1474,16 @@ if (waitlistForm) {
         var btn = this.querySelector('.submit-btn');
         var form = this;
         setTimeout(function() {
-            btn.textContent = "You're on the list \u2726";
+            btn.textContent = "You're In! \u2726";
             btn.style.background = 'var(--gold-70)';
             btn.disabled = true;
             form.querySelectorAll('input, textarea').forEach(function(el) {
                 el.disabled = true;
                 el.style.opacity = '0.5';
             });
+            document.getElementById('confirmPopup').classList.add('show');
+        
+            document.getElementById('confirmPopup').classList.add('show');
         }, 500);
     });
 }
@@ -1389,6 +1521,17 @@ document.addEventListener('keydown', function(e) {
     }
 });
 </script>
+
+
+<!-- Confirmation Popup -->
+<div class="popup-overlay" id="confirmPopup">
+    <div class="popup-card">
+        <div class="popup-sparkle">✦</div>
+        <div class="popup-title">You're In!</div>
+        <p class="popup-text">Welcome to the ALIFF community. We'll be in touch with early access details soon.</p>
+        <button class="popup-close" onclick="closePopup()">Got it</button>
+    </div>
+</div>
 
 </body>
 
