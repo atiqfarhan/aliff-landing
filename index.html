@@ -119,7 +119,7 @@ body {
 
 .header-logo img {
 
-    height: 95px;
+    height: 190px;
 
     width: auto;
 
@@ -135,7 +135,7 @@ body {
 
     align-items: center;
 
-    padding: 20px 40px 40px;
+    padding: 20px 40px 10px;
 
     max-width: 1200px;
 
@@ -387,7 +387,7 @@ body {
 
 .features {
 
-    padding: 20px 40px 60px;
+    padding: 0px 40px 40px;
 
     max-width: 1200px;
 
@@ -843,7 +843,7 @@ body {
 
         text-align: center;
 
-        padding: 20px 40px 40px;
+        padding: 20px 40px 10px;
 
     }
 
@@ -857,7 +857,7 @@ body {
 
     .phone-frame { width: 240px; height: 500px; }
 
-    .features { padding: 20px 40px 60px; }
+    .features { padding: 0px 40px 40px; }
 
     .features-grid { grid-template-columns: 1fr; gap: 16px; }
 
@@ -1142,6 +1142,65 @@ body {
     }
     .badge-img {
         max-width: 220px;
+    }
+}
+
+
+/* === BADGE CARD (styled fallback) === */
+.badge-card-link {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.badge-card-link:hover {
+    transform: scale(1.02);
+}
+
+.badge-card {
+    background: #161616;
+    border: 1px solid rgba(188, 156, 34, 0.3);
+    border-radius: 16px;
+    padding: 32px 48px;
+    display: inline-block;
+    text-align: center;
+}
+
+.badge-card-icon {
+    font-size: 36px;
+    color: #bc9c22;
+    margin-bottom: 12px;
+}
+
+.badge-card-title {
+    font-family: var(--font);
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+
+.badge-card-source {
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 400;
+    color: #CCCCCC;
+    margin-bottom: 12px;
+}
+
+.badge-card-name {
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 500;
+    color: #bc9c22;
+}
+
+@media (max-width: 768px) {
+    .badge-card {
+        padding: 24px 32px;
+    }
+    .badge-card-title {
+        font-size: 17px;
     }
 }
 
