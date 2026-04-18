@@ -326,6 +326,30 @@ body {
     .badge-card { padding: 24px 32px; }
     .badge-card-title { font-size: 17px; }
 }
+
+.badge-outer img {
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+}
+
+.badge-client-name {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gold);
+    margin-top: 8px;
+}
+
+.badge-client-name a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.badge-client-name a:hover {
+    text-decoration: underline;
+}
+
 </style>
 </head>
 <body>
@@ -357,14 +381,14 @@ body {
 
 <section class="founder-badge fade-in">
     <p class="founder-badge-label">Recognized By</p>
-    <a href="https://influentialwomen.com/shareable/badge/20028813?utm_medium=email&_hsmi=369323404&utm_content=369323404&utm_source=hs_automation" target="_blank" rel="noopener noreferrer" class="badge-card-link">
-        <div class="badge-card">
-            <div class="badge-card-icon">✦</div>
-            <div class="badge-card-title">Most Influential Women in AI</div>
-            <div class="badge-card-source">InfluentialWomen.com</div>
-            <div class="badge-card-name">Khansa Khatoon, Founder & CEO</div>
+    <div class="badge-outer">
+        <div class="badge-inner">
+            <a class="badge-link" href="https://influentialwomen.com/" target="_blank" rel="noopener noreferrer">
+                <img class="badge-img" src="https://cdn.bmapinc.com/configurations/config_68454009b3957.png" alt="Khansa Khatoon — Influential Women in AI Badge">
+            </a>
         </div>
-    </a>
+        <div class="badge-client-name"><a href="https://influentialwomen.com/profile/khansa-khatoon" target="_blank" rel="noopener noreferrer">Khansa Khatoon</a></div>
+    </div>
 </section>
 
 <section class="alif-section fade-in">
