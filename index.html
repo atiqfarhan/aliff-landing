@@ -756,97 +756,7 @@ body {
 
 
 
-@media (max-width: 768px) {
-    .header {
-        padding: 12px 20px;
-    }
 
-    .header-logo img {
-        height: 95px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px 60px 10px;
-        gap: 20px;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero-sub {
-        font-size: 17px;
-        margin: 0 auto 32px;
-    }
-
-    .hero-cta {
-        width: 100%;
-        min-width: auto;
-    }
-
-    .hero-visual {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-cta-mobile {
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        margin-top: 32px;
-        padding: 18px 64px;
-        width: 100%;
-        background: var(--gold-50);
-        color: var(--black);
-        font-family: var(--font);
-        font-weight: 600;
-        font-size: 18px;
-        border: none;
-        border-radius: 50px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-
-    .hero-cta-mobile:hover {
-        background: var(--gold-70);
-    }
-
-    .hero-content > .hero-cta {
-        display: none !important;
-    }
-
-    .phone-frame {
-        width: 260px;
-    height: 540px;
-    }
-
-    .features {
-        padding: 0px 20px 40px;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .waitlist {
-        padding: 40px 20px;
-    }
-
-    .waitlist h2 {
-        font-size: 32px;
-    }
-
-    .feedback-heading {
-        font-size: 22px;
-    }
-
-    
-}
 
 
 /* === HAMBURGER MENU === */
@@ -952,43 +862,7 @@ body {
     display: none;
 }
 
-@media (max-width: 768px) {
-    /* Hide the CTA in the text content area on mobile */
-    .hero-content > .hero-cta {
-        display: none !important;
-    }
 
-    /* Show the CTA below the phone on mobile */
-    .hero-cta-mobile {
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        margin-top: 32px;
-        padding: 18px 64px;
-        width: 100%;
-        background: var(--gold-50);
-        color: var(--black);
-        font-family: var(--font);
-        font-weight: 600;
-        font-size: 18px;
-        border: none;
-        border-radius: 50px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-
-    .hero-cta-mobile:hover {
-        background: var(--gold-70);
-    }
-
-    /* Make hero-visual a flex column so button sits below phone */
-    .hero-visual {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-}
 
 
 /* === CONFIRMATION POPUP === */
@@ -1113,14 +987,7 @@ body {
     margin-top: 12px;
 }
 
-@media (max-width: 768px) {
-    .social-proof {
-        padding: 30px 20px;
-    }
-    .badge-img {
-        max-width: 220px;
-    }
-}
+
 
 
 
@@ -1216,21 +1083,7 @@ body {
 
 
 
-@media (max-width: 768px) {
-    .footer-inner {
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
-    }
-    .footer-left {
-        flex-direction: column;
-        gap: 4px;
-    }
-    .footer-right {
-        flex-direction: column;
-        gap: 12px;
-    }
-}
+
 
 
 /* === NEW FOOTER === */
@@ -1331,20 +1184,226 @@ body {
     color: #bc9c22;
 }
 
+
+
+
+/* ============================================
+   MOBILE RESPONSIVE (max-width: 768px)
+   ============================================ */
 @media (max-width: 768px) {
+    /* Header */
+    .header {
+        padding: 12px 20px !important;
+    }
+
+    .header-logo img {
+        height: 100px !important;
+    }
+
+    /* Hero — stack vertically */
+    .hero {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 16px 20px 10px !important;
+        gap: 24px !important;
+        min-height: auto !important;
+    }
+
+    .hero-content {
+        max-width: 100% !important;
+        order: 1 !important;
+    }
+
+    .hero h1 {
+        font-size: 32px !important;
+        line-height: 1.1 !important;
+    }
+
+    .hero-sub {
+        font-size: 16px !important;
+        margin: 0 auto 24px !important;
+        max-width: 100% !important;
+    }
+
+    /* Hide desktop CTA, show mobile CTA */
+    .hero-content > .hero-cta {
+        display: none !important;
+    }
+
+    .hero-cta-mobile {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin-top: 24px !important;
+        padding: 16px 48px !important;
+        width: 100% !important;
+        background: var(--gold-50) !important;
+        color: var(--black) !important;
+        font-family: var(--font) !important;
+        font-weight: 600 !important;
+        font-size: 16px !important;
+        border: none !important;
+        border-radius: 50px !important;
+        text-decoration: none !important;
+    }
+
+    /* Phone mockup */
+    .hero-visual {
+        order: 2 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .phone-frame {
+        width: 200px !important;
+        height: 420px !important;
+        border-radius: 36px !important;
+    }
+
+    .phone-notch {
+        width: 80px !important;
+        height: 22px !important;
+    }
+
+    .phone-screen {
+        border-radius: 28px !important;
+    }
+
+    .phone-home {
+        width: 100px !important;
+    }
+
+    /* Features */
+    .features {
+        padding: 16px 20px 32px !important;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    /* Social proof / badge */
+    .social-proof {
+        padding: 24px 20px !important;
+    }
+
+    /* Waitlist form */
+    .waitlist {
+        padding: 40px 20px !important;
+    }
+
+    .waitlist h2 {
+        font-size: 28px !important;
+    }
+
+    .waitlist-sub {
+        font-size: 15px !important;
+    }
+
+    .form-group {
+        margin-bottom: 12px !important;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 14px !important;
+        font-size: 14px !important;
+    }
+
+    .form-group label {
+        font-size: 13px !important;
+    }
+
+    .form-group textarea {
+        min-height: 60px !important;
+    }
+
+    .form-divider {
+        margin: 20px 0 !important;
+    }
+
+    .feedback-heading {
+        font-size: 20px !important;
+    }
+
+    .checkbox-group {
+        margin: 16px 0 !important;
+    }
+
+    .checkbox-group label {
+        font-size: 12px !important;
+    }
+
+    .submit-btn {
+        padding: 14px !important;
+        font-size: 16px !important;
+    }
+
+    /* Hamburger menu */
+    .nav-menu {
+        width: 260px !important;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 24px 20px !important;
+    }
+
     .footer-inner {
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
+        flex-direction: column !important;
+        gap: 16px !important;
+        text-align: center !important;
     }
+
     .footer-left {
-        flex-direction: column;
-        gap: 4px;
+        flex-direction: column !important;
+        gap: 4px !important;
     }
+
     .footer-right {
-        flex-direction: column;
-        gap: 12px;
+        flex-direction: column !important;
+        gap: 12px !important;
     }
+
+    /* Popup */
+    .popup-card {
+        padding: 36px 24px !important;
+        max-width: 90% !important;
+    }
+
+    .popup-title {
+        font-size: 28px !important;
+    }
+}
+
+/* Small phones (max-width: 380px) */
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 26px !important;
+    }
+
+    .hero-sub {
+        font-size: 14px !important;
+    }
+
+    .phone-frame {
+        width: 180px !important;
+        height: 380px !important;
+    }
+
+    .header-logo img {
+        height: 80px !important;
+    }
+}
+
+
+/* Hide mobile CTA on desktop */
+.hero-cta-mobile {
+    display: none;
 }
 
 </style>
