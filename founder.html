@@ -46,6 +46,11 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
     gap: 60px;
 }
 
+.founder-left {
+    flex: 1;
+    min-width: 0;
+}
+
 .founder-image {
     flex-shrink: 0;
     margin-left: auto;
@@ -92,6 +97,7 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
     max-width: 1120px;
     margin: 0 auto;
     padding: 0 40px 40px;
+    display: none;
 }
 
 .story-opening {
@@ -120,7 +126,32 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
     font-weight: 600;
 }
 
-/* Alif card */
+.founder-story {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1.8;
+    margin-top: 24px;
+}
+
+.founder-story p {
+    margin-bottom: 20px;
+}
+
+.founder-story p:last-child { margin-bottom: 0; }
+
+.founder-story .story-opening {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.founder-story strong {
+    color: var(--white);
+    font-weight: 300;
+}
 .alif-card {
     background: transparent;
     border: none;
@@ -170,7 +201,7 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 
 /* Footer */
 .footer { padding: 32px 40px; border-top: 1px solid var(--card-border); }
-.footer-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.footer-inner { max-width: 1120px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
 .footer-left { display: flex; align-items: center; gap: 8px; position: relative; }
 .footer-talk { font-size: 14px; font-weight: 500; color: var(--white); }
 .footer-email { font-size: 14px; font-weight: 300; color: var(--off-white); cursor: pointer; display: flex; align-items: center; gap: 6px; transition: color 0.3s ease; }
@@ -217,10 +248,19 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 </header>
 
 <section class="founder-hero fade-in">
-    <div class="founder-intro">
-        <p class="founder-label" style="font-size:20px">Founder</p>
-        <h1 class="founder-name">Khansa Khatoon</h1>
-        <p class="founder-title" style="font-size:20px">Creative Strategist & Founder of ALIFF</p>
+    <div class="founder-left">
+        <div class="founder-intro">
+            <p class="founder-label" style="font-size:20px">Founder</p>
+            <h1 class="founder-name">Khansa Khatoon</h1>
+            <p class="founder-title" style="font-size:20px">Creative Strategist & Founder of ALIFF</p>
+        </div>
+        <div class="founder-story" style="margin:30px 0px 5px">
+            <p class="story-opening">A full wardrobe. Nothing to wear.</p>
+            <p>Every morning, I stood in front of a full wardrobe and still felt stuck. As a Muslim woman, getting dressed isn't just about style. It's about modesty, context, comfort, and identity, all at once.</p>
+            <p>Every tool I found ignored that. Fashion apps pushed trends that didn't fit my values. AI styling tools treated modesty as an afterthought. So I stopped looking for a solution and built one.</p>
+            <p><strong>Aliff is the first letter of the Arabic alphabet. The beginning.</strong> A tool that treats modesty as a first principle, turning your own wardrobe into thoughtful, wearable outfits without asking you to compromise who you are.</p>
+            <p>I'm a creative strategist and food photographer. I understand behavior and the small decisions that shape how we show up each day. I built this from lived experience, not a whiteboard.</p>
+        </div>
     </div>
     <div class="founder-image">
         <img src="https://aliff.app/images/FounderImage.jpeg" alt="Khansa Khatoon, Founder of ALIFF">
