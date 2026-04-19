@@ -8,7 +8,7 @@
 <meta name="keywords" content="ALIFF privacy policy, modest fashion app privacy, muslim women data privacy">
 <link rel="canonical" href="https://aliff.app/privacy.html">
 <meta property="og:title" content="Privacy Policy | ALIFF">
-<meta property="og:description" content="Your data is an amanah. ALIFF is privacy-first. Read our full privacy policy.">
+<meta property="og:description" content="Your data is an amanah. ALIFF is privacy-first.">
 <meta property="og:image" content="https://aliff.app/images/og-image.jpg">
 <meta property="og:url" content="https://aliff.app/privacy.html">
 <meta property="og:type" content="website">
@@ -29,27 +29,16 @@
     --font: 'Montserrat', -apple-system, sans-serif;
 }
 html { scroll-behavior: smooth; }
-body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-/* Header — same as index.html */
-.header {
-    padding: 12px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1080px;
-    margin: 0 auto;
-}
+.header { padding: 12px 0; display: flex; align-items: center; justify-content: space-between; max-width: 1080px; margin: 0 auto; }
 .header-logo img { height: 190px; width: auto; display: block; }
-
-/* Hamburger — same as index.html */
 .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 1001; position: relative; }
 .hamburger span { display: block; width: 28px; height: 2px; background: var(--white); transition: all 0.3s ease; }
 .hamburger:hover span { background: var(--gold); }
 .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
 .nav-menu { position: fixed; top: 0; right: -300px; width: 300px; height: 100vh; background: rgba(17,17,17,0.98); border-left: 1px solid var(--card-border); padding: 100px 40px 40px; transition: right 0.3s ease; z-index: 1000; backdrop-filter: blur(20px); }
 .nav-menu.open { right: 0; }
 .nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; }
@@ -61,33 +50,89 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 .nav-menu .nav-label { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); padding-bottom: 16px; border-bottom: none; cursor: default; }
 .nav-menu .nav-label:hover { color: var(--gold); padding-left: 0; }
 
-/* Privacy content */
-.privacy { max-width: 900px; margin: 0 auto; padding: 32px 40px 20px; }
-.privacy-title { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 6px; }
-.privacy-title em { font-style: italic; color: var(--gold); }
-.privacy-lead { font-size: 14px; font-weight: 300; color: var(--off-white); text-align: center; margin-bottom: 20px; }
+/* Privacy — simple, clean */
+.privacy {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px 40px 40px;
+}
 
-.beliefs-row { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
-.belief-pill { background: var(--card); border: 1px solid var(--card-border); border-radius: 20px; padding: 6px 14px; font-size: 12px; font-weight: 400; color: var(--off-white); }
-.belief-pill .s { color: var(--gold); margin-right: 4px; }
+.privacy-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
 
-/* Two-column grid — NO numbers column */
-.policy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px; }
-.policy-item { background: var(--card); border: 1px solid var(--card-border); border-top: 2px solid var(--gold); border-radius: 8px; padding: 14px 16px; }
-.policy-item h3 { font-size: 13px; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
-.policy-item h3 .icon { color: var(--gold); font-size: 14px; flex-shrink: 0; }
-.policy-item p { font-size: 13px; font-weight: 300; color: var(--off-white); line-height: 1.6; margin-bottom: 2px; }
+.privacy-title em {
+    font-style: italic;
+    color: var(--gold);
+}
 
-.summary-box { background: var(--dark); border: 1px solid rgba(188,156,34,0.3); border-radius: 12px; padding: 20px; text-align: center; margin-bottom: 20px; }
-.summary-box h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-.summary-box p { font-size: 14px; font-weight: 300; color: var(--gold); }
-.summary-box .em { font-size: 13px; color: var(--off-white); font-style: italic; margin-top: 4px; }
+.privacy-lead {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
 
-.back-section { text-align: center; padding: 12px 0 20px; }
-.back-link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 32px; background: var(--gold-50); color: var(--black); font-weight: 600; font-size: 14px; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; }
-.back-link:hover { background: var(--gold-70); }
+.policy-list {
+    list-style: none;
+}
 
-/* Footer — same as index.html */
+.policy-item {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.policy-item:first-child {
+    padding-top: 0;
+}
+
+.policy-item:last-child {
+    border-bottom: none;
+}
+
+.policy-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 6px;
+}
+
+.policy-item p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1.7;
+}
+
+.back-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 36px;
+    background: var(--gold-50);
+    color: var(--black);
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: var(--gold-70);
+}
+
+/* Footer */
 .footer { padding: 32px 40px; border-top: 1px solid var(--card-border); }
 .footer-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
 .footer-left { display: flex; align-items: center; gap: 8px; position: relative; }
@@ -104,94 +149,39 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 .footer-socials a { color: rgba(255,255,255,0.4); transition: color 0.3s ease; }
 .footer-socials a:hover { color: var(--gold); }
 
-/* Mobile */
-
-
-
 @media (max-width: 768px) {
-    .header {
-        padding: 12px 16px !important;
-    }
-
-    .header-logo img {
-        height: 100px !important;
-    }
-
-    .privacy {
-        padding: 20px 16px 12px !important;
-    }
-
-    .privacy-title {
-        font-size: 22px !important;
-    }
-
-    .privacy-lead {
-        font-size: 13px !important;
-    }
-
-    .beliefs-row {
-        gap: 6px !important;
-    }
-
-    .belief-pill {
-        font-size: 11px !important;
-        padding: 5px 10px !important;
-    }
-
-    .policy-grid {
-        grid-template-columns: 1fr !important;
-        gap: 8px !important;
-    }
-
-    .policy-item {
-        padding: 12px 14px !important;
-    }
-
-    .policy-item h3 {
-        font-size: 12px !important;
-        margin-bottom: 4px !important;
-    }
-
-    .policy-item p {
-        font-size: 14px !important;
-        line-height: 1.7 !important;
-    }
-
-    .summary-box {
-        padding: 16px !important;
-    }
-
-    .summary-box h3 {
-        font-size: 15px !important;
-    }
-
-    .summary-box p {
-        font-size: 13px !important;
-    }
-
-    .back-link {
-        padding: 8px 24px !important;
-        font-size: 13px !important;
-    }
+    .header { padding: 12px 20px !important; }
+    .header-logo img { height: 100px !important; }
+    .privacy { padding: 5px 20px 32px !important; }
+    .privacy-title { font-size: 24px !important; }
+    .privacy-lead { font-size: 15px !important; margin-bottom: 28px !important; }
+    .policy-item { padding: 18px 0 !important; }
+    .policy-item h3 { font-size: 15px !important; margin-bottom: 4px !important; }
+    .policy-item p { font-size: 14px !important; line-height: 1.7 !important; }
+    .back-section { padding: 0 20px 32px !important; }
+    .footer { padding: 24px 20px !important; }
+    .footer-inner { flex-direction: column !important; gap: 16px !important; text-align: center !important; }
+    .footer-left { flex-direction: column !important; gap: 4px !important; }
+    .footer-right { flex-direction: column !important; gap: 12px !important; }
+    .nav-menu { width: 260px !important; }
 }
-
+@media (max-width: 380px) {
+    .header-logo img { height: 80px !important; }
+    .privacy-title { font-size: 20px !important; }
+}
 </style>
 </head>
 <body>
 
-<!-- Header — same as index.html -->
 <header class="header">
     <a href="index.html" class="header-logo">
         <img src="images/black-logo.png" alt="ALIFF | AI Stylist for Muslim Women">
     </a>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
     </div>
 </header>
 
-<!-- Navigation — same as index.html -->
 <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
 <nav class="nav-menu" id="navMenu">
     <span class="nav-label nav-menu a">ALIFF</span>
@@ -203,73 +193,59 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 
 <section class="privacy">
     <h1 class="privacy-title">Privacy is an <em>Amanah</em></h1>
-    <p class="privacy-lead">Your data is an amanah. We treat it with responsibility, restraint, and respect.</p>
+    <p class="privacy-lead">At ALIFF, your data is an amanah. We treat it with responsibility, restraint, and respect.</p>
 
-    <div class="beliefs-row">
-        <span class="belief-pill">Your photos belong to you</span>
-        <span class="belief-pill">Your closet is private</span>
-        <span class="belief-pill">Consent is required</span>
-        <span class="belief-pill">Data is not for sale</span>
-    </div>
-
-    <!-- Two columns only — NO numbers -->
-    <div class="policy-grid">
-        <div class="policy-item">
+    <ul class="policy-list">
+        <li class="policy-item">
             <h3>Your Photos, Your Control</h3>
             <p>You own everything you upload. Used only for outfit recommendations. We take no rights over your content.</p>
-        </div>
-        <div class="policy-item">
+        </li>
+        <li class="policy-item">
             <h3>No Face Photos</h3>
             <p>ALIFF does not require your face. We encourage you to keep your identity private.</p>
-        </div>
-        <div class="policy-item">
+        </li>
+        <li class="policy-item">
             <h3>No Selling. Ever.</h3>
             <p>We do not sell, rent, or trade your photos or data. Your wardrobe is not a product.</p>
-        </div>
-        <div class="policy-item">
+        </li>
+        <li class="policy-item">
             <h3>Consent First</h3>
             <p>We only use your data with clear permission. No hidden usage. No assumptions.</p>
-        </div>
-        <div class="policy-item">
+        </li>
+        <li class="policy-item">
             <h3>No Marketing Use</h3>
             <p>We do not use your photos for ads or social media. Nothing is posted publicly by us.</p>
-        </div>
-        <div class="policy-item">
+        </li>
+        <li class="policy-item">
             <h3>Your Closet Stays Private</h3>
             <p>We do not share, publish, or display your wardrobe. Visible only to you.</p>
-        </div>
-        <div class="policy-item">
+        </li>
+        <li class="policy-item">
             <h3>Delete Anytime</h3>
             <p>Delete your photos or entire data at any time. Once deleted, permanently removed.</p>
-        </div>
-        <div class="policy-item">
+        </li>
+        <li class="policy-item">
             <h3>Minimal Data Only</h3>
             <p>We collect only what is needed to make ALIFF work. Nothing extra.</p>
-        </div>
-    </div>
-
-    <div class="summary-box">
-        <h3>In Simple Terms</h3>
-        <p>Your photos are an amanah. You own them. You control them. We protect them.</p>
-    </div>
+        </li>
+    </ul>
 </section>
 
 <div class="back-section">
     <a href="index.html" class="back-link">← Back to Home</a>
 </div>
 
-<!-- Footer — same as index.html -->
 <footer class="footer">
     <div class="footer-inner">
         <div class="footer-left">
             <span class="footer-talk">Let's Talk</span>
-            <span class="footer-email" id="footerEmail" onclick="copyEmail()">info@aliff.app
+            <span class="footer-email" onclick="copyEmail()">info@aliff.app
                 <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             </span>
             <span class="copy-toast" id="copyToast">Copied!</span>
         </div>
         <div class="footer-right">
-            <span class="footer-copyright">Copyright © 2026 ALIFF</span>
+            <span class="footer-copyright">© 2026 ALIFF. All rights reserved.</span>
             <div class="footer-socials">
                 <a href="https://www.instagram.com/aliff.app?igsh=MWloNnJrZGVteXBiYg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
@@ -310,6 +286,5 @@ function copyEmail() {
     });
 }
 </script>
-
 </body>
 </html>
