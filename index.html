@@ -1077,99 +1077,6 @@ body {
     color: rgba(255,255,255,0.4);
 }
 
-
-
-
-
-
-
-
-
-
-/* === NEW FOOTER === */
-.footer {
-    padding: 32px 40px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-}
-
-.footer-inner {
-    max-width: 1080px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-}
-
-.footer-talk {
-    font-size: 14px;
-    font-weight: 500;
-    color: #FFFFFF;
-}
-
-.footer-email {
-    font-size: 14px;
-    font-weight: 300;
-    color: #CCCCCC;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: color 0.3s ease;
-}
-
-.footer-email:hover {
-    color: #bc9c22;
-}
-
-.copy-icon {
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-}
-
-.footer-email:hover .copy-icon {
-    opacity: 1;
-    stroke: #bc9c22;
-}
-
-.copy-toast {
-    position: absolute;
-    bottom: -28px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #bc9c22;
-    color: #0A0A0A;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 4px 12px;
-    border-radius: 4px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.copy-toast.show {
-    opacity: 1;
-}
-
-.footer-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-copyright {
-    font-size: 14px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.4);
-}
-
 .footer-socials {
     display: flex;
     gap: 12px;
@@ -1626,249 +1533,75 @@ body {
 
 
 <!-- Structured Data: Organization -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ALIFF",
-    "url": "https://aliff.app",
-    "logo": "https://aliff.app/images/black-logo.png",
-    "description": "AI-powered styling assistant built for Muslim women with modesty-first design.",
-    "sameAs": [
-        "https://www.instagram.com/aliff.app",
-        "https://www.linkedin.com/in/khansakhatoon/"
-    ],
-    "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "info@aliff.app",
-        "contactType": "customer service"
-    }
-}
 
-function closePopup() {
-    document.getElementById('confirmPopup').classList.remove('show');
-}
-
-document.getElementById('confirmPopup').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closePopup();
-    }
-});
-
-// Copy email to clipboard
-function copyEmail() {
-    navigator.clipboard.writeText('info@aliff.app').then(function() {
-        var toast = document.getElementById('copyToast');
-        toast.classList.add('show');
-        setTimeout(function() {
-            toast.classList.remove('show');
-        }, 1500);
-    });
-}
-
-
-// Copy email to clipboard
-function copyEmail() {
-    navigator.clipboard.writeText('info@aliff.app').then(function() {
-        var toast = document.getElementById('copyToast');
-        toast.classList.add('show');
-        setTimeout(function() {
-            toast.classList.remove('show');
-        }, 1500);
-    });
-}
-
-</script>
 
 <!-- Structured Data: SoftwareApplication -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "ALIFF",
-    "applicationCategory": "LifestyleApplication",
-    "description": "AI-powered modest fashion styling assistant for Muslim women. Upload your wardrobe, set modesty preferences, get weekly outfit plans.",
-    "url": "https://aliff.app",
-    "operatingSystem": "Web",
-    "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/PreOrder"
-    }
-}
 
-function closePopup() {
-    document.getElementById('confirmPopup').classList.remove('show');
-}
-
-document.getElementById('confirmPopup').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closePopup();
-    }
-});
-
-// Copy email to clipboard
-function copyEmail() {
-    navigator.clipboard.writeText('info@aliff.app').then(function() {
-        var toast = document.getElementById('copyToast');
-        toast.classList.add('show');
-        setTimeout(function() {
-            toast.classList.remove('show');
-        }, 1500);
-    });
-}
-
-
-// Copy email to clipboard
-function copyEmail() {
-    navigator.clipboard.writeText('info@aliff.app').then(function() {
-        var toast = document.getElementById('copyToast');
-        toast.classList.add('show');
-        setTimeout(function() {
-            toast.classList.remove('show');
-        }, 1500);
-    });
-}
-
-</script>
 
 <!-- Structured Data: FAQPage -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "What is ALIFF?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ALIFF is an AI-powered styling assistant built for Muslim women. It turns your existing wardrobe into weekly outfit plans with modesty as a first-class design principle."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is ALIFF free?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ALIFF is currently in beta. Join the waitlist for free early access. Limited spots available."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is my data private on ALIFF?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. ALIFF is privacy-first. Your photos are never sold, shared, or used for marketing. You can delete your data at any time."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Do I need to upload face photos?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. ALIFF does not require face photos. We encourage you to keep your identity private."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Who is ALIFF for?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ALIFF is designed for Muslim women who dress modestly, whether hijabi, non-hijabi modest, or exploring modest fashion. It serves students, professionals, and anyone who wants to feel put-together in their modesty."
-            }
-        }
-    ]
-}
 
-function closePopup() {
-    document.getElementById('confirmPopup').classList.remove('show');
-}
-
-document.getElementById('confirmPopup').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closePopup();
-    }
-});
-
-// Copy email to clipboard
-function copyEmail() {
-    navigator.clipboard.writeText('info@aliff.app').then(function() {
-        var toast = document.getElementById('copyToast');
-        toast.classList.add('show');
-        setTimeout(function() {
-            toast.classList.remove('show');
-        }, 1500);
-    });
-}
-
-
-// Copy email to clipboard
-function copyEmail() {
-    navigator.clipboard.writeText('info@aliff.app').then(function() {
-        var toast = document.getElementById('copyToast');
-        toast.classList.add('show');
-        setTimeout(function() {
-            toast.classList.remove('show');
-        }, 1500);
-    });
-}
-
-</script>
 
 <!-- Page Scripts -->
+
+
+
+<!-- Confirmation Popup -->
+<div class="popup-overlay" id="confirmPopup">
+    <div class="popup-card">
+        
+        <div class="popup-title">You're In!</div>
+        <p class="popup-text">Welcome to the ALIFF community. We'll be in touch with early access details soon.</p>
+        <button class="popup-close" onclick="closePopup()">Got it</button>
+    </div>
+</div>
+
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"ALIFF","url":"https://aliff.app","logo":"https://aliff.app/images/black-logo.png","description":"AI-powered styling assistant built for Muslim women.","sameAs":["https://www.instagram.com/aliff.app","https://www.linkedin.com/in/khansakhatoon/"],"contactPoint":{"@type":"ContactPoint","email":"info@aliff.app","contactType":"customer service"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ALIFF","applicationCategory":"LifestyleApplication","description":"AI-powered modest fashion styling assistant for Muslim women.","url":"https://aliff.app","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/PreOrder"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is ALIFF?","acceptedAnswer":{"@type":"Answer","text":"ALIFF is an AI-powered styling assistant for Muslim women that turns your wardrobe into weekly outfit plans."}},{"@type":"Question","name":"Is ALIFF free?","acceptedAnswer":{"@type":"Answer","text":"ALIFF is in beta. Join the waitlist for free early access."}},{"@type":"Question","name":"Is my data private?","acceptedAnswer":{"@type":"Answer","text":"Yes. Your photos are never sold, shared, or used for marketing. Delete anytime."}},{"@type":"Question","name":"Do I need face photos?","acceptedAnswer":{"@type":"Answer","text":"No. ALIFF does not require face photos."}},{"@type":"Question","name":"Who is ALIFF for?","acceptedAnswer":{"@type":"Answer","text":"Muslim women who dress modestly — hijabi, non-hijabi, or exploring modest fashion."}}]}
+</script>
+
 <script>
-// Fade in on scroll
+// Fade in
 var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
     });
 }, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
 
-document.querySelectorAll('.fade-in').forEach(function(el) {
-    observer.observe(el);
-});
-
-// Form submit to Google Forms
-var waitlistForm = document.getElementById('waitlistForm');
-if (waitlistForm) {
-    waitlistForm.addEventListener('submit', function(e) {
+// Form submit
+var form = document.getElementById('waitlistForm');
+if (form) {
+    form.addEventListener('submit', function(e) {
         var btn = this.querySelector('.submit-btn');
-        var form = this;
+        var f = this;
         setTimeout(function() {
-            btn.textContent = "You're In! \u2726";
+            btn.textContent = "You're In!";
             btn.style.background = 'var(--gold-70)';
             btn.disabled = true;
-            form.querySelectorAll('input, textarea').forEach(function(el) {
+            f.querySelectorAll('input, textarea').forEach(function(el) {
                 el.disabled = true;
                 el.style.opacity = '0.5';
             });
-            document.getElementById('confirmPopup').classList.add('show');
-        
-            document.getElementById('confirmPopup').classList.add('show');
+            var popup = document.getElementById('confirmPopup');
+            if (popup) popup.classList.add('show');
         }, 500);
     });
 }
 
-// Sticky header
-window.addEventListener('scroll', function() {
-    var header = document.getElementById('header');
-    if (header) {
-        header.classList.toggle('scrolled', window.scrollY > 50);
-    }
-});
-
-// Hamburger menu toggle
+// Hamburger
 function toggleMenu() {
     document.getElementById('hamburger').classList.toggle('active');
     document.getElementById('navMenu').classList.toggle('open');
     document.getElementById('navOverlay').classList.toggle('open');
 }
-
-// Close menu when clicking nav links
 document.querySelectorAll('.nav-menu a').forEach(function(link) {
     link.addEventListener('click', function() {
         document.getElementById('hamburger').classList.remove('active');
@@ -1876,8 +1609,6 @@ document.querySelectorAll('.nav-menu a').forEach(function(link) {
         document.getElementById('navOverlay').classList.remove('open');
     });
 });
-
-// Close menu on Escape key
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         document.getElementById('hamburger').classList.remove('active');
@@ -1886,51 +1617,27 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+// Popup close
 function closePopup() {
-    document.getElementById('confirmPopup').classList.remove('show');
+    var popup = document.getElementById('confirmPopup');
+    if (popup) popup.classList.remove('show');
+}
+var popup = document.getElementById('confirmPopup');
+if (popup) {
+    popup.addEventListener('click', function(e) {
+        if (e.target === this) closePopup();
+    });
 }
 
-document.getElementById('confirmPopup').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closePopup();
-    }
-});
-
-// Copy email to clipboard
+// Copy email
 function copyEmail() {
     navigator.clipboard.writeText('info@aliff.app').then(function() {
         var toast = document.getElementById('copyToast');
         toast.classList.add('show');
-        setTimeout(function() {
-            toast.classList.remove('show');
-        }, 1500);
+        setTimeout(function() { toast.classList.remove('show'); }, 1500);
     });
 }
-
-
-// Copy email to clipboard
-function copyEmail() {
-    navigator.clipboard.writeText('info@aliff.app').then(function() {
-        var toast = document.getElementById('copyToast');
-        toast.classList.add('show');
-        setTimeout(function() {
-            toast.classList.remove('show');
-        }, 1500);
-    });
-}
-
 </script>
-
-
-<!-- Confirmation Popup -->
-<div class="popup-overlay" id="confirmPopup">
-    <div class="popup-card">
-        <div class="popup-sparkle">✦</div>
-        <div class="popup-title">You're In!</div>
-        <p class="popup-text">Welcome to the ALIFF community. We'll be in touch with early access details soon.</p>
-        <button class="popup-close" onclick="closePopup()">Got it</button>
-    </div>
-</div>
 
 </body>
 
