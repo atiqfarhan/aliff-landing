@@ -1198,14 +1198,28 @@ body {
         width: 100px !important;
     }
 
+    .phone-screen img {
+        width: 104% !important;
+        height: 103% !important;
+        object-fit: cover !important;
+        object-position: center top !important;
+        margin-left: -2% !important;
+        margin-top: 0% !important;
+    }
+
     /* Features */
     .features {
-        padding: 16px 20px 32px !important;
+        padding: 8px 12px 20px !important;
     }
 
     .features-grid {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+        padding: 0 4px !important;
+    }
+
+    .feature-img {
+        border-radius: 10px !important;
     }
 
     /* Social proof / badge */
