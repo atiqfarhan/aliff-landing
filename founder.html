@@ -31,31 +31,33 @@
 html { scroll-behavior: smooth; }
 body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-.header { padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--card-border); max-width: 900px; margin: 0 auto; }
-.header-logo img { height: 190px; width: auto; display: block; }
+.header { padding: 0 40px; height: 88px; display: flex; align-items: center; justify-content: space-between; max-width: 1120px; margin: 0 auto; }
+.header-logo img { height: 80px; width: auto; display: block; }
 .header-back { color: var(--off-white); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s ease; }
 .header-back:hover { color: var(--gold); }
 
 /* Founder Hero */
 .founder-hero {
-    max-width: 900px;
+    max-width: 1120px;
     margin: 0 auto;
-    padding: 60px 40px 40px;
+    padding: 40px 40px 8px;
     display: flex;
-    align-items: center;
-    gap: 48px;
+    align-items: flex-start;
+    gap: 60px;
 }
 
 .founder-image {
     flex-shrink: 0;
+    margin-left: auto;
 }
 
 .founder-image img {
-    width: 200px;
-    height: 200px;
+    width: 320px;
+    height: 400px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid rgba(188, 156, 34, 0.3);
+    object-position: center top;
+    display: block;
+    filter: grayscale(100%);
 }
 
 .founder-intro {
@@ -63,29 +65,31 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 }
 
 .founder-label {
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 600;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 4px;
+    margin-bottom: 20px;
 }
 
 .founder-name {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 4px;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 8px;
 }
 
 .founder-title {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 300;
     color: var(--off-white);
 }
 
 /* Story */
 .story {
-    max-width: 900px;
+    max-width: 1120px;
     margin: 0 auto;
     padding: 0 40px 40px;
 }
@@ -118,11 +122,9 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 
 /* Alif card */
 .alif-card {
-    background: var(--card);
-    border: 1px solid var(--card-border);
-    border-left: 3px solid var(--gold);
-    border-radius: 12px;
-    padding: 32px;
+    background: transparent;
+    border: none;
+    padding: 0;
     margin-bottom: 32px;
 }
 
@@ -143,24 +145,18 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 }
 
 /* Beliefs */
-.beliefs-card {
-    background: var(--dark);
-    border: 1px solid rgba(188, 156, 34, 0.3);
-    border-radius: 16px;
-    padding: 40px;
-    text-align: center;
+.beliefs-list {
     margin-bottom: 32px;
 }
 
 .belief-line {
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--white);
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--off-white);
     line-height: 1.8;
     margin-bottom: 4px;
+    padding-left: 0;
 }
-
-.belief-line .sparkle { color: var(--gold); }
 
 /* Back */
 .back-section { padding: 20px 40px 40px; text-align: center; }
@@ -215,24 +211,23 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 
 <header class="header">
     <a href="index.html" class="header-logo">
-        <img src="images/black-logo.png" alt="ALIFF | AI Stylist for Muslim Women">
+        <img src="https://aliff.app/images/black-logo.png" alt="ALIFF | AI Stylist for Muslim Women">
     </a>
     <a href="index.html" class="header-back">← Back to Home</a>
 </header>
 
 <section class="founder-hero fade-in">
-    <div class="founder-image">
-        <img src="images/founder.jpeg" alt="Khansa Khatoon, Founder of ALIFF">
-    </div>
     <div class="founder-intro">
-        <p class="founder-label">Founder</p>
+        <p class="founder-label" style="font-size:20px">Founder</p>
         <h1 class="founder-name">Khansa Khatoon</h1>
-        <p class="founder-title">Creative Strategist & Founder of ALIFF</p>
+        <p class="founder-title" style="font-size:20px">Creative Strategist & Founder of ALIFF</p>
+    </div>
+    <div class="founder-image">
+        <img src="uploads/FounderImage.jpeg" alt="Khansa Khatoon, Founder of ALIFF">
     </div>
 </section>
 
-<section class="story fade-in">
-    <p class="story-opening">A full wardrobe.<br><em>Nothing to wear.</em></p>
+<section class="story fade-in" style="padding:0px 40px">A full wardrobe. Nothing to wear.</p>
     <p>Every morning, I stood in front of a full wardrobe and still felt stuck. As a Muslim woman, getting dressed isn't just about style. It's about modesty, context, comfort, and identity, all at once.</p>
 
     <p>Every tool I found ignored that. Fashion apps pushed trends that didn't fit my values. AI styling tools treated modesty as an afterthought. So I stopped looking for a solution and built one.</p>
@@ -245,29 +240,17 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
     <p>I'm a creative strategist and food photographer. I understand behavior and the small decisions that shape how we show up each day. I built this from lived experience, not a whiteboard.</p>
 </section>
 
-<section class="story fade-in">
-    <div class="beliefs-card">
-        <p class="belief-line"><span class="sparkle">✦</span> You shouldn't have to choose between modesty and style.</p>
-        <p class="belief-line"><span class="sparkle">✦</span> You shouldn't have to overthink getting dressed.</p>
-        <p class="belief-line"><span class="sparkle">✦</span> You shouldn't feel unseen by the tools meant to help you.</p>
-    </div>
-</section>
-
-<section class="back-section fade-in">
-    <a href="index.html" class="back-link">← Back to Home</a>
-</section>
-
 <footer class="footer">
     <div class="footer-inner">
         <div class="footer-left">
             <span class="footer-talk">Let's Talk</span>
-            <span class="footer-email" id="footerEmail" onclick="copyEmail()">info@aliff.app
+            <span class="footer-email" onclick="copyEmail()">info&#64;aliff.app
                 <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             </span>
             <span class="copy-toast" id="copyToast">Copied!</span>
         </div>
         <div class="footer-right">
-            <span class="footer-copyright">Copyright © 2026 ALIFF</span>
+            <span class="footer-copyright">© 2026 ALIFF. All rights reserved.</span>
             <div class="footer-socials">
                 <a href="https://www.instagram.com/aliff.app?igsh=MWloNnJrZGVteXBiYg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
@@ -279,6 +262,83 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
         </div>
     </div>
 </footer>
+
+<!-- Tweaks Panel -->
+<div id="tweaks-panel" style="display:none; position:fixed; bottom:24px; right:24px; background:#161616; border:1px solid rgba(255,255,255,0.12); border-radius:4px; padding:24px; width:260px; z-index:9000; font-family:'Montserrat',sans-serif;">
+  <p style="font-size:10px; font-weight:600; letter-spacing:0.25em; text-transform:uppercase; color:#bc9c22; margin-bottom:20px;">Tweaks</p>
+
+  <label style="font-size:11px; color:#CCCCCC; letter-spacing:0.05em; display:block; margin-bottom:6px;">Spacing Density</label>
+  <input type="range" id="tw-spacing" min="1" max="3" step="1" value="2" style="width:100%; accent-color:#bc9c22; margin-bottom:4px;">
+  <div style="display:flex; justify-content:space-between; font-size:10px; color:rgba(255,255,255,0.3); margin-bottom:20px;">
+    <span>Compact</span><span>Default</span><span>Spacious</span>
+  </div>
+
+  <label style="font-size:11px; color:#CCCCCC; letter-spacing:0.05em; display:block; margin-bottom:6px;">Body Text Size</label>
+  <input type="range" id="tw-bodysize" min="14" max="20" step="1" value="17" style="width:100%; accent-color:#bc9c22; margin-bottom:4px;">
+  <div style="display:flex; justify-content:space-between; font-size:10px; color:rgba(255,255,255,0.3); margin-bottom:20px;">
+    <span>Small</span><span>Large</span>
+  </div>
+
+  <label style="font-size:11px; color:#CCCCCC; letter-spacing:0.05em; display:block; margin-bottom:6px;">Photo Width</label>
+  <input type="range" id="tw-imgwidth" min="200" max="480" step="10" value="320" style="width:100%; accent-color:#bc9c22; margin-bottom:4px;">
+  <div style="display:flex; justify-content:space-between; font-size:10px; color:rgba(255,255,255,0.3); margin-bottom:4px;">
+    <span>Narrow</span><span>Wide</span>
+  </div>
+</div>
+
+<script>
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "spacing": 2,
+  "bodySize": 17,
+  "imgWidth": 320
+}/*EDITMODE-END*/;
+
+const spacingMap = {
+  1: { heroPad: '20px 40px 4px', storyPad: '0 40px 20px' },
+  2: { heroPad: '40px 40px 8px', storyPad: '0 40px 40px' },
+  3: { heroPad: '60px 40px 24px', storyPad: '0 40px 60px' }
+};
+
+function applyTweaks(t) {
+  const s = spacingMap[t.spacing] || spacingMap[2];
+  document.querySelector('.founder-hero').style.padding = s.heroPad;
+  document.querySelectorAll('.story').forEach(function(el) { el.style.padding = s.storyPad; });
+  document.querySelectorAll('.story p, .alif-card p, .belief-line').forEach(function(el) { el.style.fontSize = t.bodySize + 'px'; });
+  var img = document.querySelector('.founder-image img');
+  if (img) { img.style.width = t.imgWidth + 'px'; }
+  if (document.getElementById('tw-spacing')) {
+    document.getElementById('tw-spacing').value = t.spacing;
+    document.getElementById('tw-bodysize').value = t.bodySize;
+    document.getElementById('tw-imgwidth').value = t.imgWidth;
+  }
+}
+
+document.getElementById('tw-spacing').addEventListener('input', function() {
+  TWEAK_DEFAULTS.spacing = +this.value;
+  applyTweaks(TWEAK_DEFAULTS);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits: TWEAK_DEFAULTS}, '*');
+});
+document.getElementById('tw-bodysize').addEventListener('input', function() {
+  TWEAK_DEFAULTS.bodySize = +this.value;
+  applyTweaks(TWEAK_DEFAULTS);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits: TWEAK_DEFAULTS}, '*');
+});
+document.getElementById('tw-imgwidth').addEventListener('input', function() {
+  TWEAK_DEFAULTS.imgWidth = +this.value;
+  applyTweaks(TWEAK_DEFAULTS);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits: TWEAK_DEFAULTS}, '*');
+});
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.type === '__activate_edit_mode') {
+    document.getElementById('tweaks-panel').style.display = 'block';
+  } else if (e.data && e.data.type === '__deactivate_edit_mode') {
+    document.getElementById('tweaks-panel').style.display = 'none';
+  }
+});
+window.parent.postMessage({type:'__edit_mode_available'}, '*');
+applyTweaks(TWEAK_DEFAULTS);
+</script>
 
 <script>
 var observer = new IntersectionObserver(function(entries) {

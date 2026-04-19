@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy | ALIFF — AI Stylist for Muslim Women</title>
 <meta name="description" content="ALIFF treats your data as an amanah. Privacy-first, always. Your photos are never sold, shared, or used for marketing.">
-<meta name="keywords" content="ALIFF privacy policy, modest fashion app privacy, muslim women data privacy">
 <link rel="canonical" href="https://aliff.app/privacy.html">
 <meta property="og:title" content="Privacy Policy | ALIFF">
 <meta property="og:description" content="Your data is an amanah. ALIFF is privacy-first. Read our full privacy policy.">
@@ -14,125 +13,664 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
 :root {
-    --black: #0A0A0A; --dark: #111111; --card: #161616;
-    --card-border: rgba(255,255,255,0.08); --white: #FFFFFF;
-    --off-white: #CCCCCC; --gold: #bc9c22;
-    --font: 'Montserrat', -apple-system, sans-serif;
+  --black:       #0A0A0A;
+  --dark:        #111111;
+  --card:        #161616;
+  --card-border: rgba(255,255,255,0.08);
+  --white:       #FFFFFF;
+  --off-white:   #CCCCCC;
+  --gold:        #bc9c22;
+  --gold-dim:    rgba(188,156,34,0.18);
+  --gold-50:     rgba(188,156,34,0.5);
+  --gold-70:     rgba(188,156,34,0.7);
+  --font:        'Montserrat', -apple-system, sans-serif;
+
+  /* tweakable spacing tokens */
+  --hero-pad-v:   56px;
+  --section-pad-v: 56px;
+  --row-pad-v:    24px;
+  --body-size:    14px;
 }
+
 html { scroll-behavior: smooth; }
-body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.5; -webkit-font-smoothing: antialiased; }
 
-.header { padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--card-border); max-width: 900px; margin: 0 auto; }
-.header-logo img { height: 60px; width: auto; }
-.header-back { color: var(--off-white); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.3s ease; }
-.header-back:hover { color: var(--gold); }
+body {
+  font-family: var(--font);
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
 
-.privacy { max-width: 900px; margin: 0 auto; padding: 32px 40px 20px; }
-.privacy-title { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 6px; }
-.privacy-title em { font-style: italic; color: var(--gold); }
-.privacy-lead { font-size: 14px; font-weight: 300; color: var(--off-white); text-align: center; margin-bottom: 20px; }
+/* ─── HEADER ─── */
+.header {
+  padding: 0 40px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1120px;
+  margin: 0 auto;
+}
 
-.beliefs-row { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
-.belief-pill { background: var(--card); border: 1px solid var(--card-border); border-radius: 20px; padding: 6px 14px; font-size: 12px; font-weight: 400; color: var(--off-white); }
-.belief-pill .s { color: var(--gold); margin-right: 4px; }
+.header-logo img { height: 80px; width: auto; display: block; }
 
-.policy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px; }
-.policy-item { background: var(--card); border: 1px solid var(--card-border); border-top: 2px solid var(--gold); border-radius: 8px; padding: 14px 16px; }
-.policy-item h3 { font-size: 13px; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
-.policy-item h3 .icon { color: var(--gold); font-size: 14px; }
-.policy-item p { font-size: 12px; font-weight: 300; color: var(--off-white); line-height: 1.5; margin-bottom: 2px; }
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block; width: 26px; height: 1.5px;
+  background: var(--white); transition: all 0.3s ease;
+}
+.hamburger:hover span { background: var(--gold); }
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
 
-.summary-box { background: var(--dark); border: 1px solid rgba(188,156,34,0.3); border-radius: 12px; padding: 20px; text-align: center; margin-bottom: 20px; }
-.summary-box h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-.summary-box p { font-size: 14px; font-weight: 300; color: var(--gold); }
-.summary-box .em { font-size: 13px; color: var(--off-white); font-style: italic; margin-top: 4px; }
+.nav-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.65);
+  opacity: 0; visibility: hidden;
+  transition: all 0.35s ease; z-index: 999;
+}
+.nav-overlay.open { opacity: 1; visibility: visible; }
 
-.back-section { text-align: center; padding: 12px 0 20px; }
-.back-link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 32px; background: rgba(188,156,34,0.5); color: var(--black); font-weight: 600; font-size: 14px; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; }
-.back-link:hover { background: rgba(188,156,34,0.7); }
+.nav-menu {
+  position: fixed; top: 0; right: -320px; width: 320px; height: 100vh;
+  background: var(--dark); border-left: 1px solid var(--card-border);
+  padding: 88px 40px 40px; transition: right 0.35s ease; z-index: 1000;
+}
+.nav-menu.open { right: 0; }
+.nav-menu a {
+  display: flex; align-items: center; justify-content: space-between;
+  color: var(--white); text-decoration: none;
+  font-size: 16px; font-weight: 400; letter-spacing: 0.03em;
+  padding: 18px 0; border-bottom: 1px solid var(--card-border);
+  transition: color 0.3s ease;
+}
+.nav-menu a:hover { color: var(--gold); }
+.nav-arrow { font-size: 14px; color: rgba(255,255,255,0.3); transition: color 0.3s ease; }
+.nav-menu a:hover .nav-arrow { color: var(--gold); }
 
-.footer { padding: 16px 40px; text-align: center; border-top: 1px solid var(--card-border); }
-.footer p { font-size: 12px; color: rgba(255,255,255,0.4); }
+/* thin gold rule under header */
+.header-rule {
+  width: 100%;
+  height: 1px;
+  background: var(--card-border);
+}
 
+/* ─── HERO ─── */
+.hero {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 40px 16px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-size: clamp(44px, 6.5vw, 80px);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  margin-bottom: 28px;
+  text-wrap: balance;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+  font-weight: 300;
+}
+
+.hero-lead {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--off-white);
+  max-width: 540px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  border: 1px solid var(--card-border);
+  border-radius: 2px;
+  padding: 6px 16px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ─── DIVIDER ─── */
+.gold-rule {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.gold-rule hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold) 0%, rgba(188,156,34,0.08) 100%);
+}
+
+/* ─── COMMITMENTS ─── */
+.commitments {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px 40px 80px;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.section-count {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.2);
+}
+
+.commitment-item {
+  display: grid;
+  grid-template-columns: 56px 1fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+  padding: 20px 0;
+}
+.commitment-item:last-child { }
+.commitment-item:hover { }
+
+.c-num {
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.18);
+  letter-spacing: 0.1em;
+  padding-top: 3px;
+  font-style: italic;
+}
+
+.c-title {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.c-body {
+  font-size: var(--body-size);
+  font-weight: 300;
+  color: var(--off-white);
+  line-height: 1.8;
+}
+
+/* ─── STATEMENT ─── */
+.statement {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 40px 40px;
+}
+
+.statement-inner {
+  background: transparent;
+  border: none;
+  padding: 15px 64px;
+}
+
+.statement-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.statement-quote {
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  max-width: 680px;
+  text-wrap: balance;
+}
+
+.statement-quote em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  padding: 32px 40px;
+  border-top: 1px solid var(--card-border);
+}
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.footer-sep {
+  width: 1px;
+  height: 14px;
+  background: var(--card-border);
+}
+
+.footer-talk {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+
+.footer-email {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--off-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.footer-email:hover { color: var(--gold); }
+
+.copy-icon { opacity: 0.4; transition: opacity 0.3s ease; }
+.footer-email:hover .copy-icon { opacity: 1; stroke: var(--gold); }
+
+.copy-toast {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--black);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.copy-toast.show { opacity: 1; }
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.02em;
+}
+
+.footer-socials { display: flex; gap: 14px; }
+.footer-socials a { color: rgba(255,255,255,0.3); transition: color 0.3s ease; }
+.footer-socials a:hover { color: var(--gold); }
+
+/* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
-    .privacy { padding: 20px 16px 12px; }
-    .privacy-title { font-size: 22px; }
-    .policy-grid { grid-template-columns: 1fr; }
-    .header { padding: 12px 16px; }
-    .header-logo img { height: 40px; }
+  .header { padding: 0 20px; height: 72px; }
+  .header-logo img { height: 56px; }
+
+  .hero { padding: calc(var(--hero-pad-v) * 0.6) 20px; }
+  .hero h1 { font-size: 36px; }
+  .hero-lead { font-size: 15px; }
+
+  .gold-rule { padding: 0 20px; }
+
+  .commitments { padding: calc(var(--section-pad-v) * 0.6) 20px; }
+
+  .commitment-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 28px 0;
+  }
+  .c-num { display: none; }
+
+  .statement { padding: 0 20px calc(var(--section-pad-v) * 0.6); }
+  .statement-inner { padding: 36px 28px; }
+  .statement-quote { font-size: 18px; }
+
+  .footer { padding: 28px 20px; }
+  .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+  .footer-left { flex-direction: column; gap: 6px; }
+  .footer-sep { display: none; }
+  .footer-right { flex-direction: column; gap: 14px; }
 }
 </style>
+<template id="__bundler_thumbnail" data-bg-color="#0A0A0A">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0A0A0A"/>
+    <rect x="80" y="80" width="160" height="8" rx="4" fill="#bc9c22" opacity="0.6"/>
+    <rect x="80" y="120" width="520" height="48" rx="4" fill="#FFFFFF" opacity="0.9"/>
+    <rect x="80" y="184" width="380" height="16" rx="4" fill="#CCCCCC" opacity="0.4"/>
+    <rect x="80" y="210" width="320" height="16" rx="4" fill="#CCCCCC" opacity="0.3"/>
+    <rect x="80" y="280" width="1040" height="1" fill="rgba(188,156,34,0.4)"/>
+    <rect x="80" y="320" width="40" height="10" rx="2" fill="#FFFFFF" opacity="0.2"/>
+    <rect x="160" y="316" width="200" height="18" rx="3" fill="#FFFFFF" opacity="0.7"/>
+    <rect x="600" y="316" width="440" height="12" rx="3" fill="#CCCCCC" opacity="0.3"/>
+    <rect x="600" y="336" width="380" height="12" rx="3" fill="#CCCCCC" opacity="0.2"/>
+    <rect x="80" y="360" width="1040" height="1" fill="rgba(255,255,255,0.06)"/>
+    <rect x="80" y="400" width="40" height="10" rx="2" fill="#FFFFFF" opacity="0.2"/>
+    <rect x="160" y="396" width="180" height="18" rx="3" fill="#FFFFFF" opacity="0.7"/>
+    <rect x="600" y="396" width="400" height="12" rx="3" fill="#CCCCCC" opacity="0.3"/>
+    <rect x="600" y="416" width="340" height="12" rx="3" fill="#CCCCCC" opacity="0.2"/>
+    <rect x="80" y="440" width="1040" height="1" fill="rgba(255,255,255,0.06)"/>
+    <rect x="80" y="480" width="40" height="10" rx="2" fill="#FFFFFF" opacity="0.2"/>
+    <rect x="160" y="476" width="220" height="18" rx="3" fill="#FFFFFF" opacity="0.7"/>
+    <rect x="600" y="476" width="420" height="12" rx="3" fill="#CCCCCC" opacity="0.3"/>
+    <rect x="600" y="496" width="360" height="12" rx="3" fill="#CCCCCC" opacity="0.2"/>
+    <rect x="80" y="600" width="1040" height="80" rx="4" fill="#111111" stroke="rgba(188,156,34,0.3)" stroke-width="1"/>
+    <rect x="112" y="624" width="80" height="10" rx="2" fill="#bc9c22" opacity="0.6"/>
+    <rect x="112" y="644" width="500" height="14" rx="2" fill="#FFFFFF" opacity="0.5"/>
+  </svg>
+</template>
 </head>
 <body>
 
+<div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
+<nav class="nav-menu" id="navMenu">
+  <a href="index.html">Home <span class="nav-arrow">→</span></a>
+  <a href="founder.html">Our Founder <span class="nav-arrow">→</span></a>
+  <a href="privacy.html">Privacy Policy <span class="nav-arrow">→</span></a>
+  <a href="index.html#waitlist">Join the Waitlist <span class="nav-arrow">→</span></a>
+</nav>
+
 <header class="header">
-    <a href="index.html" class="header-logo"><img src="images/black-logo.png" alt="ALIFF"></a>
-    <a href="index.html" class="header-back">← Back</a>
+  <a href="index.html" class="header-logo">
+    <img src="https://aliff.app/images/black-logo.png" alt="ALIFF">
+  </a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
 </header>
+<div class="header-rule"></div>
 
-<section class="privacy">
-    <h1 class="privacy-title">Privacy is an <em>Amanah</em></h1>
-    <p class="privacy-lead">Your data is an amanah. We treat it with responsibility, restraint, and respect.</p>
-
-    <div class="beliefs-row">
-        <span class="belief-pill"><span class="s">✦</span>Your photos belong to you</span>
-        <span class="belief-pill"><span class="s">✦</span>Your closet is private</span>
-        <span class="belief-pill"><span class="s">✦</span>Consent is required</span>
-        <span class="belief-pill"><span class="s">✦</span>Data is not for sale</span>
-    </div>
-
-    <div class="policy-grid">
-        <div class="policy-item">
-            <h3><span class="icon">✦</span> Your Photos, Your Control</h3>
-            <p>You own everything you upload. Used only for outfit recommendations. We take no rights over your content.</p>
-        </div>
-        <div class="policy-item">
-            <h3><span class="icon">✦</span> No Face Photos</h3>
-            <p>ALIFF does not require your face. We encourage you to keep your identity private.</p>
-        </div>
-        <div class="policy-item">
-            <h3><span class="icon">✦</span> No Selling. Ever.</h3>
-            <p>We do not sell, rent, or trade your photos or data. Your wardrobe is not a product.</p>
-        </div>
-        <div class="policy-item">
-            <h3><span class="icon">✦</span> Consent First</h3>
-            <p>We only use your data with clear permission. No hidden usage. No assumptions.</p>
-        </div>
-        <div class="policy-item">
-            <h3><span class="icon">✦</span> No Marketing Use</h3>
-            <p>We do not use your photos for ads or social media. Nothing is posted publicly by us.</p>
-        </div>
-        <div class="policy-item">
-            <h3><span class="icon">✦</span> Your Closet Stays Private</h3>
-            <p>We do not share, publish, or display your wardrobe. Visible only to you.</p>
-        </div>
-        <div class="policy-item">
-            <h3><span class="icon">✦</span> Delete Anytime</h3>
-            <p>Delete your photos or entire data at any time. Once deleted, permanently removed.</p>
-        </div>
-        <div class="policy-item">
-            <h3><span class="icon">✦</span> Minimal Data Only</h3>
-            <p>We collect only what is needed to make ALIFF work. Nothing extra.</p>
-        </div>
-    </div>
-
-    <div class="summary-box">
-        <h3>In Simple Terms</h3>
-        <p>Your photos are an amanah. You own them. You control them. We protect them.</p>
-    </div>
+<!-- Hero -->
+<section class="hero" style="padding:40px 40px 1px">
+  <p class="eyebrow" style="font-size:20px">Privacy Policy</p>
+  <h1 style="font-size:50px;font-weight:600">Your Data is an <em style="font-weight:600">Amanah</em></h1>
+  <p class="hero-lead" style="display:none"></p>
 </section>
 
-<div class="back-section">
-    <a href="index.html" class="back-link">← Back to Home</a>
-</div>
+<!-- Commitments -->
+<section class="commitments" style="padding:8px 40px 10px">
+  <div class="section-header" style="display:none">
+    <span class="section-title">Our Commitments</span>
+    <span class="section-count"></span>
+  </div>
 
+  <div class="commitment-item">
+    <span class="c-num">01</span>
+    <h3 class="c-title">Your Photos, Your Control</h3>
+    <p class="c-body">Everything you upload belongs to you. Photos are used only to generate outfit recommendations and nothing else.</p>
+  </div>
+
+  <div class="commitment-item">
+    <span class="c-num">02</span>
+    <h3 class="c-title">No Face Photos Required</h3>
+    <p class="c-body">ALIFF does not ask for your face. We actively encourage you to keep your identity private when uploading wardrobe items.</p>
+  </div>
+
+  <div class="commitment-item">
+    <span class="c-num">03</span>
+    <h3 class="c-title">No Selling. Ever.</h3>
+    <p class="c-body">We do not sell, rent, or trade your photos or personal data. Your wardrobe is not a product, it belongs to you alone.</p>
+  </div>
+
+  <div class="commitment-item">
+    <span class="c-num">04</span>
+    <h3 class="c-title">Consent First</h3>
+    <p class="c-body">We only use your data with your clear, explicit permission. No hidden usage. No assumptions. No dark patterns.</p>
+  </div>
+
+  <div class="commitment-item">
+    <span class="c-num">05</span>
+    <h3 class="c-title">No Marketing Use</h3>
+    <p class="c-body">Your photos will never appear in our ads, social media, or any public-facing material. We do not use your wardrobe to market anything.</p>
+  </div>
+
+  <div class="commitment-item">
+    <span class="c-num">06</span>
+    <h3 class="c-title">Your Closet Stays Private</h3>
+    <p class="c-body">Your wardrobe is visible only to you. We do not share, display, or publish your clothing, with anyone, for any reason.</p>
+  </div>
+
+  <div class="commitment-item">
+    <span class="c-num">07</span>
+    <h3 class="c-title">Delete Anytime</h3>
+    <p class="c-body">You can delete individual photos or your entire account at any time. Once deleted, data is permanently and irreversibly removed.</p>
+  </div>
+
+  <div class="commitment-item">
+    <span class="c-num">08</span>
+    <h3 class="c-title">Minimal Data Only</h3>
+    <p class="c-body">We collect only what is strictly necessary to make ALIFF work. Nothing extra is gathered, stored, or retained beyond that purpose.</p>
+  </div>
+
+</section>
+
+<!-- Statement -->
+<section class="statement" style="padding:0px 40px">
+  <div class="statement-inner" style="padding:0px 64px 0px 0px">
+    <p class="statement-label" style="font-size:20px">
+</p>
+    <p class="statement-quote" style="width:700px;font-size:24px"></p>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer class="footer">
-    <p>Copyright © 2026 ALIFF. All Rights Reserved.</p>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-talk">Let's Talk</span>
+      <div class="footer-sep"></div>
+      <span class="footer-email" onclick="copyEmail()">
+        <span id="footer-email-text">info&#64;aliff.app</span>
+        <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2"/>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+      </span>
+      <span class="copy-toast" id="copyToast">Copied</span>
+    </div>
+    <div class="footer-right">
+      <span class="footer-copyright">© 2026 ALIFF. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/aliff.app?igsh=MWloNnJrZGVteXBiYg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/khansakhatoon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
 </footer>
 
+<!-- Tweaks Panel -->
+<div id="tweaks-panel" style="display:none; position:fixed; bottom:24px; right:24px; background:#161616; border:1px solid rgba(255,255,255,0.12); border-radius:4px; padding:24px; width:260px; z-index:9000; font-family:'Montserrat',sans-serif;">
+  <p style="font-size:10px; font-weight:600; letter-spacing:0.25em; text-transform:uppercase; color:#bc9c22; margin-bottom:20px;">Tweaks</p>
+
+  <label style="font-size:11px; color:#CCCCCC; letter-spacing:0.05em; display:block; margin-bottom:6px;">Spacing Density</label>
+  <input type="range" id="tw-spacing" min="1" max="3" step="1" value="2" style="width:100%; accent-color:#bc9c22; margin-bottom:4px;">
+  <div style="display:flex; justify-content:space-between; font-size:10px; color:rgba(255,255,255,0.3); margin-bottom:20px;">
+    <span>Compact</span><span>Default</span><span>Spacious</span>
+  </div>
+
+  <label style="font-size:11px; color:#CCCCCC; letter-spacing:0.05em; display:block; margin-bottom:6px;">Body Text Size</label>
+  <input type="range" id="tw-bodysize" min="12" max="16" step="1" value="14" style="width:100%; accent-color:#bc9c22; margin-bottom:4px;">
+  <div style="display:flex; justify-content:space-between; font-size:10px; color:rgba(255,255,255,0.3); margin-bottom:20px;">
+    <span>Small</span><span>Large</span>
+  </div>
+
+  <label style="font-size:11px; color:#CCCCCC; letter-spacing:0.05em; display:block; margin-bottom:6px;">Gold Accent</label>
+  <input type="color" id="tw-gold" value="#bc9c22" style="width:100%; height:32px; border:1px solid rgba(255,255,255,0.1); border-radius:2px; background:none; cursor:pointer; margin-bottom:20px;">
+
+  <label style="font-size:11px; color:#CCCCCC; letter-spacing:0.05em; display:block; margin-bottom:8px;">Layout</label>
+  <div style="display:flex; gap:8px; margin-bottom:4px;">
+    <button id="tw-layout-3col" onclick="setLayout('3col')" style="flex:1; padding:7px; font-size:10px; font-family:inherit; letter-spacing:0.05em; border:1px solid rgba(188,156,34,0.6); background:rgba(188,156,34,0.12); color:#bc9c22; cursor:pointer; border-radius:2px;">3-Column</button>
+    <button id="tw-layout-2col" onclick="setLayout('2col')" style="flex:1; padding:7px; font-size:10px; font-family:inherit; letter-spacing:0.05em; border:1px solid rgba(255,255,255,0.1); background:none; color:#CCCCCC; cursor:pointer; border-radius:2px;">Title / Body</button>
+  </div>
+</div>
+
+<script>
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "spacing": 2,
+  "bodySize": 14,
+  "gold": "#bc9c22",
+  "layout": "3col"
+}/*EDITMODE-END*/;
+
+const spacingMap = { 1: {hero:32, section:32, row:14}, 2: {hero:56, section:56, row:24}, 3: {hero:88, section:80, row:36} };
+
+function applyTweaks(t) {
+  const s = spacingMap[t.spacing] || spacingMap[2];
+  const r = document.documentElement.style;
+  r.setProperty('--hero-pad-v', s.hero + 'px');
+  r.setProperty('--section-pad-v', s.section + 'px');
+  r.setProperty('--row-pad-v', s.row + 'px');
+  r.setProperty('--body-size', t.bodySize + 'px');
+  r.setProperty('--gold', t.gold);
+  // parse gold to rgba
+  const hex = t.gold.replace('#','');
+  const ri = parseInt(hex.slice(0,2),16), gi = parseInt(hex.slice(2,4),16), bi = parseInt(hex.slice(4,6),16);
+  r.setProperty('--gold-50', `rgba(${ri},${gi},${bi},0.5)`);
+  r.setProperty('--gold-70', `rgba(${ri},${gi},${bi},0.7)`);
+  setLayout(t.layout);
+  // sync controls
+  if(document.getElementById('tw-spacing')) {
+    document.getElementById('tw-spacing').value = t.spacing;
+    document.getElementById('tw-bodysize').value = t.bodySize;
+    document.getElementById('tw-gold').value = t.gold;
+  }
+}
+
+function setLayout(mode) {
+  TWEAK_DEFAULTS.layout = mode;
+  document.querySelectorAll('.commitment-item').forEach(function(el) {
+    if(mode === '2col') {
+      el.style.gridTemplateColumns = '1fr 1.4fr';
+      el.querySelectorAll('.c-num').forEach(function(n){ n.style.display='none'; });
+    } else {
+      el.style.gridTemplateColumns = '56px 1fr 1.2fr';
+      el.querySelectorAll('.c-num').forEach(function(n){ n.style.display=''; });
+    }
+  });
+  document.getElementById('tw-layout-3col').style.cssText += mode==='3col' ? ';border-color:rgba(188,156,34,0.6);background:rgba(188,156,34,0.12);color:var(--gold);' : ';border-color:rgba(255,255,255,0.1);background:none;color:#CCCCCC;';
+  document.getElementById('tw-layout-2col').style.cssText += mode==='2col' ? ';border-color:rgba(188,156,34,0.6);background:rgba(188,156,34,0.12);color:var(--gold);' : ';border-color:rgba(255,255,255,0.1);background:none;color:#CCCCCC;';
+}
+
+document.getElementById('tw-spacing').addEventListener('input', function() {
+  TWEAK_DEFAULTS.spacing = +this.value;
+  applyTweaks(TWEAK_DEFAULTS);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits: TWEAK_DEFAULTS}, '*');
+});
+document.getElementById('tw-bodysize').addEventListener('input', function() {
+  TWEAK_DEFAULTS.bodySize = +this.value;
+  applyTweaks(TWEAK_DEFAULTS);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits: TWEAK_DEFAULTS}, '*');
+});
+document.getElementById('tw-gold').addEventListener('input', function() {
+  TWEAK_DEFAULTS.gold = this.value;
+  applyTweaks(TWEAK_DEFAULTS);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits: TWEAK_DEFAULTS}, '*');
+});
+
+window.addEventListener('message', function(e) {
+  if(e.data && e.data.type === '__activate_edit_mode') {
+    document.getElementById('tweaks-panel').style.display = 'block';
+  } else if(e.data && e.data.type === '__deactivate_edit_mode') {
+    document.getElementById('tweaks-panel').style.display = 'none';
+  }
+});
+window.parent.postMessage({type:'__edit_mode_available'}, '*');
+
+applyTweaks(TWEAK_DEFAULTS);
+
+function toggleMenu() {
+  document.getElementById('hamburger').classList.toggle('active');
+  document.getElementById('navMenu').classList.toggle('open');
+  document.getElementById('navOverlay').classList.toggle('open');
+}
+document.querySelectorAll('.nav-menu a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.getElementById('hamburger').classList.remove('active');
+    document.getElementById('navMenu').classList.remove('open');
+    document.getElementById('navOverlay').classList.remove('open');
+  });
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('hamburger').classList.remove('active');
+    document.getElementById('navMenu').classList.remove('open');
+    document.getElementById('navOverlay').classList.remove('open');
+  }
+});
+function copyEmail() {
+  navigator.clipboard.writeText('info@aliff.app').then(function() {
+    var t = document.getElementById('copyToast');
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 1500);
+  });
+}
+</script>
 </body>
 </html>
