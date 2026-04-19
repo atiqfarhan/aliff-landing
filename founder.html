@@ -25,32 +25,22 @@
     --black: #0A0A0A; --dark: #111111; --card: #161616;
     --card-border: rgba(255,255,255,0.08); --white: #FFFFFF;
     --off-white: #CCCCCC; --gold: #bc9c22;
-    --gold-50: rgba(188, 156, 34, 0.5); --gold-70: rgba(188, 156, 34, 0.7);
+    --gold-50: rgba(188,156,34,0.5); --gold-70: rgba(188,156,34,0.7);
     --font: 'Montserrat', -apple-system, sans-serif;
 }
 html { scroll-behavior: smooth; }
 body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-/* Header — same as index.html */
-.header {
-    padding: 12px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1080px;
-    margin: 0 auto;
-}
+.header { padding: 12px 0; display: flex; align-items: center; justify-content: space-between; max-width: 1080px; margin: 0 auto; }
 .header-logo img { height: 190px; width: auto; display: block; }
 
-/* Hamburger — same as index.html */
 .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 1001; position: relative; }
 .hamburger span { display: block; width: 28px; height: 2px; background: var(--white); transition: all 0.3s ease; }
 .hamburger:hover span { background: var(--gold); }
 .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
-.nav-menu { position: fixed; top: 0; right: -300px; width: 300px; height: 100vh; background: rgba(17,17,17,0.98); border-left: 1px solid var(--card-border); padding: 100px 40px 40px; transition: right 0.3s ease; z-index: 1000; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+.nav-menu { position: fixed; top: 0; right: -300px; width: 300px; height: 100vh; background: rgba(17,17,17,0.98); border-left: 1px solid var(--card-border); padding: 100px 40px 40px; transition: right 0.3s ease; z-index: 1000; backdrop-filter: blur(20px); }
 .nav-menu.open { right: 0; }
 .nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; }
 .nav-overlay.open { opacity: 1; visibility: visible; }
@@ -61,53 +51,35 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 .nav-menu .nav-label { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); padding-bottom: 16px; border-bottom: none; cursor: default; }
 .nav-menu .nav-label:hover { color: var(--gold); padding-left: 0; }
 
-/* Founder name section */
-.founder-header {
-    max-width: 900px;
+/* Founder hero — name on left, image on right (desktop) */
+.founder-hero {
+    max-width: 1120px;
     margin: 0 auto;
-    padding: 48px 40px 16px;
-    text-align: center;
+    padding: 40px 40px 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
 }
-.founder-label { font-size: 13px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
-.founder-name { font-size: 36px; font-weight: 700; margin-bottom: 4px; }
-.founder-title { font-size: 15px; font-weight: 300; color: var(--off-white); margin-bottom: 0; }
-
-/* Founder image — AFTER name, centered */
-.founder-image-section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 32px 40px;
-    text-align: center;
-}
-.founder-image-section img {
-    width: 220px;
-    height: 220px;
+.founder-left { flex: 1; min-width: 0; }
+.founder-image { flex-shrink: 0; }
+.founder-image img {
+    width: 320px;
+    height: 400px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid rgba(188,156,34,0.3);
+    object-position: center top;
+    display: block;
+    filter: grayscale(100%);
 }
+.founder-label { font-size: 10px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.founder-name { font-size: 50px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 8px; }
+.founder-title { font-size: 16px; font-weight: 300; color: var(--off-white); }
+.founder-story { font-size: 15px; font-weight: 300; color: var(--off-white); line-height: 1.8; margin-top: 24px; }
+.founder-story p { margin-bottom: 20px; }
+.founder-story p:last-child { margin-bottom: 0; }
+.founder-story .story-opening { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 12px; font-style: normal; }
+.founder-story strong { color: var(--white); font-weight: 600; }
 
-/* Story */
-.story { max-width: 900px; margin: 0 auto; padding: 0 40px 32px; }
-.story-opening { font-size: 28px; font-weight: 700; line-height: 1.2; margin-bottom: 4px; color: var(--white); }
-.story-opening em { color: var(--gold); font-style: italic; }
-.story p { font-size: 17px; font-weight: 300; color: var(--off-white); line-height: 1.8; margin-bottom: 24px; }
-.story p strong { color: var(--white); font-weight: 600; }
-
-.alif-card { background: var(--card); border: 1px solid var(--card-border); border-left: 3px solid var(--gold); border-radius: 12px; padding: 32px; margin-bottom: 32px; }
-.alif-card p { font-size: 17px; font-weight: 300; color: var(--off-white); line-height: 1.8; margin-bottom: 12px; }
-.alif-card p:last-child { margin-bottom: 0; }
-.alif-card .first-line { font-size: 18px; font-weight: 600; color: var(--white); }
-
-.beliefs-card { background: var(--dark); border: 1px solid rgba(188,156,34,0.3); border-radius: 16px; padding: 40px; text-align: center; margin-bottom: 32px; }
-.belief-line { font-size: 18px; font-weight: 400; color: var(--white); line-height: 1.8; margin-bottom: 4px; }
-.belief-line .sparkle { color: var(--gold); }
-
-.back-section { padding: 20px 40px 40px; text-align: center; }
-.back-link { display: inline-flex; align-items: center; gap: 8px; padding: 14px 48px; background: var(--gold-50); color: var(--black); font-weight: 600; font-size: 16px; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; }
-.back-link:hover { background: var(--gold-70); transform: translateY(-2px); }
-
-/* Footer — same as index.html */
+/* Footer */
 .footer { padding: 32px 40px; border-top: 1px solid var(--card-border); }
 .footer-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
 .footer-left { display: flex; align-items: center; gap: 8px; position: relative; }
@@ -127,129 +99,52 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-
-
-
+/* Mobile — founder stacks vertically: name THEN image below */
 @media (max-width: 768px) {
-    .header {
-        padding: 16px 20px !important;
-    }
-
-    .header-logo img {
-        height: 100px !important;
-    }
-
+    .header { padding: 12px 20px !important; }
+    .header-logo img { height: 100px !important; }
     .founder-hero {
         flex-direction: column !important;
-        text-align: center !important;
-        padding: 32px 20px 24px !important;
-        gap: 20px !important;
+        padding: 24px 20px 8px !important;
+        gap: 24px !important;
     }
-
+    .founder-left { order: 1 !important; }
+    .founder-image { order: 2 !important; width: 100% !important; text-align: center !important; }
     .founder-image img {
-        width: 140px !important;
-        height: 140px !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        height: auto !important;
+        aspect-ratio: 4/5;
+        margin: 0 auto !important;
     }
-
-    .founder-name {
-        font-size: 24px !important;
-    }
-
-    .founder-title {
-        font-size: 14px !important;
-    }
-
-    .story {
-        padding: 0 20px 24px !important;
-    }
-
-    .story-opening {
-        font-size: 22px !important;
-    }
-
-    .story p {
-        font-size: 15px !important;
-        margin-bottom: 18px !important;
-    }
-
-    .alif-card {
-        padding: 20px !important;
-    }
-
-    .alif-card p {
-        font-size: 15px !important;
-    }
-
-    .beliefs-card {
-        padding: 28px 20px !important;
-    }
-
-    .belief-line {
-        font-size: 15px !important;
-    }
-
-    .back-section {
-        padding: 16px 20px 24px !important;
-    }
-
-    .back-link {
-        padding: 12px 36px !important;
-        font-size: 14px !important;
-    }
-
-    .footer {
-        padding: 24px 20px !important;
-    }
-
-    .footer-inner {
-        flex-direction: column !important;
-        gap: 16px !important;
-        text-align: center !important;
-    }
-
-    .footer-left {
-        flex-direction: column !important;
-        gap: 4px !important;
-    }
-
-    .footer-right {
-        flex-direction: column !important;
-        gap: 12px !important;
-    }
+    .founder-name { font-size: 32px !important; }
+    .founder-title { font-size: 14px !important; }
+    .founder-story { font-size: 14px !important; margin-top: 16px !important; }
+    .founder-story p { margin-bottom: 14px !important; }
+    .footer { padding: 24px 20px !important; }
+    .footer-inner { flex-direction: column !important; gap: 16px !important; text-align: center !important; }
+    .footer-left { flex-direction: column !important; gap: 4px !important; }
+    .footer-right { flex-direction: column !important; gap: 12px !important; }
+    .nav-menu { width: 260px !important; }
 }
-
 @media (max-width: 380px) {
-    .founder-name {
-        font-size: 20px !important;
-    }
-
-    .founder-image img {
-        width: 120px !important;
-        height: 120px !important;
-    }
-
-    .header-logo img {
-        height: 80px !important;
-    }
+    .header-logo img { height: 80px !important; }
+    .founder-name { font-size: 26px !important; }
+    .founder-image img { max-width: 220px !important; }
 }
-
 </style>
 </head>
 <body>
 
-<!-- Header — same as index.html -->
 <header class="header">
     <a href="index.html" class="header-logo">
         <img src="images/black-logo.png" alt="ALIFF | AI Stylist for Muslim Women">
     </a>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
     </div>
 </header>
 
-<!-- Navigation — same as index.html -->
 <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
 <nav class="nav-menu" id="navMenu">
     <span class="nav-label nav-menu a">ALIFF</span>
@@ -259,54 +154,35 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
     <a href="index.html#waitlist">Join the Waitlist <span class="nav-arrow">→</span></a>
 </nav>
 
-<!-- Founder Name + Designation FIRST -->
-<section class="founder-header fade-in">
-    <p class="founder-label">Founder</p>
-    <h1 class="founder-name">Khansa Khatoon</h1>
-    <p class="founder-title">Creative Strategist & Founder of ALIFF</p>
-</section>
-
-<!-- Founder Image AFTER name -->
-<section class="founder-image-section fade-in">
-    <img src="images/founder.jpeg" alt="Khansa Khatoon, Founder of ALIFF">
-</section>
-
-<!-- Story -->
-<section class="story fade-in">
-    <p class="story-opening">A full wardrobe.<br><em>Nothing to wear.</em></p>
-    <p>Every morning, I stood in front of a full wardrobe and still felt stuck. As a Muslim woman, getting dressed isn't just about style. It's about modesty, context, comfort, and identity, all at once.</p>
-    <p>Every tool I found ignored that. Fashion apps pushed trends that didn't fit my values. AI styling tools treated modesty as an afterthought. So I stopped looking for a solution and built one.</p>
-    <div class="alif-card">
-        <p class="first-line">Aliff is the first letter of the Arabic alphabet. The beginning.</p>
-        <p>A tool that treats modesty as a first principle, turning your own wardrobe into thoughtful, wearable outfits without asking you to compromise who you are.</p>
+<section class="founder-hero fade-in">
+    <div class="founder-left">
+        <p class="founder-label">Founder</p>
+        <h1 class="founder-name">Khansa Khatoon</h1>
+        <p class="founder-title">Creative Strategist & Founder of ALIFF</p>
+        <div class="founder-story" style="margin:30px 0px 5px">
+            <p class="story-opening">A full wardrobe. Nothing to wear.</p>
+            <p>Every morning, I stood in front of a full wardrobe and still felt stuck. As a Muslim woman, getting dressed isn't just about style. It's about modesty, context, comfort, and identity, all at once.</p>
+            <p>Every tool I found ignored that. Fashion apps pushed trends that didn't fit my values. AI styling tools treated modesty as an afterthought. So I stopped looking for a solution and built one.</p>
+            <p><strong>Aliff is the first letter of the Arabic alphabet. The beginning.</strong> A tool that treats modesty as a first principle, turning your own wardrobe into thoughtful, wearable outfits without asking you to compromise who you are.</p>
+            <p>I'm a creative strategist and food photographer. I understand behavior and the small decisions that shape how we show up each day. I built this from lived experience, not a whiteboard.</p>
+        </div>
     </div>
-    <p>I'm a creative strategist and food photographer. I understand behavior and the small decisions that shape how we show up each day. I built this from lived experience, not a whiteboard.</p>
-</section>
-
-<section class="story fade-in">
-    <div class="beliefs-card">
-        <p class="belief-line"><span class="sparkle">✦</span> You shouldn't have to choose between modesty and style.</p>
-        <p class="belief-line"><span class="sparkle">✦</span> You shouldn't have to overthink getting dressed.</p>
-        <p class="belief-line"><span class="sparkle">✦</span> You shouldn't feel unseen by the tools meant to help you.</p>
+    <div class="founder-image">
+        <img src="images/FounderImage.jpeg" alt="Khansa Khatoon, Founder of ALIFF">
     </div>
 </section>
 
-<section class="back-section fade-in">
-    <a href="index.html" class="back-link">← Back to Home</a>
-</section>
-
-<!-- Footer — same as index.html -->
 <footer class="footer">
     <div class="footer-inner">
         <div class="footer-left">
             <span class="footer-talk">Let's Talk</span>
-            <span class="footer-email" id="footerEmail" onclick="copyEmail()">info@aliff.app
+            <span class="footer-email" onclick="copyEmail()">info@aliff.app
                 <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             </span>
             <span class="copy-toast" id="copyToast">Copied!</span>
         </div>
         <div class="footer-right">
-            <span class="footer-copyright">Copyright © 2026 ALIFF</span>
+            <span class="footer-copyright">© 2026 ALIFF. All rights reserved.</span>
             <div class="footer-socials">
                 <a href="https://www.instagram.com/aliff.app?igsh=MWloNnJrZGVteXBiYg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
@@ -321,7 +197,7 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 
 <script>
 var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+    entries.forEach(function(entry) { if (entry.isIntersecting) entry.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
 
@@ -352,6 +228,5 @@ function copyEmail() {
     });
 }
 </script>
-
 </body>
 </html>
