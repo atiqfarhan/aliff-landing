@@ -31,177 +31,85 @@
 html { scroll-behavior: smooth; }
 body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-.header { padding: 0 40px; height: 88px; display: flex; align-items: center; justify-content: space-between; max-width: 1120px; margin: 0 auto; }
-.header-logo img { height: 80px; width: auto; display: block; }
-.header-back { color: var(--off-white); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s ease; }
-.header-back:hover { color: var(--gold); }
-
-/* Founder Hero */
-.founder-hero {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 40px 40px 8px;
+/* Header — same as index.html */
+.header {
+    padding: 12px 0;
     display: flex;
-    align-items: flex-start;
-    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1080px;
+    margin: 0 auto;
 }
+.header-logo img { height: 190px; width: auto; display: block; }
 
-.founder-left {
-    flex: 1;
-    min-width: 0;
+/* Hamburger — same as index.html */
+.hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 1001; position: relative; }
+.hamburger span { display: block; width: 28px; height: 2px; background: var(--white); transition: all 0.3s ease; }
+.hamburger:hover span { background: var(--gold); }
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+.nav-menu { position: fixed; top: 0; right: -300px; width: 300px; height: 100vh; background: rgba(17,17,17,0.98); border-left: 1px solid var(--card-border); padding: 100px 40px 40px; transition: right 0.3s ease; z-index: 1000; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+.nav-menu.open { right: 0; }
+.nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; }
+.nav-overlay.open { opacity: 1; visibility: visible; }
+.nav-menu a { display: block; color: var(--white); text-decoration: none; font-size: 18px; font-weight: 500; padding: 20px 0; border-bottom: 1px solid var(--card-border); transition: color 0.3s ease, padding-left 0.3s ease; }
+.nav-menu a:hover { color: var(--gold); padding-left: 8px; }
+.nav-menu a .nav-arrow { float: right; color: var(--off-white); }
+.nav-menu a:hover .nav-arrow { color: var(--gold); }
+.nav-menu .nav-label { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); padding-bottom: 16px; border-bottom: none; cursor: default; }
+.nav-menu .nav-label:hover { color: var(--gold); padding-left: 0; }
+
+/* Founder name section */
+.founder-header {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 40px 16px;
+    text-align: center;
 }
+.founder-label { font-size: 13px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.founder-name { font-size: 36px; font-weight: 700; margin-bottom: 4px; }
+.founder-title { font-size: 15px; font-weight: 300; color: var(--off-white); margin-bottom: 0; }
 
-.founder-image {
-    flex-shrink: 0;
-    margin-left: auto;
+/* Founder image — AFTER name, centered */
+.founder-image-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 40px;
+    text-align: center;
 }
-
-.founder-image img {
-    width: 320px;
-    height: 400px;
+.founder-image-section img {
+    width: 220px;
+    height: 220px;
     object-fit: cover;
-    object-position: center top;
-    display: block;
-    filter: grayscale(100%);
-}
-
-.founder-intro {
-    flex: 1;
-}
-
-.founder-label {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 20px;
-}
-
-.founder-name {
-    font-size: 50px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.05;
-    margin-bottom: 8px;
-}
-
-.founder-title {
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--off-white);
+    border-radius: 50%;
+    border: 2px solid rgba(188,156,34,0.3);
 }
 
 /* Story */
-.story {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 40px 40px;
-    display: none;
-}
+.story { max-width: 900px; margin: 0 auto; padding: 0 40px 32px; }
+.story-opening { font-size: 28px; font-weight: 700; line-height: 1.2; margin-bottom: 4px; color: var(--white); }
+.story-opening em { color: var(--gold); font-style: italic; }
+.story p { font-size: 17px; font-weight: 300; color: var(--off-white); line-height: 1.8; margin-bottom: 24px; }
+.story p strong { color: var(--white); font-weight: 600; }
 
-.story-opening {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 4px;
-    color: var(--white);
-}
-
-.story-opening em {
-    color: var(--gold);
-    font-style: italic;
-}
-
-.story p {
-    font-size: 17px;
-    font-weight: 300;
-    color: var(--off-white);
-    line-height: 1.8;
-    margin-bottom: 24px;
-}
-
-.story p strong {
-    color: var(--white);
-    font-weight: 600;
-}
-
-.founder-story {
-    font-size: 15px;
-    font-weight: 300;
-    color: var(--off-white);
-    line-height: 1.8;
-    margin-top: 24px;
-}
-
-.founder-story p {
-    margin-bottom: 20px;
-}
-
-.founder-story p:last-child { margin-bottom: 0; }
-
-.founder-story .story-opening {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--white);
-    line-height: 1.2;
-    margin-bottom: 16px;
-}
-
-.founder-story strong {
-    color: var(--white);
-    font-weight: 300;
-}
-.alif-card {
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin-bottom: 32px;
-}
-
-.alif-card p {
-    font-size: 17px;
-    font-weight: 300;
-    color: var(--off-white);
-    line-height: 1.8;
-    margin-bottom: 12px;
-}
-
+.alif-card { background: var(--card); border: 1px solid var(--card-border); border-left: 3px solid var(--gold); border-radius: 12px; padding: 32px; margin-bottom: 32px; }
+.alif-card p { font-size: 17px; font-weight: 300; color: var(--off-white); line-height: 1.8; margin-bottom: 12px; }
 .alif-card p:last-child { margin-bottom: 0; }
+.alif-card .first-line { font-size: 18px; font-weight: 600; color: var(--white); }
 
-.alif-card .first-line {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--white);
-}
+.beliefs-card { background: var(--dark); border: 1px solid rgba(188,156,34,0.3); border-radius: 16px; padding: 40px; text-align: center; margin-bottom: 32px; }
+.belief-line { font-size: 18px; font-weight: 400; color: var(--white); line-height: 1.8; margin-bottom: 4px; }
+.belief-line .sparkle { color: var(--gold); }
 
-/* Beliefs */
-.beliefs-list {
-    margin-bottom: 32px;
-}
-
-.belief-line {
-    font-size: 17px;
-    font-weight: 300;
-    color: var(--off-white);
-    line-height: 1.8;
-    margin-bottom: 4px;
-    padding-left: 0;
-}
-
-/* Back */
 .back-section { padding: 20px 40px 40px; text-align: center; }
-.back-link {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 14px 48px; background: var(--gold-50); color: var(--black);
-    font-weight: 600; font-size: 16px; border-radius: 50px;
-    text-decoration: none; transition: all 0.3s ease;
-}
+.back-link { display: inline-flex; align-items: center; gap: 8px; padding: 14px 48px; background: var(--gold-50); color: var(--black); font-weight: 600; font-size: 16px; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; }
 .back-link:hover { background: var(--gold-70); transform: translateY(-2px); }
 
-/* Footer */
+/* Footer — same as index.html */
 .footer { padding: 32px 40px; border-top: 1px solid var(--card-border); }
-.footer-inner { max-width: 1120px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.footer-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
 .footer-left { display: flex; align-items: center; gap: 8px; position: relative; }
 .footer-talk { font-size: 14px; font-weight: 500; color: var(--white); }
 .footer-email { font-size: 14px; font-weight: 300; color: var(--off-white); cursor: pointer; display: flex; align-items: center; gap: 6px; transition: color 0.3s ease; }
@@ -219,166 +127,108 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-
-
 @media (max-width: 768px) {
-    .header {
-        padding: 16px 20px !important;
-    }
-
-    .header-logo img {
-        height: 100px !important;
-    }
-
-    .founder-hero {
-        flex-direction: column !important;
-        text-align: center !important;
-        padding: 32px 20px 24px !important;
-        gap: 20px !important;
-    }
-
-    .founder-image img {
-        width: 140px !important;
-        height: 140px !important;
-    }
-
-    .founder-name {
-        font-size: 24px !important;
-    }
-
-    .founder-title {
-        font-size: 14px !important;
-    }
-
-    .story {
-        padding: 0 20px 24px !important;
-    }
-
-    .story-opening {
-        font-size: 22px !important;
-    }
-
-    .story p {
-        font-size: 15px !important;
-        margin-bottom: 18px !important;
-    }
-
-    .alif-card {
-        padding: 20px !important;
-    }
-
-    .alif-card p {
-        font-size: 15px !important;
-    }
-
-    .beliefs-card {
-        padding: 28px 20px !important;
-    }
-
-    .belief-line {
-        font-size: 15px !important;
-    }
-
-    .back-section {
-        padding: 16px 20px 24px !important;
-    }
-
-    .back-link {
-        padding: 12px 36px !important;
-        font-size: 14px !important;
-    }
-
-    .footer {
-        padding: 24px 20px !important;
-    }
-
-    .footer-inner {
-        flex-direction: column !important;
-        gap: 16px !important;
-        text-align: center !important;
-    }
-
-    .footer-left {
-        flex-direction: column !important;
-        gap: 4px !important;
-    }
-
-    .footer-right {
-        flex-direction: column !important;
-        gap: 12px !important;
-    }
+    .header { padding: 12px 20px !important; }
+    .header-logo img { height: 100px !important; }
+    .founder-header { padding: 32px 20px 12px !important; }
+    .founder-name { font-size: 26px !important; }
+    .founder-title { font-size: 13px !important; }
+    .founder-image-section { padding: 20px 20px !important; }
+    .founder-image-section img { width: 160px !important; height: 160px !important; }
+    .story { padding: 0 20px 24px !important; }
+    .story-opening { font-size: 22px !important; }
+    .story p { font-size: 15px !important; margin-bottom: 18px !important; }
+    .alif-card { padding: 20px !important; }
+    .alif-card p { font-size: 15px !important; }
+    .beliefs-card { padding: 28px 20px !important; }
+    .belief-line { font-size: 15px !important; }
+    .back-section { padding: 16px 20px 24px !important; }
+    .back-link { padding: 12px 36px !important; font-size: 14px !important; }
+    .footer { padding: 24px 20px !important; }
+    .footer-inner { flex-direction: column !important; gap: 16px !important; text-align: center !important; }
+    .footer-left { flex-direction: column !important; gap: 4px !important; }
+    .footer-right { flex-direction: column !important; gap: 12px !important; }
+    .nav-menu { width: 260px !important; }
 }
-
 @media (max-width: 380px) {
-    .founder-name {
-        font-size: 20px !important;
-    }
-
-    .founder-image img {
-        width: 120px !important;
-        height: 120px !important;
-    }
-
-    .header-logo img {
-        height: 80px !important;
-    }
+    .header-logo img { height: 80px !important; }
+    .founder-name { font-size: 22px !important; }
+    .founder-image-section img { width: 130px !important; height: 130px !important; }
 }
-
 </style>
 </head>
 <body>
 
+<!-- Header — same as index.html -->
 <header class="header">
     <a href="index.html" class="header-logo">
-        <img src="https://aliff.app/images/black-logo.png" alt="ALIFF | AI Stylist for Muslim Women">
+        <img src="images/black-logo.png" alt="ALIFF | AI Stylist for Muslim Women">
     </a>
-    <a href="index.html" class="header-back">← Back to Home</a>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </header>
 
-<section class="founder-hero fade-in">
-    <div class="founder-left">
-        <div class="founder-intro">
-            <p class="founder-label" style="font-size:20px">Founder</p>
-            <h1 class="founder-name">Khansa Khatoon</h1>
-            <p class="founder-title" style="font-size:20px">Creative Strategist & Founder of ALIFF</p>
-        </div>
-        <div class="founder-story" style="margin:30px 0px 5px">
-            <p class="story-opening">A full wardrobe. Nothing to wear.</p>
-            <p>Every morning, I stood in front of a full wardrobe and still felt stuck. As a Muslim woman, getting dressed isn't just about style. It's about modesty, context, comfort, and identity, all at once.</p>
-            <p>Every tool I found ignored that. Fashion apps pushed trends that didn't fit my values. AI styling tools treated modesty as an afterthought. So I stopped looking for a solution and built one.</p>
-            <p><strong>Aliff is the first letter of the Arabic alphabet. The beginning.</strong> A tool that treats modesty as a first principle, turning your own wardrobe into thoughtful, wearable outfits without asking you to compromise who you are.</p>
-            <p>I'm a creative strategist and food photographer. I understand behavior and the small decisions that shape how we show up each day. I built this from lived experience, not a whiteboard.</p>
-        </div>
-    </div>
-    <div class="founder-image">
-        <img src="https://aliff.app/images/FounderImage.jpeg" alt="Khansa Khatoon, Founder of ALIFF">
-    </div>
+<!-- Navigation — same as index.html -->
+<div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
+<nav class="nav-menu" id="navMenu">
+    <span class="nav-label nav-menu a">ALIFF</span>
+    <a href="index.html">Home <span class="nav-arrow">→</span></a>
+    <a href="founder.html">Our Founder <span class="nav-arrow">→</span></a>
+    <a href="privacy.html">Privacy Policy <span class="nav-arrow">→</span></a>
+    <a href="index.html#waitlist">Join the Waitlist <span class="nav-arrow">→</span></a>
+</nav>
+
+<!-- Founder Name + Designation FIRST -->
+<section class="founder-header fade-in">
+    <p class="founder-label">Founder</p>
+    <h1 class="founder-name">Khansa Khatoon</h1>
+    <p class="founder-title">Creative Strategist & Founder of ALIFF</p>
 </section>
 
-<section class="story fade-in" style="padding:0px 40px">A full wardrobe. Nothing to wear.</p>
+<!-- Founder Image AFTER name -->
+<section class="founder-image-section fade-in">
+    <img src="images/founder.jpeg" alt="Khansa Khatoon, Founder of ALIFF">
+</section>
+
+<!-- Story -->
+<section class="story fade-in">
+    <p class="story-opening">A full wardrobe.<br><em>Nothing to wear.</em></p>
     <p>Every morning, I stood in front of a full wardrobe and still felt stuck. As a Muslim woman, getting dressed isn't just about style. It's about modesty, context, comfort, and identity, all at once.</p>
-
     <p>Every tool I found ignored that. Fashion apps pushed trends that didn't fit my values. AI styling tools treated modesty as an afterthought. So I stopped looking for a solution and built one.</p>
-
     <div class="alif-card">
         <p class="first-line">Aliff is the first letter of the Arabic alphabet. The beginning.</p>
         <p>A tool that treats modesty as a first principle, turning your own wardrobe into thoughtful, wearable outfits without asking you to compromise who you are.</p>
     </div>
-
     <p>I'm a creative strategist and food photographer. I understand behavior and the small decisions that shape how we show up each day. I built this from lived experience, not a whiteboard.</p>
 </section>
 
+<section class="story fade-in">
+    <div class="beliefs-card">
+        <p class="belief-line"><span class="sparkle">✦</span> You shouldn't have to choose between modesty and style.</p>
+        <p class="belief-line"><span class="sparkle">✦</span> You shouldn't have to overthink getting dressed.</p>
+        <p class="belief-line"><span class="sparkle">✦</span> You shouldn't feel unseen by the tools meant to help you.</p>
+    </div>
+</section>
+
+<section class="back-section fade-in">
+    <a href="index.html" class="back-link">← Back to Home</a>
+</section>
+
+<!-- Footer — same as index.html -->
 <footer class="footer">
     <div class="footer-inner">
         <div class="footer-left">
             <span class="footer-talk">Let's Talk</span>
-            <span class="footer-email" onclick="copyEmail()">info&#64;aliff.app
+            <span class="footer-email" id="footerEmail" onclick="copyEmail()">info@aliff.app
                 <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             </span>
             <span class="copy-toast" id="copyToast">Copied!</span>
         </div>
         <div class="footer-right">
-            <span class="footer-copyright">© 2026 ALIFF. All rights reserved.</span>
+            <span class="footer-copyright">Copyright © 2026 ALIFF</span>
             <div class="footer-socials">
                 <a href="https://www.instagram.com/aliff.app?igsh=MWloNnJrZGVteXBiYg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
@@ -391,91 +241,31 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
     </div>
 </footer>
 
-<!-- Tweaks Panel -->
-<div id="tweaks-panel" style="display:none; position:fixed; bottom:24px; right:24px; background:#161616; border:1px solid rgba(255,255,255,0.12); border-radius:4px; padding:24px; width:260px; z-index:9000; font-family:'Montserrat',sans-serif;">
-  <p style="font-size:10px; font-weight:600; letter-spacing:0.25em; text-transform:uppercase; color:#bc9c22; margin-bottom:20px;">Tweaks</p>
-
-  <label style="font-size:11px; color:#CCCCCC; letter-spacing:0.05em; display:block; margin-bottom:6px;">Spacing Density</label>
-  <input type="range" id="tw-spacing" min="1" max="3" step="1" value="2" style="width:100%; accent-color:#bc9c22; margin-bottom:4px;">
-  <div style="display:flex; justify-content:space-between; font-size:10px; color:rgba(255,255,255,0.3); margin-bottom:20px;">
-    <span>Compact</span><span>Default</span><span>Spacious</span>
-  </div>
-
-  <label style="font-size:11px; color:#CCCCCC; letter-spacing:0.05em; display:block; margin-bottom:6px;">Body Text Size</label>
-  <input type="range" id="tw-bodysize" min="14" max="20" step="1" value="17" style="width:100%; accent-color:#bc9c22; margin-bottom:4px;">
-  <div style="display:flex; justify-content:space-between; font-size:10px; color:rgba(255,255,255,0.3); margin-bottom:20px;">
-    <span>Small</span><span>Large</span>
-  </div>
-
-  <label style="font-size:11px; color:#CCCCCC; letter-spacing:0.05em; display:block; margin-bottom:6px;">Photo Width</label>
-  <input type="range" id="tw-imgwidth" min="200" max="480" step="10" value="320" style="width:100%; accent-color:#bc9c22; margin-bottom:4px;">
-  <div style="display:flex; justify-content:space-between; font-size:10px; color:rgba(255,255,255,0.3); margin-bottom:4px;">
-    <span>Narrow</span><span>Wide</span>
-  </div>
-</div>
-
-<script>
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "spacing": 2,
-  "bodySize": 17,
-  "imgWidth": 320
-}/*EDITMODE-END*/;
-
-const spacingMap = {
-  1: { heroPad: '20px 40px 4px', storyPad: '0 40px 20px' },
-  2: { heroPad: '40px 40px 8px', storyPad: '0 40px 40px' },
-  3: { heroPad: '60px 40px 24px', storyPad: '0 40px 60px' }
-};
-
-function applyTweaks(t) {
-  const s = spacingMap[t.spacing] || spacingMap[2];
-  document.querySelector('.founder-hero').style.padding = s.heroPad;
-  document.querySelectorAll('.story').forEach(function(el) { el.style.padding = s.storyPad; });
-  document.querySelectorAll('.story p, .alif-card p, .belief-line').forEach(function(el) { el.style.fontSize = t.bodySize + 'px'; });
-  var img = document.querySelector('.founder-image img');
-  if (img) { img.style.width = t.imgWidth + 'px'; }
-  if (document.getElementById('tw-spacing')) {
-    document.getElementById('tw-spacing').value = t.spacing;
-    document.getElementById('tw-bodysize').value = t.bodySize;
-    document.getElementById('tw-imgwidth').value = t.imgWidth;
-  }
-}
-
-document.getElementById('tw-spacing').addEventListener('input', function() {
-  TWEAK_DEFAULTS.spacing = +this.value;
-  applyTweaks(TWEAK_DEFAULTS);
-  window.parent.postMessage({type:'__edit_mode_set_keys', edits: TWEAK_DEFAULTS}, '*');
-});
-document.getElementById('tw-bodysize').addEventListener('input', function() {
-  TWEAK_DEFAULTS.bodySize = +this.value;
-  applyTweaks(TWEAK_DEFAULTS);
-  window.parent.postMessage({type:'__edit_mode_set_keys', edits: TWEAK_DEFAULTS}, '*');
-});
-document.getElementById('tw-imgwidth').addEventListener('input', function() {
-  TWEAK_DEFAULTS.imgWidth = +this.value;
-  applyTweaks(TWEAK_DEFAULTS);
-  window.parent.postMessage({type:'__edit_mode_set_keys', edits: TWEAK_DEFAULTS}, '*');
-});
-
-window.addEventListener('message', function(e) {
-  if (e.data && e.data.type === '__activate_edit_mode') {
-    document.getElementById('tweaks-panel').style.display = 'block';
-  } else if (e.data && e.data.type === '__deactivate_edit_mode') {
-    document.getElementById('tweaks-panel').style.display = 'none';
-  }
-});
-window.parent.postMessage({type:'__edit_mode_available'}, '*');
-applyTweaks(TWEAK_DEFAULTS);
-</script>
-
 <script>
 var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
-    });
+    entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
 
+function toggleMenu() {
+    document.getElementById('hamburger').classList.toggle('active');
+    document.getElementById('navMenu').classList.toggle('open');
+    document.getElementById('navOverlay').classList.toggle('open');
+}
+document.querySelectorAll('.nav-menu a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        document.getElementById('hamburger').classList.remove('active');
+        document.getElementById('navMenu').classList.remove('open');
+        document.getElementById('navOverlay').classList.remove('open');
+    });
+});
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.getElementById('hamburger').classList.remove('active');
+        document.getElementById('navMenu').classList.remove('open');
+        document.getElementById('navOverlay').classList.remove('open');
+    }
+});
 function copyEmail() {
     navigator.clipboard.writeText('info@aliff.app').then(function() {
         var toast = document.getElementById('copyToast');
