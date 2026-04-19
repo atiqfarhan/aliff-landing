@@ -127,34 +127,112 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+
+
+
 @media (max-width: 768px) {
-    .header { padding: 12px 20px !important; }
-    .header-logo img { height: 100px !important; }
-    .founder-header { padding: 32px 20px 12px !important; }
-    .founder-name { font-size: 26px !important; }
-    .founder-title { font-size: 13px !important; }
-    .founder-image-section { padding: 20px 20px !important; }
-    .founder-image-section img { width: 160px !important; height: 160px !important; }
-    .story { padding: 0 20px 24px !important; }
-    .story-opening { font-size: 22px !important; }
-    .story p { font-size: 15px !important; margin-bottom: 18px !important; }
-    .alif-card { padding: 20px !important; }
-    .alif-card p { font-size: 15px !important; }
-    .beliefs-card { padding: 28px 20px !important; }
-    .belief-line { font-size: 15px !important; }
-    .back-section { padding: 16px 20px 24px !important; }
-    .back-link { padding: 12px 36px !important; font-size: 14px !important; }
-    .footer { padding: 24px 20px !important; }
-    .footer-inner { flex-direction: column !important; gap: 16px !important; text-align: center !important; }
-    .footer-left { flex-direction: column !important; gap: 4px !important; }
-    .footer-right { flex-direction: column !important; gap: 12px !important; }
-    .nav-menu { width: 260px !important; }
+    .header {
+        padding: 16px 20px !important;
+    }
+
+    .header-logo img {
+        height: 100px !important;
+    }
+
+    .founder-hero {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 32px 20px 24px !important;
+        gap: 20px !important;
+    }
+
+    .founder-image img {
+        width: 140px !important;
+        height: 140px !important;
+    }
+
+    .founder-name {
+        font-size: 24px !important;
+    }
+
+    .founder-title {
+        font-size: 14px !important;
+    }
+
+    .story {
+        padding: 0 20px 24px !important;
+    }
+
+    .story-opening {
+        font-size: 22px !important;
+    }
+
+    .story p {
+        font-size: 15px !important;
+        margin-bottom: 18px !important;
+    }
+
+    .alif-card {
+        padding: 20px !important;
+    }
+
+    .alif-card p {
+        font-size: 15px !important;
+    }
+
+    .beliefs-card {
+        padding: 28px 20px !important;
+    }
+
+    .belief-line {
+        font-size: 15px !important;
+    }
+
+    .back-section {
+        padding: 16px 20px 24px !important;
+    }
+
+    .back-link {
+        padding: 12px 36px !important;
+        font-size: 14px !important;
+    }
+
+    .footer {
+        padding: 24px 20px !important;
+    }
+
+    .footer-inner {
+        flex-direction: column !important;
+        gap: 16px !important;
+        text-align: center !important;
+    }
+
+    .footer-left {
+        flex-direction: column !important;
+        gap: 4px !important;
+    }
+
+    .footer-right {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
 }
+
 @media (max-width: 380px) {
-    .header-logo img { height: 80px !important; }
-    .founder-name { font-size: 22px !important; }
-    .founder-image-section img { width: 130px !important; height: 130px !important; }
+    .founder-name {
+        font-size: 20px !important;
+    }
+
+    .founder-image img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .header-logo img {
+        height: 80px !important;
+    }
 }
+
 </style>
 </head>
 <body>
