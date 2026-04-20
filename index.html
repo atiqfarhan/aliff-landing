@@ -1174,45 +1174,58 @@ body {
     display: none;
 }
 
-/* === MOBILE: Features horizontal scroll carousel === */
+
+/* === MOBILE: Phone image — show top of app === */
+@media (max-width: 768px) {
+    .phone-screen img {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 0% !important;
+        margin: 0 !important;
+        transform: translateY(-5%) !important;
+    }
+}
+
+
+/* === MOBILE: Scroll-linked carousel === */
 @media (max-width: 768px) {
     .features {
-        padding: 8px 0 20px !important;
+        padding: 0 !important;
+        position: sticky !important;
+        top: 0 !important;
+        height: 100vh !important;
+        display: flex !important;
+        align-items: center !important;
         overflow: hidden !important;
     }
 
     .features-grid {
         display: flex !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory !important;
-        -webkit-overflow-scrolling: touch !important;
         gap: 12px !important;
-        padding: 0 20px 12px !important;
-        scrollbar-width: none !important;
-    }
-
-    .features-grid::-webkit-scrollbar {
-        display: none !important;
+        padding: 0 20px !important;
+        transition: transform 0.1s linear !important;
+        will-change: transform !important;
     }
 
     .feature-img {
-        flex: 0 0 85% !important;
-        scroll-snap-align: center !important;
+        flex: 0 0 80vw !important;
+        width: 80vw !important;
         border-radius: 12px !important;
-        width: 85% !important;
         max-width: none !important;
+    }
+
+    /* Spacer to allow scroll room */
+    .features-scroll-spacer {
+        display: block !important;
+        height: 200vh !important;
     }
 }
 
-/* === MOBILE: Phone mockup image positioning === */
-@media (max-width: 768px) {
-    .phone-screen img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        object-position: center top !important;
-        margin: 0 !important;
-    }
+/* Desktop: hide spacer */
+.features-scroll-spacer {
+    display: none;
 }
 
 </style>
@@ -1488,6 +1501,72 @@ function copyEmail() {
         setTimeout(function() { toast.classList.remove('show'); }, 1500);
     });
 }
+
+
+// Scroll-linked carousel (mobile only)
+(function() {
+    if (window.innerWidth > 768) return;
+
+    var features = document.querySelector('.features');
+    var grid = document.querySelector('.features-grid');
+    var spacer = document.querySelector('.features-scroll-spacer');
+    if (!features || !grid || !spacer) return;
+
+    var images = grid.querySelectorAll('.feature-img');
+    if (images.length === 0) return;
+
+    // Calculate total scroll distance needed
+    var totalScrollWidth = (images.length - 1) * (window.innerWidth * 0.8 + 12); // 80vw + gap
+
+    // Set spacer height to match needed scroll distance
+    spacer.style.height = totalScrollWidth + 'px';
+
+    var ticking = false;
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                var featuresRect = features.getBoundingClientRect();
+                var spacerRect = spacer.getBoundingClientRect();
+
+                // When features section is at top of viewport
+                if (featuresRect.top <= 0 && spacerRect.bottom > window.innerHeight) {
+                    // Calculate progress (0 to 1)
+                    var scrolled = -featuresRect.top;
+                    var maxScroll = spacer.offsetHeight - window.innerHeight;
+                    var progress = Math.min(Math.max(scrolled / maxScroll, 0), 1);
+
+                    // Move carousel
+                    var translateX = progress * totalScrollWidth;
+                    grid.style.transform = 'translateX(-' + translateX + 'px)';
+
+                    // Keep features sticky
+                    features.style.position = 'sticky';
+                    features.style.top = '0';
+                } else {
+                    // Reset when not in view
+                    if (featuresRect.top > 0) {
+                        grid.style.transform = 'translateX(0)';
+                    }
+                }
+
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    // Also handle resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            grid.style.transform = '';
+            spacer.style.height = '0';
+            features.style.position = '';
+            features.style.top = '';
+        }
+    });
+})();
+
 </script>
 
 </body>
