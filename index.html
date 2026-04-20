@@ -1046,11 +1046,13 @@ body {
     }
 
     .phone-screen img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center 35%;
-        display: block;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 0% !important;
+        margin: 0 !important;
+        transform: translateY(-5%) !important;
     }
 
     /* Features */
