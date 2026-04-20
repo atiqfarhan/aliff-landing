@@ -1174,20 +1174,10 @@ body {
     display: none;
 }
 
-
 /* === MOBILE: Phone image — show top of app === */
 @media (max-width: 768px) {
-    .phone-screen img {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 100% !important;
-        object-fit: cover !important;
-        object-position: center 0% !important;
-        margin: 0 !important;
-        transform: translateY(-5%) !important;
-    }
+    
 }
-
 
 /* === MOBILE: Scroll-linked carousel === */
 @media (max-width: 768px) {
@@ -1226,6 +1216,47 @@ body {
 /* Desktop: hide spacer */
 .features-scroll-spacer {
     display: none;
+}
+
+/* === MOBILE: Features horizontal scroll carousel === */
+@media (max-width: 768px) {
+    .features {
+        padding: 8px 0 20px !important;
+        overflow: hidden !important;
+    }
+
+    .features-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 12px !important;
+        padding: 0 20px 12px !important;
+        scrollbar-width: none !important;
+    }
+
+    .features-grid::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .feature-img {
+        flex: 0 0 85% !important;
+        scroll-snap-align: center !important;
+        border-radius: 12px !important;
+        width: 85% !important;
+        max-width: none !important;
+    }
+}
+
+/* === MOBILE: Phone mockup image positioning === */
+@media (max-width: 768px) {
+    .phone-screen img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center top !important;
+        margin: 0 !important;
+    }
 }
 
 </style>
@@ -1501,7 +1532,6 @@ function copyEmail() {
         setTimeout(function() { toast.classList.remove('show'); }, 1500);
     });
 }
-
 
 // Scroll-linked carousel (mobile only)
 (function() {
