@@ -1177,89 +1177,11 @@ body {
 }
 
 
-/* === MOBILE: Scroll-linked carousel === */
-@media (max-width: 768px) {
-    .features {
-        padding: 0 !important;
-        position: sticky !important;
-        top: 0 !important;
-        height: 100vh !important;
-        display: flex !important;
-        align-items: center !important;
-        overflow: hidden !important;
-    }
 
-    .features-grid {
-        display: flex !important;
-        gap: 12px !important;
-        padding: 0 20px !important;
-        transition: transform 0.1s linear !important;
-        will-change: transform !important;
-    }
 
-    .feature-img {
-        flex: 0 0 80vw !important;
-        width: 80vw !important;
-        border-radius: 12px !important;
-        max-width: none !important;
-    }
 
-    /* Spacer to allow scroll room */
-    .features-scroll-spacer {
-        display: block !important;
-        height: 200vh !important;
-    }
-}
-
-/* Desktop: hide spacer */
-.features-scroll-spacer {
-    display: none;
-}
-
-/* === MOBILE: Features horizontal scroll carousel === */
-@media (max-width: 768px) {
-    .features {
-        padding: 8px 0 20px !important;
-        overflow: hidden !important;
-    }
-
-    .features-grid {
-        display: flex !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory !important;
-        -webkit-overflow-scrolling: touch !important;
-        gap: 12px !important;
-        padding: 0 20px 12px !important;
-        scrollbar-width: none !important;
-    }
-
-    .features-grid::-webkit-scrollbar {
-        display: none !important;
-    }
-
-    .feature-img {
-        flex: 0 0 85% !important;
-        scroll-snap-align: center !important;
-        border-radius: 12px !important;
-        width: 85% !important;
-        max-width: none !important;
-    }
-}
 
 /* === MOBILE: Phone mockup image positioning === */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1274,6 +1196,68 @@ body {
         margin: 0 !important;
         transform: none !important;
     }
+}
+
+
+/* === MOBILE: Swipeable carousel (no sticky, no scroll hijack) === */
+@media (max-width: 768px) {
+    .features {
+        padding: 8px 0 24px !important;
+        overflow: visible !important;
+        position: relative !important;
+    }
+
+    .features-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 12px !important;
+        padding: 0 20px 16px !important;
+        scrollbar-width: none !important;
+    }
+
+    .features-grid::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .feature-img {
+        flex: 0 0 82% !important;
+        width: 82% !important;
+        max-width: none !important;
+        scroll-snap-align: center !important;
+        border-radius: 12px !important;
+    }
+
+    /* Dot indicators */
+    .carousel-dots {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        padding: 0 0 8px !important;
+    }
+
+    .carousel-dot {
+        width: 8px !important;
+        height: 8px !important;
+        border-radius: 50% !important;
+        background: rgba(255,255,255,0.2) !important;
+        border: none !important;
+        padding: 0 !important;
+        cursor: pointer !important;
+        transition: background 0.3s ease !important;
+    }
+
+    .carousel-dot.active {
+        background: #bc9c22 !important;
+        width: 24px !important;
+        border-radius: 4px !important;
+    }
+}
+
+/* Desktop: hide dots */
+.carousel-dots {
+    display: none;
 }
 
 </style>
@@ -1550,67 +1534,77 @@ function copyEmail() {
     });
 }
 
-// Scroll-linked carousel (mobile only)
+
+
+// Swipeable carousel — dot indicators
 (function() {
     if (window.innerWidth > 768) return;
 
-    var features = document.querySelector('.features');
     var grid = document.querySelector('.features-grid');
-    var spacer = document.querySelector('.features-scroll-spacer');
-    if (!features || !grid || !spacer) return;
+    if (!grid) return;
 
-    var images = grid.querySelectorAll('.feature-img');
-    if (images.length === 0) return;
+    // Create dots if they don't exist in HTML
+    var dotsContainer = document.getElementById('carouselDots');
+    if (!dotsContainer) {
+        dotsContainer = document.createElement('div');
+        dotsContainer.className = 'carousel-dots';
+        dotsContainer.id = 'carouselDots';
+        dotsContainer.style.display = 'flex';
+        dotsContainer.style.justifyContent = 'center';
+        dotsContainer.style.gap = '8px';
+        dotsContainer.style.padding = '0 0 8px';
 
-    // Calculate total scroll distance needed
-    var totalScrollWidth = (images.length - 1) * (window.innerWidth * 0.8 + 12); // 80vw + gap
-
-    // Set spacer height to match needed scroll distance
-    spacer.style.height = totalScrollWidth + 'px';
-
-    var ticking = false;
-
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            window.requestAnimationFrame(function() {
-                var featuresRect = features.getBoundingClientRect();
-                var spacerRect = spacer.getBoundingClientRect();
-
-                // When features section is at top of viewport
-                if (featuresRect.top <= 0 && spacerRect.bottom > window.innerHeight) {
-                    // Calculate progress (0 to 1)
-                    var scrolled = -featuresRect.top;
-                    var maxScroll = spacer.offsetHeight - window.innerHeight;
-                    var progress = Math.min(Math.max(scrolled / maxScroll, 0), 1);
-
-                    // Move carousel
-                    var translateX = progress * totalScrollWidth;
-                    grid.style.transform = 'translateX(-' + translateX + 'px)';
-
-                    // Keep features sticky
-                    features.style.position = 'sticky';
-                    features.style.top = '0';
-                } else {
-                    // Reset when not in view
-                    if (featuresRect.top > 0) {
-                        grid.style.transform = 'translateX(0)';
-                    }
-                }
-
-                ticking = false;
-            });
-            ticking = true;
+        var images = grid.querySelectorAll('.feature-img');
+        for (var i = 0; i < images.length; i++) {
+            var dot = document.createElement('button');
+            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('data-index', i);
+            dot.style.width = i === 0 ? '24px' : '8px';
+            dot.style.height = '8px';
+            dot.style.borderRadius = i === 0 ? '4px' : '50%';
+            dot.style.background = i === 0 ? '#bc9c22' : 'rgba(255,255,255,0.2)';
+            dot.style.border = 'none';
+            dot.style.padding = '0';
+            dot.style.cursor = 'pointer';
+            dot.style.transition = 'all 0.3s ease';
+            dotsContainer.appendChild(dot);
         }
+
+        grid.parentElement.appendChild(dotsContainer);
+    }
+
+    var dots = dotsContainer.querySelectorAll('.carousel-dot');
+    var images = grid.querySelectorAll('.feature-img');
+
+    // Update dots on scroll
+    grid.addEventListener('scroll', function() {
+        var scrollLeft = grid.scrollLeft;
+        var itemWidth = images[0].offsetWidth + 12; // width + gap
+        var activeIndex = Math.round(scrollLeft / itemWidth);
+        activeIndex = Math.min(Math.max(activeIndex, 0), images.length - 1);
+
+        dots.forEach(function(dot, i) {
+            if (i === activeIndex) {
+                dot.classList.add('active');
+                dot.style.width = '24px';
+                dot.style.borderRadius = '4px';
+                dot.style.background = '#bc9c22';
+            } else {
+                dot.classList.remove('active');
+                dot.style.width = '8px';
+                dot.style.borderRadius = '50%';
+                dot.style.background = 'rgba(255,255,255,0.2)';
+            }
+        });
     });
 
-    // Also handle resize
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            grid.style.transform = '';
-            spacer.style.height = '0';
-            features.style.position = '';
-            features.style.top = '';
-        }
+    // Click dot to scroll to image
+    dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+            var index = parseInt(this.getAttribute('data-index'));
+            var itemWidth = images[0].offsetWidth + 12;
+            grid.scrollTo({ left: index * itemWidth, behavior: 'smooth' });
+        });
     });
 })();
 
