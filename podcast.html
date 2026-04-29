@@ -198,18 +198,9 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
     margin-bottom: 20px;
 }
 
-.episode-player {
-    width: 100%;
-    margin-bottom: 16px;
-    border-radius: 8px;
-    overflow: hidden;
-}
 
-.episode-player iframe {
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-}
+
+
 
 .episode-desc {
     font-size: 14px;
@@ -281,6 +272,25 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
     margin-top: 20px;
 }
 
+
+.episode-player-full {
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.episode-player-full iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    display: block;
+}
+
+.episode-card + .episode-card {
+    margin-top: 20px;
+}
+
 @media (max-width: 768px) {
     .header { padding: 12px 20px !important; }
     .header-logo img { height: 100px !important; }
@@ -294,11 +304,7 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
     .episode { padding: 0 20px 24px !important; }
     .episode-card { padding: 24px !important; }
     .episode-title { font-size: 17px !important; }
-    .episode-player iframe {
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-}
+    
     .podcast-cta { padding: 0 20px 32px !important; }
     .cta-btn { padding: 12px 32px !important; font-size: 14px !important; }
     .footer { padding: 24px 20px !important; }
@@ -369,26 +375,11 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 <!-- Latest Episode -->
 <section class="episode fade-in">
     <p class="episode-label">Episodes</p>
-        <div class="episode-card" style="margin-top: 16px;">
-        <p class="episode-number">Episode 2</p>
-        <h2 class="episode-title">The 8am Wardrobe Crisis</h2>
-        <p class="episode-meta">April 29, 2026</p>
-        <div class="episode-player">
-            <iframe src="https://player.rss.com/modest-loud-by-aliff/2778860?theme=dark&v=2" width="100%" height="393px" title="Episode 2 | Modest & Loud" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen scrolling="no"><a href="https://rss.com/podcasts/modest-loud-by-aliff">Episode 2 | Modest & Loud</a></iframe>
-        </div>
-        <p class="episode-desc">Khansa unpacks the daily morning struggle every modest woman knows. Full closet, limited time, and the mental load of putting an outfit together that feels right.</p>
-        <a href="https://rss.com/podcasts/modest-loud-by-aliff/2778860/" target="_blank" rel="noopener noreferrer" class="episode-link">Listen on RSS.com →</a>
-    </div>
-
     <div class="episode-card">
-        <p class="episode-number">Episode 1</p>
-        <h2 class="episode-title">I Had a Full Wardrobe and Nothing to Wear. So I Built ALIFF.</h2>
-        <p class="episode-meta">April 22, 2026</p>
-        <div class="episode-player">
-            <iframe src="https://player.rss.com/modest-loud-by-aliff/2756131?theme=dark&v=2" width="100%" height="393px" title="Episode 1 | Modest & Loud" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen scrolling="no"><a href="https://rss.com/podcasts/modest-loud-by-aliff">Episode 1 | Modest & Loud</a></iframe>
+        <div class="episode-player-full">
+            <iframe src="https://player.rss.com/modest-loud-by-aliff?theme=dark&v=2" width="100%" height="393px" title="Modest & Loud Podcast" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen scrolling="no"><a href="https://rss.com/podcasts/modest-loud-by-aliff">Modest & Loud | RSS.com</a></iframe>
         </div>
-        <p class="episode-desc">In this first episode, Khansa shares why she built ALIFF. A full wardrobe, nothing to wear, and no tool that understood modesty as a starting point.</p>
-        <a href="https://rss.com/podcasts/modest-loud-by-aliff/2756131" target="_blank" rel="noopener noreferrer" class="episode-link">Listen on RSS.com →</a>
+        <a href="https://rss.com/podcasts/modest-loud-by-aliff" target="_blank" rel="noopener noreferrer" class="episode-link">View all episodes on RSS.com →</a>
     </div>
 </section>
 
