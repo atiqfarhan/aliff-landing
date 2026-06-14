@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Your Account | ALIFF</title>
+<meta name="description" content="How to delete your ALIFF account and associated data, in the app or by request.">
+<link rel="canonical" href="https://aliff.app/account-deletion.html">
+<meta property="og:title" content="Delete Your Account | ALIFF">
+<meta property="og:description" content="How to delete your ALIFF account and associated data, in the app or by request.">
+<meta property="og:image" content="https://aliff.app/images/og-image.jpg">
+<meta property="og:url" content="https://aliff.app/account-deletion.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Delete Your Account | ALIFF">
+<meta name="twitter:description" content="How to delete your ALIFF account and associated data, in the app or by request.">
+<meta name="twitter:image" content="https://aliff.app/images/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+    --black: #0A0A0A; --dark: #111111; --card: #161616;
+    --card-border: rgba(255,255,255,0.08); --white: #FFFFFF;
+    --off-white: #CCCCCC; --gold: #bc9c22;
+    --gold-50: rgba(188,156,34,0.5); --gold-70: rgba(188,156,34,0.7);
+    --font: 'Montserrat', -apple-system, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+.header { padding: 12px 0; display: flex; align-items: center; justify-content: space-between; max-width: 1080px; margin: 0 auto; }
+.header-logo img { height: 190px; width: auto; display: block; }
+.hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 1001; position: relative; }
+.hamburger span { display: block; width: 28px; height: 2px; background: var(--white); transition: all 0.3s ease; }
+.hamburger:hover span { background: var(--gold); }
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+.nav-menu { position: fixed; top: 0; right: -300px; width: 300px; height: 100vh; background: rgba(17,17,17,0.98); border-left: 1px solid var(--card-border); padding: 100px 40px 40px; transition: right 0.3s ease; z-index: 1000; backdrop-filter: blur(20px); }
+.nav-menu.open { right: 0; }
+.nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; }
+.nav-overlay.open { opacity: 1; visibility: visible; }
+.nav-menu a { display: block; color: var(--white); text-decoration: none; font-size: 18px; font-weight: 500; padding: 20px 0; border-bottom: 1px solid var(--card-border); transition: color 0.3s ease, padding-left 0.3s ease; }
+.nav-menu a:hover { color: var(--gold); padding-left: 8px; }
+.nav-menu a .nav-arrow { float: right; color: var(--off-white); }
+.nav-menu a:hover .nav-arrow { color: var(--gold); }
+.nav-menu .nav-label { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); padding-bottom: 16px; border-bottom: none; cursor: default; }
+.nav-menu .nav-label:hover { color: var(--gold); padding-left: 0; }
+
+/* Privacy — simple, clean */
+.privacy {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px 40px 40px;
+}
+
+.privacy-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.privacy-title em {
+    font-style: italic;
+    color: var(--gold);
+}
+
+.privacy-lead {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.policy-list {
+    list-style: none;
+}
+
+.policy-item {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.policy-item:first-child {
+    padding-top: 0;
+}
+
+.policy-item:last-child {
+    border-bottom: none;
+}
+
+.policy-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 6px;
+}
+
+.policy-item p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1.7;
+}
+
+.back-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 36px;
+    background: var(--gold-50);
+    color: var(--black);
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: var(--gold-70);
+}
+
+/* Footer */
+.footer { padding: 32px 40px; border-top: 1px solid var(--card-border); }
+.footer-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.footer-left { display: flex; align-items: center; gap: 8px; position: relative; }
+.footer-talk { font-size: 14px; font-weight: 500; color: var(--white); }
+.footer-email { font-size: 14px; font-weight: 300; color: var(--off-white); cursor: pointer; display: flex; align-items: center; gap: 6px; transition: color 0.3s ease; }
+.footer-email:hover { color: var(--gold); }
+.copy-icon { opacity: 0.5; transition: opacity 0.3s ease; }
+.footer-email:hover .copy-icon { opacity: 1; stroke: var(--gold); }
+.copy-toast { position: absolute; bottom: -28px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--black); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 4px; opacity: 0; transition: opacity 0.3s ease; pointer-events: none; }
+.copy-toast.show { opacity: 1; }
+.footer-right { display: flex; align-items: center; gap: 20px; }
+.footer-copyright { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.4); }
+.footer-socials { display: flex; gap: 12px; }
+.footer-socials a { color: rgba(255,255,255,0.4); transition: color 0.3s ease; }
+.footer-socials a:hover { color: var(--gold); }
+
+@media (max-width: 768px) {
+    .header { padding: 12px 20px !important; }
+    .header-logo img { height: 100px !important; }
+    .privacy { padding: 5px 20px 32px !important; }
+    .privacy-title { font-size: 24px !important; }
+    .privacy-lead { font-size: 15px !important; margin-bottom: 28px !important; }
+    .policy-item { padding: 18px 0 !important; }
+    .policy-item h3 { font-size: 15px !important; margin-bottom: 4px !important; }
+    .policy-item p { font-size: 14px !important; line-height: 1.7 !important; }
+    .back-section { padding: 0 20px 32px !important; }
+    .footer { padding: 24px 20px !important; }
+    .footer-inner { flex-direction: column !important; gap: 16px !important; text-align: center !important; }
+    .footer-left { flex-direction: column !important; gap: 4px !important; }
+    .footer-right { flex-direction: column !important; gap: 12px !important; }
+    .nav-menu { width: 260px !important; }
+}
+@media (max-width: 380px) {
+    .header-logo img { height: 80px !important; }
+    .privacy-title { font-size: 20px !important; }
+}
+
+.legal { max-width: 800px; margin: 0 auto; padding: 5px 40px 8px; }
+.legal-title { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+.legal-title em { font-style: italic; color: var(--gold); }
+.legal-lead { font-size: 16px; font-weight: 300; color: var(--off-white); line-height: 1.7; margin-bottom: 10px; max-width: 640px; }
+.legal-updated { font-size: 13px; font-weight: 400; color: var(--gold); letter-spacing: 0.02em; margin-bottom: 32px; }
+.legal section { padding: 24px 0; border-bottom: 1px solid var(--card-border); }
+.legal section:last-of-type { border-bottom: none; }
+.legal h2 { font-size: 18px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
+.legal h3 { font-size: 15px; font-weight: 600; color: var(--white); margin: 16px 0 6px; }
+.legal p { font-size: 15px; font-weight: 300; color: var(--off-white); line-height: 1.8; margin-bottom: 12px; }
+.legal p:last-child { margin-bottom: 0; }
+.legal ul { list-style: none; margin: 4px 0 12px; }
+.legal li { font-size: 15px; font-weight: 300; color: var(--off-white); line-height: 1.8; padding-left: 20px; position: relative; margin-bottom: 6px; }
+.legal li::before { content: ""; position: absolute; left: 4px; top: 13px; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; }
+.legal a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-50); }
+.legal a:hover { border-bottom-color: var(--gold); }
+.legal strong { color: var(--white); font-weight: 600; }
+.legal .contact-block { font-size: 15px; font-weight: 300; color: var(--off-white); line-height: 1.9; }
+.legal .contact-block strong { display: block; }
+.privacy-intro { max-width: 800px; margin: 0 auto; padding: 5px 40px 0; }
+.privacy-intro .legal-title { margin-bottom: 8px; }
+.policy-list { list-style: none; margin-bottom: 8px; }
+.policy-item { padding: 22px 0; border-bottom: 1px solid var(--card-border); }
+.policy-item:first-child { padding-top: 4px; }
+.policy-item h3 { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 6px; }
+.policy-item p { font-size: 15px; font-weight: 300; color: var(--off-white); line-height: 1.7; }
+.section-break { max-width: 800px; margin: 0 auto; padding: 16px 40px 0; }
+.section-break span { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+.back-section { max-width: 800px; margin: 0 auto; padding: 24px 40px 16px; }
+.back-link { display: inline-flex; align-items: center; gap: 6px; padding: 12px 36px; background: var(--gold-50); color: var(--black); font-weight: 600; font-size: 14px; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; }
+.back-link:hover { background: var(--gold-70); }
+.legal-nav { max-width: 800px; margin: 0 auto; padding: 0 40px 40px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.legal-nav a { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s ease; }
+.legal-nav a:hover { color: var(--gold); }
+</style>
+</head>
+<body>
+<header class="header">
+    <a href="index.html" class="header-logo">
+        <img src="images/black-logo.png" alt="ALIFF | AI Stylist for Muslim Women">
+    </a>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+</header>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
+<nav class="nav-menu" id="navMenu">
+    <span class="nav-label nav-menu a">ALIFF</span>
+    <a href="index.html">Home <span class="nav-arrow">→</span></a>
+    <a href="founder.html">Our Founder <span class="nav-arrow">→</span></a>
+    <a href="index.html#waitlist" onclick="toggleMenu()">Join the Waitlist <span class="nav-arrow">→</span></a>
+    <a href="podcast.html">Podcast <span class="nav-arrow">→</span></a>
+</nav>
+<section class="legal">
+    <h1 class="legal-title">Delete Your <em>ALIFF</em> Account</h1>
+    <p class="legal-lead">How to delete your ALIFF account and the data associated with it. You can request deletion here without reinstalling the app.</p>
+
+    <section><h2>Option 1 &mdash; Delete in the app</h2>
+    <ul>
+        <li>Open ALIFF and go to <strong>Settings &rarr; Privacy</strong>.</li>
+        <li>Tap <strong>Delete account</strong> (or <strong>Delete my data</strong>).</li>
+        <li>Confirm. Your account and associated data will be scheduled for deletion.</li>
+    </ul></section>
+
+    <section><h2>Option 2 &mdash; Request deletion here</h2>
+    <p>If you can't access the app, email <a href="mailto:info@aliff.app?subject=Delete%20my%20account">info@aliff.app</a> from the email address linked to your ALIFF account, with the subject line "Delete my account." We will verify your request and process it.</p></section>
+
+    <section><h2>What gets deleted</h2>
+    <ul>
+        <li>Your account profile (name and email)</li>
+        <li>Your wardrobe photos and digital closet</li>
+        <li>Your style preferences and, where provided, your modesty preferences</li>
+        <li>Your in-app activity tied to your account</li>
+    </ul></section>
+
+    <section><h2>What we may retain, and why</h2>
+    <p>We may keep limited information where the law requires or permits &mdash; for example, to comply with legal obligations, resolve disputes, and prevent fraud and abuse. Any retained data is kept only as long as necessary and then deleted or anonymized.</p></section>
+
+    <section><h2>How long it takes</h2>
+    <ul>
+        <li><strong>Deletion requests</strong> are completed within 30 days of your verified request.</li>
+        <li>If you <strong>cancel</strong> rather than delete, your wardrobe data, outfit history, and style profile are kept for 90 days so you can reactivate, then permanently deleted.</li>
+    </ul></section>
+
+    <section><h2>Questions</h2>
+    <p>For help with account deletion or any privacy request, contact <a href="mailto:info@aliff.app">info@aliff.app</a>. See also our <a href="privacy.html">Privacy Policy</a>.</p>
+    <p class="contact-block"><strong>ALIFF LLC</strong>2701D W 15th Street, PMB 2024<br>Plano, Texas 75075</p></section>
+</section>
+
+<div class="back-section"><a href="index.html" class="back-link">&larr; Back to Home</a></div>
+<nav class="legal-nav" aria-label="Legal pages">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="account-deletion.html">Account Deletion</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-left">
+            <span class="footer-talk">Let's Talk</span>
+            <span class="footer-email" onclick="copyEmail()">info@aliff.app
+                <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </span>
+            <span class="copy-toast" id="copyToast">Copied!</span>
+        </div>
+        <div class="footer-right">
+            <span class="footer-copyright">© 2026 ALIFF. All rights reserved.</span>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/aliff.app?igsh=MWloNnJrZGVteXBiYg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/khansakhatoon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://rss.com/podcasts/modest-loud-by-aliff" target="_blank" rel="noopener noreferrer" aria-label="Podcast">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+function toggleMenu() {
+    document.getElementById('hamburger').classList.toggle('active');
+    document.getElementById('navMenu').classList.toggle('open');
+    document.getElementById('navOverlay').classList.toggle('open');
+}
+document.querySelectorAll('.nav-menu a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        document.getElementById('hamburger').classList.remove('active');
+        document.getElementById('navMenu').classList.remove('open');
+        document.getElementById('navOverlay').classList.remove('open');
+    });
+});
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.getElementById('hamburger').classList.remove('active');
+        document.getElementById('navMenu').classList.remove('open');
+        document.getElementById('navOverlay').classList.remove('open');
+    }
+});
+function copyEmail() {
+    navigator.clipboard.writeText('info@aliff.app').then(function() {
+        var toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(function() { toast.classList.remove('show'); }, 1500);
+    });
+}
+</script>
+</body>
+</html>
