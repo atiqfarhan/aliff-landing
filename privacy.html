@@ -174,6 +174,40 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
     .header-logo img { height: 80px !important; }
     .privacy-title { font-size: 20px !important; }
 }
+.legal { max-width: 800px; margin: 0 auto; padding: 5px 40px 8px; }
+.legal-title { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+.legal-title em { font-style: italic; color: var(--gold); }
+.legal-lead { font-size: 16px; font-weight: 300; color: var(--off-white); line-height: 1.7; margin-bottom: 10px; max-width: 640px; }
+.legal-updated { font-size: 13px; font-weight: 400; color: var(--gold); letter-spacing: 0.02em; margin-bottom: 32px; }
+.legal section { padding: 24px 0; border-bottom: 1px solid var(--card-border); }
+.legal section:last-of-type { border-bottom: none; }
+.legal h2 { font-size: 18px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
+.legal h3 { font-size: 15px; font-weight: 600; color: var(--white); margin: 16px 0 6px; }
+.legal p { font-size: 15px; font-weight: 300; color: var(--off-white); line-height: 1.8; margin-bottom: 12px; }
+.legal p:last-child { margin-bottom: 0; }
+.legal ul { list-style: none; margin: 4px 0 12px; }
+.legal li { font-size: 15px; font-weight: 300; color: var(--off-white); line-height: 1.8; padding-left: 20px; position: relative; margin-bottom: 6px; }
+.legal li::before { content: ""; position: absolute; left: 4px; top: 13px; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; }
+.legal a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-50); }
+.legal a:hover { border-bottom-color: var(--gold); }
+.legal strong { color: var(--white); font-weight: 600; }
+.legal .contact-block { font-size: 15px; font-weight: 300; color: var(--off-white); line-height: 1.9; }
+.legal .contact-block strong { display: block; }
+.privacy-intro { max-width: 800px; margin: 0 auto; padding: 5px 40px 0; }
+.privacy-intro .legal-title { margin-bottom: 8px; }
+.policy-list { list-style: none; margin-bottom: 8px; }
+.policy-item { padding: 22px 0; border-bottom: 1px solid var(--card-border); }
+.policy-item:first-child { padding-top: 4px; }
+.policy-item h3 { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 6px; }
+.policy-item p { font-size: 15px; font-weight: 300; color: var(--off-white); line-height: 1.7; }
+.section-break { max-width: 800px; margin: 0 auto; padding: 16px 40px 0; }
+.section-break span { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+.back-section { max-width: 800px; margin: 0 auto; padding: 24px 40px 16px; }
+.back-link { display: inline-flex; align-items: center; gap: 6px; padding: 12px 36px; background: var(--gold-50); color: var(--black); font-weight: 600; font-size: 14px; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; }
+.back-link:hover { background: var(--gold-70); }
+.legal-nav { max-width: 800px; margin: 0 auto; padding: 0 40px 40px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.legal-nav a { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s ease; }
+.legal-nav a:hover { color: var(--gold); }
 </style>
 </head>
 <body>
@@ -236,9 +270,126 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
     </ul>
 </section>
 
+<div class="section-break"><span>The full policy</span></div>
+
+<section class="legal">
+    <p class="legal-lead" style="margin-top:18px;">This Privacy Policy applies to ALIFF &ndash; AI Modest Stylist, operated by <strong>ALIFF LLC</strong>, and to the website at <a href="https://aliff.app/">https://aliff.app/</a>. By using ALIFF, you agree to this Policy. We collect modesty-related preferences only after you give explicit consent, as described below.</p>
+    <p class="legal-updated">Effective as of June 14, 2026</p>
+
+    <section>
+        <h2>1. Information we collect</h2>
+        <p>We collect the information you voluntarily provide:</p>
+        <ul>
+            <li><strong>Account information:</strong> your first and last name and email address.</li>
+            <li><strong>Wardrobe photos:</strong> photographs of your clothing and wardrobe items, used to build your digital closet and generate styling suggestions. ALIFF does not collect photographs of your face or body.</li>
+            <li><strong>Style preferences:</strong> non-sensitive preferences such as body type, color preferences, and style goals.</li>
+            <li><strong>Modesty preferences (sensitive &mdash; with your consent):</strong> including whether you wear hijab and your coverage preferences. See Section 2.</li>
+            <li><strong>Location:</strong> your city or region, which you provide, used for weather-based styling. We do not track your precise GPS location.</li>
+            <li><strong>Usage and device data:</strong> app interaction data and device identifiers, for analytics and to keep the app working.</li>
+            <li><strong>Billing information:</strong> subscriptions are processed by Apple, Google, and our subscription manager. We do not store your card number.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Sensitive data and your consent</h2>
+        <p>Because ALIFF helps with modest styling, we ask whether you wear hijab and about your coverage preferences. This can reveal religious belief, so under the Texas Data Privacy and Security Act it is <strong>sensitive data</strong>, and we collect and use it <strong>only after you give explicit, opt-in consent</strong> at onboarding.</p>
+        <p>We use your modesty preferences for one purpose only: to personalize your styling. We do not sell this data, use it for advertising, use it for profiling, or share it beyond what is necessary to operate the app. You can withdraw consent, edit, or delete these preferences anytime in <strong>Settings &rarr; Privacy</strong>, or by emailing <a href="mailto:info@aliff.app">info@aliff.app</a>.</p>
+    </section>
+
+    <section>
+        <h2>3. How we use your information</h2>
+        <ul>
+            <li>Provide and personalize your styling, color analysis, wardrobe gap analysis, and outfit calendars.</li>
+            <li>Use your city/region to provide weather-appropriate styling.</li>
+            <li>Create and secure your account and provide account notices.</li>
+            <li>Process your subscription.</li>
+            <li>Maintain records, improve features, ensure the app functions, and prevent fraud and misuse.</li>
+            <li>Respond to your requests and comply with applicable laws.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. How we share information</h2>
+        <p>We do <strong>not</strong> sell, rent, or lease your personal data. We share data only with service providers that help us operate ALIFF, under confidentiality agreements that limit them to providing services to us. These include Google and Apple (sign-in); Apple App Store, Google Play, and RevenueCat (subscriptions and payments); OpenWeather (which receives your city/region to return weather information); and providers for cloud hosting, AI processing, analytics, crash reporting, and push notifications.</p>
+        <p>We may disclose information if required by law, or in good faith to comply with legal process, protect our rights or property, or protect the safety of users or the public.</p>
+    </section>
+
+    <section>
+        <h2>5. Your Texas privacy rights (TDPSA)</h2>
+        <p>If you are a Texas resident, you have the right to confirm and access, correct, delete, and obtain a portable copy of your personal data, and to opt out of the sale of personal data, targeted advertising, and profiling (see Section 6 &mdash; ALIFF does none of these). To exercise these rights, email <a href="mailto:info@aliff.app">info@aliff.app</a> or use the in-app controls. We respond within 45 days (extendable once by 45 days with notice). We will not require you to create an account to make a request, and will not discriminate against you for exercising your rights.</p>
+        <p><strong>Appeals.</strong> If we decline your request, you may appeal by emailing <a href="mailto:info@aliff.app">info@aliff.app</a>; we respond within 60 days. If denied, you may contact the Texas Attorney General at <a href="https://www.texasattorneygeneral.gov/">texasattorneygeneral.gov</a>. Residents of other states may have similar rights; contact us and we will honor applicable rights.</p>
+    </section>
+
+    <section>
+        <h2>6. We do not sell your data, advertise to you, or profile you</h2>
+        <p>ALIFF does not sell your personal data, does not use it for targeted advertising, and does not use it for profiling that produces legal or similarly significant effects. Because we do none of these, there is no opt-out for you to complete.</p>
+    </section>
+
+    <section>
+        <h2>7. Data retention</h2>
+        <ul>
+            <li>While your account is active, we keep your data to provide the service.</li>
+            <li>If you cancel, your wardrobe data, outfit history, and style profile are kept for 90 days so you can reactivate, then permanently deleted.</li>
+            <li>If you delete your account, we delete your personal data within 30 days, except limited information we must keep for legal, security, or fraud-prevention reasons.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Security</h2>
+        <p>We protect your information using reasonable administrative, technical, and physical safeguards, including encryption of data in transit (TLS/SSL) and at rest. No method of transmission or storage over the Internet is 100% secure, and we cannot guarantee absolute security.</p>
+    </section>
+
+    <section>
+        <h2>9. Data breach notification</h2>
+        <p>If a security incident affects your personal information, we will promptly investigate and notify affected users and, where required, applicable regulators, in the manner and within the timeframes required by law.</p>
+    </section>
+
+    <section>
+        <h2>10. Account and data deletion</h2>
+        <p>You can delete your account and data anytime: in the app at <strong>Settings &rarr; Privacy &rarr; Delete account</strong>, on the web at our <a href="account-deletion.html">Account Deletion page</a>, or by emailing <a href="mailto:info@aliff.app">info@aliff.app</a>. On a verifiable request we delete your personal data and direct our service providers to do the same, subject to limited legal exceptions.</p>
+    </section>
+
+    <section>
+        <h2>11. Eligibility and children</h2>
+        <p>ALIFF is intended for users <strong>18 years of age or older</strong>. At signup you confirm that you are 18 or older. We do not knowingly collect personal information from anyone under 18, and we will delete any such data if we learn of it.</p>
+    </section>
+
+    <section>
+        <h2>12. Email communications</h2>
+        <p>We may contact you with account notices and, if you opt in, marketing emails. You can opt in or out of marketing in <strong>Settings &rarr; Privacy</strong>, and every marketing email includes an unsubscribe link. We send account and transactional emails regardless of marketing preferences.</p>
+    </section>
+
+    <section>
+        <h2>13. Third-party sign-in</h2>
+        <p>You can sign in using Google or Apple, which handle sign-in under their own privacy policies. You can disconnect ALIFF by removing its access in your Google or Apple account settings, by deleting your ALIFF account, or by emailing <a href="mailto:info@aliff.app">info@aliff.app</a>.</p>
+    </section>
+
+    <section>
+        <h2>14. Data storage and international users</h2>
+        <p>We may store data on servers provided by third-party hosting vendors we contract with. ALIFF is operated from the United States; if you use it from elsewhere, your data may be processed in the U.S., and you are responsible for compliance with local laws.</p>
+    </section>
+
+    <section>
+        <h2>15. Changes to this policy</h2>
+        <p>We may update this Policy from time to time. When changes are significant, we will notify you by email to your account address or a prominent in-app notice. Continued use after changes constitutes acceptance of the updated Policy.</p>
+    </section>
+
+    <section>
+        <h2>16. Contact</h2>
+        <p class="contact-block"><strong>ALIFF LLC</strong>2701D W 15th Street, PMB 2024<br>Plano, Texas 75075<br>Email: <a href="mailto:info@aliff.app">info@aliff.app</a></p>
+    </section>
+</section>
+
 <div class="back-section">
     <a href="index.html" class="back-link">← Back to Home</a>
 </div>
+
+<nav class="legal-nav" aria-label="Legal pages">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="account-deletion.html">Account Deletion</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
 <footer class="footer">
     <div class="footer-inner">
