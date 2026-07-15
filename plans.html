@@ -219,6 +219,7 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 
 .fm-banner { max-width: 1080px; margin: 32px auto 0; padding: 26px 40px; text-align: center; border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); }
 .fm-banner h2 { font-size: 24px; font-weight: 700; color: var(--white); line-height: 1.3; margin-bottom: 10px; }
+.banner-break { display: none; }
 .fm-banner h2 em { font-style: italic; color: var(--gold); }
 .fm-banner p { font-size: 14.5px; font-weight: 300; color: var(--off-white); line-height: 1.7; max-width: 620px; margin: 0 auto; }
 
@@ -277,6 +278,7 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
     .plans-hero h1 { font-size: 28px !important; }
     .fm-banner { padding: 22px 20px !important; }
     .fm-banner h2 { font-size: 20px !important; }
+    .banner-break { display: block !important; }
     .plan-wrap { padding: 0 20px !important; margin: 32px auto !important; }
     .why-diff, .fm-table-wrap, .faq-wrap { padding-left: 20px !important; padding-right: 20px !important; }
     .why-diff h2, .fm-table-wrap h2, .faq-wrap h2 { font-size: 21px !important; }
@@ -300,6 +302,7 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
     <span class="nav-label nav-menu a">ALIFF</span>
     <a href="index.html">Home <span class="nav-arrow">→</span></a>
     <a href="founder.html">Our Founder <span class="nav-arrow">→</span></a>
+    <a href="plans.html">Plans <span class="nav-arrow">→</span></a>
     <a href="index.html#waitlist" onclick="toggleMenu()">Join the Waitlist <span class="nav-arrow">→</span></a>
     <a href="podcast.html">Podcast <span class="nav-arrow">→</span></a>
 </nav>
@@ -310,7 +313,7 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 </section>
 
 <div class="fm-banner">
-    <h2>Founding Member Pricing. <em>First 500 Subscribers.</em></h2>
+    <h2>Founding Member Pricing.<br class="banner-break"> <em>First 500 Subscribers.</em></h2>
     <p>Join now and your price stays locked for as long as you&rsquo;re subscribed, even when pricing goes up for everyone else.</p>
 </div>
 
