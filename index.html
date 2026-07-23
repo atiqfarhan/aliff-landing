@@ -2523,17 +2523,23 @@ body {
 
 
 .store-badges { display: inline-flex; gap: 14px; align-items: center; flex-wrap: wrap; justify-content: center; }
-.store-badges img { height: 52px; width: auto; display: block; }
+.store-badges img { width: auto; display: block; }
+.badge-apple { height: 48px; }
+.badge-google { height: 64px; }
 .hero-badges-mobile { display: none; }
 @media (max-width: 768px) {
     .hero-badges-desktop { display: none !important; }
-    .hero-badges-mobile { display: inline-flex !important; }
-    .store-badges img { height: 44px; }
+    .hero-badges-mobile { display: inline-flex !important; margin-top: 28px; }
+    .badge-apple { height: 42px; }
+    .badge-google { height: 56px; }
 }
 
-.download-badges img { height: 56px; }
+.download-badges { margin-top: 4px; }
+.download-badges .badge-apple { height: 52px; }
+.download-badges .badge-google { height: 68px; }
 @media (max-width: 768px) {
-    .download-badges img { height: 46px; }
+    .download-badges .badge-apple { height: 44px; }
+    .download-badges .badge-google { height: 58px; }
 }
 </style>
 
@@ -2617,8 +2623,8 @@ body {
 
 
         <div class="store-badges hero-badges-desktop">
-            <a href="https://apps.apple.com/app/id6775791063" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="lazy"></a>
-            <a href="https://play.google.com/store/apps/details?id=com.aliff.app" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" loading="lazy"></a>
+            <a href="https://apps.apple.com/app/id6775791063" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="lazy" class="badge-apple"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.aliff.app" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" loading="lazy" class="badge-google"></a>
         </div>
 
 
@@ -2662,8 +2668,8 @@ body {
         <!-- Mobile CTA Button -->
 
         <div class="store-badges hero-badges-mobile">
-            <a href="https://apps.apple.com/app/id6775791063" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="lazy"></a>
-            <a href="https://play.google.com/store/apps/details?id=com.aliff.app" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" loading="lazy"></a>
+            <a href="https://apps.apple.com/app/id6775791063" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="lazy" class="badge-apple"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.aliff.app" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" loading="lazy" class="badge-google"></a>
         </div>
 
 </div>
@@ -2711,8 +2717,8 @@ body {
         <p class="waitlist-sub">Available now on iOS and Android.</p>
 
         <div class="store-badges download-badges">
-            <a href="https://apps.apple.com/app/id6775791063" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="lazy"></a>
-            <a href="https://play.google.com/store/apps/details?id=com.aliff.app" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" loading="lazy"></a>
+            <a href="https://apps.apple.com/app/id6775791063" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="lazy" class="badge-apple"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.aliff.app" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" loading="lazy" class="badge-google"></a>
         </div>
 
     </div>
