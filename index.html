@@ -240,7 +240,7 @@ body {
 
     justify-content: center;
 
-    padding: 10px 0 10px;
+    padding: 100px 0 10px;
 
     max-width: 1080px;
 
@@ -270,7 +270,7 @@ body {
 
 
 
-    font-size: 64px;
+    font-size: 48px;
 
 
 
@@ -278,7 +278,7 @@ body {
 
 
 
-    line-height: 1.05;
+    line-height: 1.1;
 
 
 
@@ -314,7 +314,7 @@ body {
 
 
 
-    font-size: 20px;
+    font-size: 19px;
 
 
 
@@ -334,7 +334,7 @@ body {
 
 
 
-    max-width: 480px;
+    max-width: 600px;
 
 
 
@@ -1810,6 +1810,14 @@ body {
 
 
 
+    .hero {
+
+        padding-top: 60px !important;
+
+    }
+
+
+
     .hero-sub {
 
         font-size: 16px !important;
@@ -2433,67 +2441,33 @@ body {
 
 <section class="hero" id="download">
 
-
-
     <div class="hero-content fade-in">
-
-
 
         <h1>Confidence Meets <em>Haya</em></h1>
 
-
-
         <p class="hero-sub">AI styling that turns your wardrobe into outfit plans, built for Muslim women with modesty first.</p>
 
-
-
-        <div class="store-badges hero-badges-desktop js-hero-download"></div>
-
-
+        <div class="hero-download js-hero-download"></div>
 
     </div>
 
-
-
     <div class="hero-visual fade-in">
-
-
 
         <div class="phone-frame">
 
-
-
             <div class="phone-notch"></div>
-
-
 
             <div class="phone-screen">
 
-
-
                 <img src="images/phone-screenshot.jpeg" alt="ALIFF app showing weekly modest outfit plan for Muslim women">
-
-
 
             </div>
 
-
-
             <div class="phone-home"></div>
-
-
 
         </div>
 
-
-
-        <!-- Mobile CTA Button -->
-
-        <div class="store-badges hero-badges-mobile js-hero-download"></div>
-
-</div>
-
-
+    </div>
 
 </section>
 
@@ -2875,42 +2849,62 @@ function copyEmail() {
 
 
 <style>
-.hero-download-line { font-size: 0.95em; color: #bc9c22; font-weight: 600; margin-bottom: 14px; }
-.hero-download-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-.hero-download-arrow { font-size: 1.3em; color: #bc9c22; line-height: 1; }
-.hero-download-qr-wrap { display: flex; align-items: center; gap: 12px; margin-left: 8px; padding-left: 20px; border-left: 1px solid rgba(255,255,255,0.15); }
-.hero-download-qr-wrap img { width: 76px; height: 76px; border-radius: 8px; background: #fff; padding: 4px; }
-.hero-download-qr-label { font-size: 0.8em; color: rgba(255,255,255,0.6); max-width: 90px; line-height: 1.3; }
+.hero-download-line {
+    font-size: 22px;
+    font-weight: 700;
+    color: #bc9c22;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.hero-download-arrow { font-size: 1.1em; color: #bc9c22; line-height: 1; }
+.hero-download-badges { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.hero-download-badges .badge-apple,
+.hero-download-badges .badge-google {
+    height: 54px;
+    width: auto;
+    padding: 0 16px;
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+.hero-download-qr { width: 90px; height: 90px; margin-left: 20px; border-radius: 8px; background: #fff; padding: 4px; box-sizing: border-box; }
+@media (max-width: 768px) {
+    .hero-download-line { font-size: 18px; margin-bottom: 16px; }
+    .hero-download-badges .badge-apple,
+    .hero-download-badges .badge-google { height: 48px; padding: 0 12px; }
+    .hero-download-qr { display: none; }
+}
 </style>
 
 <script>
 (function() {
     var APP_STORE_URL = "https://apps.apple.com/app/id6775791063";
     var GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.aliff.app";
-    var QR_IMG = "https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Faliff.app%2F%23download";
+    var QR_IMG = "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Faliff.app%2F%23download";
 
     function isIOS() { return /iPhone|iPad|iPod/.test(navigator.userAgent); }
     function isAndroid() { return /Android/.test(navigator.userAgent); }
 
     function badgeApple() {
-        return '<a href="' + APP_STORE_URL + '" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:10px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="lazy" class="badge-apple"><span class="hero-download-arrow">→</span></a>';
+        return '<a href="' + APP_STORE_URL + '" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="lazy" class="badge-apple"></a>';
     }
     function badgeGoogle() {
-        return '<a href="' + GOOGLE_PLAY_URL + '" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:10px;"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" loading="lazy" class="badge-google"><span class="hero-download-arrow">→</span></a>';
+        return '<a href="' + GOOGLE_PLAY_URL + '" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" loading="lazy" class="badge-google"></a>';
     }
 
     function renderHeroDownloads() {
-        var html;
+        var badgesHtml;
         if (isIOS()) {
-            html = '<div><div class="hero-download-line">Try 7 Days, On Us</div><div class="hero-download-row">' + badgeApple() + '</div></div>';
+            badgesHtml = badgeApple();
         } else if (isAndroid()) {
-            html = '<div><div class="hero-download-line">Try 7 Days, On Us</div><div class="hero-download-row">' + badgeGoogle() + '</div></div>';
+            badgesHtml = badgeGoogle();
         } else {
-            html = '<div><div class="hero-download-line">Try 7 Days, On Us</div><div class="hero-download-row">'
-                 + badgeApple() + badgeGoogle()
-                 + '<div class="hero-download-qr-wrap"><img src="' + QR_IMG + '" alt="Scan to download ALIFF" loading="lazy"><span class="hero-download-qr-label">Or scan with your phone</span></div>'
-                 + '</div></div>';
+            badgesHtml = badgeApple() + badgeGoogle()
+                + '<img class="hero-download-qr" src="' + QR_IMG + '" alt="Scan to download ALIFF">';
         }
+        var html = '<div class="hero-download-line">Try 7 Days, On Us <span class="hero-download-arrow">→</span></div>'
+                  + '<div class="hero-download-badges">' + badgesHtml + '</div>';
         document.querySelectorAll('.js-hero-download').forEach(function(el) {
             el.innerHTML = html;
         });
