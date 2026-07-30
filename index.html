@@ -238,9 +238,9 @@ body {
 
     align-items: center;
 
-    justify-content: center;
+    justify-content: space-between;
 
-    padding: 100px 0 10px;
+    padding: 64px 0 10px;
 
     max-width: 1080px;
 
@@ -254,7 +254,7 @@ body {
 
 .hero-content {
 
-    flex: 1;
+    flex: 0 1 520px;
 
     max-width: 520px;
 
@@ -432,7 +432,7 @@ body {
 
 .hero-visual {
 
-    flex: 1;
+    flex: 0 1 auto;
 
     display: flex;
 
@@ -2860,19 +2860,27 @@ function copyEmail() {
 }
 .hero-download-arrow { font-size: 1.1em; color: #bc9c22; line-height: 1; }
 .hero-download-badges { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-.hero-download-badges .badge-apple,
-.hero-download-badges .badge-google {
+.hero-download-badges .badge-apple {
     height: 54px;
     width: auto;
     padding: 0 16px;
     border-radius: 10px;
     box-sizing: content-box;
+    margin-left: -6px;
+}
+.hero-download-badges .badge-google {
+    height: 72px;
+    width: auto;
+    padding: 0 16px;
+    border-radius: 10px;
+    box-sizing: content-box;
+    margin-left: -6px;
 }
 .hero-download-qr { width: 90px; height: 90px; margin-left: 20px; border-radius: 8px; background: #fff; padding: 4px; box-sizing: border-box; }
 @media (max-width: 768px) {
     .hero-download-line { font-size: 18px; margin-bottom: 16px; }
-    .hero-download-badges .badge-apple,
-    .hero-download-badges .badge-google { height: 48px; padding: 0 12px; }
+    .hero-download-badges .badge-apple { height: 48px; padding: 0 12px; margin-left: -6px; }
+    .hero-download-badges .badge-google { height: 64px; padding: 0 12px; margin-left: -6px; }
     .hero-download-qr { display: none; }
 }
 </style>
