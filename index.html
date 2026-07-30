@@ -2854,19 +2854,20 @@ function copyEmail() {
     font-weight: 700;
     color: #bc9c22;
     margin-bottom: 16px;
+    text-align: center;
+}
+.hero-download-badges {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
+    flex-wrap: wrap;
 }
-.hero-download-arrow { font-size: 1.1em; color: #bc9c22; line-height: 1; }
-.hero-download-badges { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .hero-download-badges .badge-apple {
     height: 54px;
     width: auto;
     padding: 0 16px;
     border-radius: 10px;
     box-sizing: content-box;
-    margin-left: -6px;
 }
 .hero-download-badges .badge-google {
     height: 72px;
@@ -2874,14 +2875,26 @@ function copyEmail() {
     padding: 0 16px;
     border-radius: 10px;
     box-sizing: content-box;
-    margin-left: -6px;
 }
-.hero-download-qr { width: 90px; height: 90px; margin-left: 20px; border-radius: 8px; background: #fff; padding: 4px; box-sizing: border-box; }
+.hero-download-qr-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+.hero-download-qr {
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+    background: #fff;
+    padding: 4px;
+    box-sizing: border-box;
+}
 @media (max-width: 768px) {
     .hero-download-line { font-size: 18px; margin-bottom: 16px; }
-    .hero-download-badges .badge-apple { height: 48px; padding: 0 12px; margin-left: -6px; }
-    .hero-download-badges .badge-google { height: 64px; padding: 0 12px; margin-left: -6px; }
-    .hero-download-qr { display: none; }
+    .hero-download-badges { justify-content: center; }
+    .hero-download-badges .badge-apple { height: 48px; padding: 0 12px; }
+    .hero-download-badges .badge-google { height: 64px; padding: 0 12px; }
+    .hero-download-qr-row { display: none; }
 }
 </style>
 
@@ -2903,16 +2916,18 @@ function copyEmail() {
 
     function renderHeroDownloads() {
         var badgesHtml;
+        var qrRowHtml = '';
         if (isIOS()) {
             badgesHtml = badgeApple();
         } else if (isAndroid()) {
             badgesHtml = badgeGoogle();
         } else {
-            badgesHtml = badgeApple() + badgeGoogle()
-                + '<img class="hero-download-qr" src="' + QR_IMG + '" alt="Scan to download ALIFF">';
+            badgesHtml = badgeApple() + badgeGoogle();
+            qrRowHtml = '<div class="hero-download-qr-row"><img class="hero-download-qr" src="' + QR_IMG + '" alt="Scan to download ALIFF"></div>';
         }
-        var html = '<div class="hero-download-line">Try 7 Days, On Us <span class="hero-download-arrow">→</span></div>'
-                  + '<div class="hero-download-badges">' + badgesHtml + '</div>';
+        var html = '<div class="hero-download-line">Try 7 Days, On Us</div>'
+                  + '<div class="hero-download-badges">' + badgesHtml + '</div>'
+                  + qrRowHtml;
         document.querySelectorAll('.js-hero-download').forEach(function(el) {
             el.innerHTML = html;
         });
