@@ -22,7 +22,7 @@
 
 <!-- Meta Description -->
 
-<meta name="description" content="ALIFF is an AI-powered styling assistant built for Muslim women. Get outfit plans from your own wardrobe, modesty-first, privacy-first, personalized. Download now on iOS and Android.">
+<meta name="description" content="ALIFF: AI-powered styling for Muslim women. Get outfit plans from your wardrobe. Modesty-first, privacy-first. Download now.">
 
 
 
@@ -1444,164 +1444,6 @@ body {
 
 
 
-/* === CONFIRMATION POPUP === */
-
-.popup-overlay {
-
-    position: fixed;
-
-    top: 0;
-
-    left: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    background: rgba(0, 0, 0, 0.7);
-
-    display: none;
-
-    justify-content: center;
-
-    align-items: center;
-
-    z-index: 9999;
-
-    backdrop-filter: blur(8px);
-
-    -webkit-backdrop-filter: blur(8px);
-
-}
-
-
-
-.popup-overlay.show {
-
-    display: flex;
-
-}
-
-
-
-.popup-card {
-
-    background: #111111;
-
-    border: 1px solid rgba(188, 156, 34, 0.4);
-
-    border-radius: 20px;
-
-    padding: 48px 40px;
-
-    text-align: center;
-
-    max-width: 420px;
-
-    width: 90%;
-
-    animation: popIn 0.4s ease;
-
-}
-
-
-
-@keyframes popIn {
-
-    0% { transform: scale(0.8); opacity: 0; }
-
-    100% { transform: scale(1); opacity: 1; }
-
-}
-
-
-
-.popup-sparkle {
-
-    font-size: 48px;
-
-    color: #bc9c22;
-
-    margin-bottom: 16px;
-
-}
-
-
-
-.popup-title {
-
-    font-family: var(--font);
-
-    font-size: 36px;
-
-    font-weight: 700;
-
-    color: #FFFFFF;
-
-    margin-bottom: 12px;
-
-}
-
-
-
-.popup-text {
-
-    font-family: var(--font);
-
-    font-size: 16px;
-
-    font-weight: 300;
-
-    color: #CCCCCC;
-
-    line-height: 1.6;
-
-    margin-bottom: 32px;
-
-}
-
-
-
-.popup-close {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 14px 48px;
-
-    background: rgba(188, 156, 34, 0.5);
-
-    color: #0A0A0A;
-
-    font-family: var(--font);
-
-    font-weight: 600;
-
-    font-size: 16px;
-
-    border: none;
-
-    border-radius: 50px;
-
-    cursor: pointer;
-
-    transition: all 0.3s ease;
-
-}
-
-
-
-.popup-close:hover {
-
-    background: rgba(188, 156, 34, 0.7);
-
-}
-
-
-
 /* === SOCIAL PROOF / BADGE === */
 
 .social-proof {
@@ -2264,23 +2106,7 @@ body {
 
 
 
-    /* Popup */
 
-    .popup-card {
-
-        padding: 36px 24px !important;
-
-        max-width: 90% !important;
-
-    }
-
-
-
-    .popup-title {
-
-        font-size: 28px !important;
-
-    }
 
 }
 
@@ -2791,26 +2617,6 @@ body {
 
 
 
-<!-- Confirmation Popup -->
-
-<div class="popup-overlay" id="confirmPopup">
-
-    <div class="popup-card">
-
-        
-
-        <div class="popup-title">You're In!</div>
-
-        <p class="popup-text">Welcome to the ALIFF community. We'll be in touch with early access details soon.</p>
-
-        <button class="popup-close" onclick="closePopup()">Got it</button>
-
-    </div>
-
-</div>
-
-
-
 <!-- Structured Data -->
 
 <script type="application/ld+json">
@@ -2897,27 +2703,7 @@ document.addEventListener('keydown', function(e) {
 
 
 
-// Popup close
 
-function closePopup() {
-
-    var popup = document.getElementById('confirmPopup');
-
-    if (popup) popup.classList.remove('show');
-
-}
-
-var popup = document.getElementById('confirmPopup');
-
-if (popup) {
-
-    popup.addEventListener('click', function(e) {
-
-        if (e.target === this) closePopup();
-
-    });
-
-}
 
 
 
