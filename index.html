@@ -98,7 +98,7 @@
 
 
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
 
 <!-- Vercel Web Analytics -->
 <script>
@@ -238,7 +238,7 @@ body {
 
     align-items: center;
 
-    justify-content: space-between;
+    justify-content: flex-start;
 
     padding: 64px 0 10px;
 
@@ -246,7 +246,7 @@ body {
 
     margin: 0 auto;
 
-    gap: 20px;
+    gap: 48px;
 
 }
 
@@ -266,11 +266,11 @@ body {
 
 
 
-    font-family: var(--font);
+    font-family: 'Playfair Display', serif;
 
 
 
-    font-size: 48px;
+    font-size: 42px;
 
 
 
@@ -286,7 +286,7 @@ body {
 
 
 
-    margin-bottom: 24px;
+    margin-bottom: 12px;
 
 
 
@@ -302,7 +302,11 @@ body {
 
 
 
-    color: var(--gold);
+    color: #B8860B;
+
+
+
+    font-family: 'Playfair Display', serif;
 
 
 
@@ -314,15 +318,15 @@ body {
 
 
 
-    font-size: 19px;
+    font-size: 16px;
 
 
 
-    font-weight: 300;
+    font-weight: 400;
 
 
 
-    color: var(--off-white);
+    color: #D8D2C7;
 
 
 
@@ -330,11 +334,11 @@ body {
 
 
 
-    margin-bottom: 40px;
+    margin-bottom: 28px;
 
 
 
-    max-width: 600px;
+    max-width: 420px;
 
 
 
@@ -1804,7 +1808,7 @@ body {
 
     .hero h1 {
 
-        font-size: 32px !important;
+        font-size: 30px !important;
 
         line-height: 1.1 !important;
 
@@ -1822,11 +1826,11 @@ body {
 
     .hero-sub {
 
-        font-size: 16px !important;
+        font-size: 15px !important;
 
-        margin: 0 auto 24px !important;
+        margin: 0 auto 28px !important;
 
-        max-width: 100% !important;
+        max-width: 300px !important;
 
     }
 
@@ -2447,7 +2451,11 @@ body {
 
         <h1>Confidence Meets <em>Haya</em></h1>
 
-        <p class="hero-sub">AI styling that turns your wardrobe into outfit plans, built for Muslim women with modesty first.</p>
+        <p class="hero-tagline">AI Stylist for Muslim Women &amp; Modest Fashion</p>
+
+        <p class="hero-sub">Upload your closet, and get outfit plans styled around your coverage and your preferences.</p>
+
+        <a href="#download" class="hero-pill-cta">Free for 7 Days. Cancel Anytime.</a>
 
         <div class="hero-download js-hero-download"></div>
 
@@ -2851,17 +2859,35 @@ function copyEmail() {
 
 
 <style>
-.hero-download-line {
-    font-size: 22px;
-    font-weight: 700;
-    color: #bc9c22;
+.hero-tagline {
+    font-family: var(--font);
+    font-size: 19px;
+    font-weight: 600;
+    color: #B8860B;
     margin-bottom: 16px;
-    text-align: center;
+    text-align: left;
 }
+.hero-pill-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    background: #1A1A1A;
+    border: 1.5px solid #B8860B;
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    margin-bottom: 24px;
+    transition: background 0.3s ease;
+}
+.hero-pill-cta:hover { background: #262626; }
 .hero-download-badges {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 0;
     flex-wrap: wrap;
 }
 .hero-download-badges .badge-apple {
@@ -2878,9 +2904,16 @@ function copyEmail() {
     border-radius: 10px;
     box-sizing: content-box;
 }
+.hero-badge-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255,255,255,0.2);
+    margin: 0 4px;
+}
 .hero-download-qr-row {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 16px;
 }
 .hero-download-qr {
@@ -2891,8 +2924,15 @@ function copyEmail() {
     padding: 4px;
     box-sizing: border-box;
 }
+.hero-download-qr-caption {
+    font-family: var(--font);
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 8px;
+}
 @media (max-width: 768px) {
-    .hero-download-line { font-size: 18px; margin-bottom: 16px; }
+    .hero-tagline { font-size: 15px; text-align: center; margin-bottom: 16px; }
+    .hero-pill-cta { width: 100%; max-width: 280px; }
     .hero-download-badges { justify-content: center; }
     .hero-download-badges .badge-apple { height: 48px; padding: 0 12px; }
     .hero-download-badges .badge-google { height: 64px; padding: 0 12px; }
@@ -2924,12 +2964,10 @@ function copyEmail() {
         } else if (isAndroid()) {
             badgesHtml = badgeGoogle();
         } else {
-            badgesHtml = badgeApple() + badgeGoogle();
-            qrRowHtml = '<div class="hero-download-qr-row"><img class="hero-download-qr" src="' + QR_IMG + '" alt="Scan to download ALIFF"></div>';
+            badgesHtml = badgeApple() + '<span class="hero-badge-divider"></span>' + badgeGoogle();
+            qrRowHtml = '<div class="hero-download-qr-row"><img class="hero-download-qr" src="' + QR_IMG + '" alt="Scan to download ALIFF"><span class="hero-download-qr-caption">Scan to download</span></div>';
         }
-        var html = '<div class="hero-download-line">Try 7 Days, On Us</div>'
-                  + '<div class="hero-download-badges">' + badgesHtml + '</div>'
-                  + qrRowHtml;
+        var html = '<div class="hero-download-badges">' + badgesHtml + '</div>' + qrRowHtml;
         document.querySelectorAll('.js-hero-download').forEach(function(el) {
             el.innerHTML = html;
         });
