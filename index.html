@@ -270,7 +270,7 @@ body {
 
 
 
-    font-size: 42px;
+    font-size: 64px;
 
 
 
@@ -278,15 +278,15 @@ body {
 
 
 
-    line-height: 1.1;
+    line-height: 1.05;
 
 
 
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 
 
 
-    margin-bottom: 12px;
+    margin-bottom: 4px;
 
 
 
@@ -1786,7 +1786,7 @@ body {
 
         padding: 16px 20px 10px !important;
 
-        gap: 24px !important;
+        gap: 48px !important;
 
         min-height: auto !important;
 
@@ -1808,7 +1808,7 @@ body {
 
     .hero h1 {
 
-        font-size: 30px !important;
+        font-size: 38px !important;
 
         line-height: 1.1 !important;
 
@@ -2862,8 +2862,9 @@ function copyEmail() {
 .hero-tagline {
     font-family: var(--font);
     font-size: 19px;
-    font-weight: 600;
-    color: #B8860B;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gold);
     margin-bottom: 16px;
     text-align: left;
 }
@@ -2873,14 +2874,14 @@ function copyEmail() {
     justify-content: center;
     width: fit-content;
     margin: 0 auto 24px auto;
-    padding: 14px 32px;
+    padding: 10px 22px;
     background: #1A1A1A;
-    border: 1.5px solid #B8860B;
+    border: 1px solid var(--gold);
     border-radius: 50px;
     color: #FFFFFF;
     font-family: var(--font);
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 13px;
     text-decoration: none;
     transition: background 0.3s ease;
 }
@@ -2939,7 +2940,7 @@ function copyEmail() {
 @media (max-width: 768px) {
     .hero-download { display: block; }
     .hero-tagline { font-size: 15px; text-align: center; margin-bottom: 16px; }
-    .hero-pill-cta { width: 100%; max-width: 280px; }
+    .hero-pill-cta { width: auto; max-width: fit-content; }
     .hero-download-badges { justify-content: center; }
     .hero-download-badges .badge-apple { height: 48px; padding: 0 12px; }
     .hero-download-badges .badge-google { height: 64px; padding: 0 12px; }
