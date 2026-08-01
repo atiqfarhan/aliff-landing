@@ -98,7 +98,7 @@
 
 
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 <!-- Vercel Web Analytics -->
 <script>
@@ -266,7 +266,7 @@ body {
 
 
 
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font);
 
 
 
@@ -302,11 +302,11 @@ body {
 
 
 
-    color: #B8860B;
+    color: #FFFFFF;
 
 
 
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font);
 
 
 
@@ -2868,9 +2868,11 @@ function copyEmail() {
     text-align: left;
 }
 .hero-pill-cta {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+    width: fit-content;
+    margin: 0 auto 24px auto;
     padding: 14px 32px;
     background: #1A1A1A;
     border: 1.5px solid #B8860B;
@@ -2880,7 +2882,6 @@ function copyEmail() {
     font-weight: 600;
     font-size: 15px;
     text-decoration: none;
-    margin-bottom: 24px;
     transition: background 0.3s ease;
 }
 .hero-pill-cta:hover { background: #262626; }
