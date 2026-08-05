@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALIFF | AI Stylist for Muslim Women & Modest Fashion</title>
+<meta name="description" content="ALIFF: AI stylist app for Muslim women. Personalized outfit recommendations with modest fashion preferences. Download now.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --black: #0A0A0A;
+    --footer-black: #050505;
+    --ivory: #F0EDE8;
+    --gold: #bc9c22;
+    --white: #FFFFFF;
+    --cream: #CCCCCC;
+    --grey: #4A4A4A;
+    --muted: #8A8A8A;
+    --font-body: 'Montserrat', -apple-system, sans-serif;
+    --font-head: 'Montserrat', -apple-system, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); line-height: 1.6; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+/* ===== Header (reused site pattern) ===== */
+.header {
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--black);
+}
+.header-logo img { height: 34px; }
+.hamburger { width: 28px; height: 20px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer; }
+.hamburger span { display: block; height: 2px; background: var(--white); }
+.nav-menu {
+    position: fixed; top: 0; right: -300px; width: 280px; height: 100vh;
+    background: var(--footer-black); padding: 80px 32px 40px; transition: right 0.3s ease; z-index: 1000;
+}
+.nav-menu.open { right: 0; }
+.nav-menu a { display: block; color: var(--white); text-decoration: none; padding: 14px 0; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: none; z-index: 999; }
+.nav-overlay.open { display: block; }
+
+/* ===== Section shells ===== */
+.sec-dark { background: var(--black); color: var(--white); }
+.sec-ivory { background: var(--ivory); color: var(--black); }
+.inner { max-width: 1140px; margin: 0 auto; padding: 90px 40px; }
+.eyebrow { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+
+/* ===== Hero ===== */
+.hero { display: flex; align-items: center; gap: 56px; padding: 90px 40px 60px; max-width: 1200px; margin: 0 auto; }
+.hero-text { flex: 0 1 520px; }
+.hero-eyebrow { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--gold); margin-bottom: 14px; }
+.hero-eyebrow em { font-style: italic; }
+.hero h1 { font-family: var(--font-head); font-weight: 700; font-size: 44px; line-height: 1.15; color: var(--white); margin-bottom: 18px; max-width: 480px; }
+.hero-body { font-size: 16px; color: var(--cream); max-width: 420px; margin-bottom: 28px; }
+.pill-cta {
+    display: flex; align-items: center; justify-content: center; width: fit-content;
+    padding: 11px 24px; background: var(--black); border: 1.5px solid var(--gold); border-radius: 50px;
+    color: var(--white); font-weight: 600; font-size: 14px; text-decoration: none; margin-bottom: 26px;
+}
+.hero-visual { flex: 0 1 auto; display: flex; justify-content: center; }
+.phone-frame { width: 260px; height: 540px; background: #111; border-radius: 44px; padding: 14px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+.phone-screen { width: 100%; height: 100%; border-radius: 30px; overflow: hidden; background: #000; }
+.phone-screen img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ===== Store badges (shared component, 3 instances) ===== */
+.download-badges { display: flex; align-items: center; gap: 0; flex-wrap: wrap; }
+.download-badges .badge-apple { height: 50px; width: auto; padding: 0 14px; box-sizing: content-box; }
+.download-badges .badge-google { height: 66px; width: auto; padding: 0 14px; box-sizing: content-box; }
+.badge-divider { width: 1px; height: 34px; background: rgba(0,0,0,0.15); margin: 0 4px; }
+.sec-dark .badge-divider { background: rgba(255,255,255,0.2); }
+.download-qr-row { display: flex; flex-direction: column; align-items: center; margin-top: 14px; }
+.download-qr-row img { width: 84px; height: 84px; border-radius: 8px; background: #fff; padding: 4px; }
+.download-qr-row span { font-size: 12px; color: var(--muted); margin-top: 8px; }
+.download-block { display: inline-flex; flex-direction: column; align-items: center; }
+@media (max-width: 768px) {
+    .download-block-hero { align-items: flex-start; }
+}
+.download-block-center { display: inline-flex; flex-direction: column; align-items: center; margin: 0 auto; }
+@media (max-width: 768px) {
+    .download-qr-row { display: none; }
+}
+
+/* ===== Section 2: Reframe ===== */
+.reframe { display: flex; align-items: center; gap: 60px; }
+.reframe-text { flex: 1; max-width: 460px; }
+.reframe h2 { font-family: var(--font-head); font-weight: 700; font-size: 34px; margin-bottom: 18px; color: var(--black); }
+.reframe-body { font-size: 16px; color: var(--grey); max-width: 440px; }
+.reframe-visual { flex: 1; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.garment-item { width: 90px; height: 110px; background: rgba(184,134,11,0.08); border: 1px dashed rgba(184,134,11,0.35); border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 10px; color: var(--gold); padding: 6px; }
+
+/* ===== Section 3: Numbered features ===== */
+.features-eyebrow { text-align: center; margin-bottom: 60px; }
+.feature-row { display: flex; align-items: center; gap: 60px; margin-bottom: 90px; }
+.feature-row:last-child { margin-bottom: 0; }
+.feature-row.reverse { flex-direction: row-reverse; }
+.feature-text { flex: 1; max-width: 440px; }
+.feature-label { font-family: var(--font-head); font-size: 48px; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 10px; }
+.feature-text h3 { font-family: var(--font-head); font-weight: 700; font-size: 24px; color: var(--black); margin-bottom: 12px; }
+.feature-text p { font-size: 15px; color: var(--grey); }
+.feature-visual { flex: 1; display: flex; justify-content: center; }
+.feature-shot { width: 100%; max-width: 300px; border-radius: 18px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+.hiw-shot { width: 100%; max-width: 280px; border-radius: 18px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); margin-top: 40px; }
+
+/* ===== Section 4: Objection ===== */
+.objection { text-align: center; }
+.objection h2 { font-family: var(--font-head); font-weight: 700; font-size: 34px; color: var(--white); margin-bottom: 20px; }
+.objection p { font-size: 16px; color: var(--cream); max-width: 500px; margin: 0 auto; }
+
+/* ===== Section 5: Privacy ===== */
+.privacy { text-align: center; }
+.privacy h2 { font-family: var(--font-head); font-weight: 700; font-size: 34px; color: var(--black); margin-bottom: 36px; }
+.privacy-fact { font-size: 16px; color: var(--grey); margin-bottom: 16px; }
+.privacy-fact:last-child { margin-bottom: 0; }
+
+/* ===== Section 6: How it works ===== */
+.hiw { text-align: center; }
+.hiw h2 { font-family: var(--font-head); font-weight: 700; font-size: 34px; color: var(--black); margin-bottom: 16px; max-width: 640px; margin-left: auto; margin-right: auto; }
+.hiw-sub { font-size: 16px; color: var(--grey); max-width: 480px; margin: 0 auto 60px; }
+.hiw-steps { display: flex; gap: 48px; justify-content: center; flex-wrap: wrap; }
+.hiw-step { max-width: 260px; }
+.hiw-num { width: 60px; height: 60px; border-radius: 50%; background: var(--gold); color: var(--white); display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-size: 24px; font-weight: 700; margin: 0 auto 20px; }
+.hiw-step h4 { font-size: 17px; font-weight: 600; color: var(--black); margin-bottom: 8px; }
+.hiw-step p { font-size: 14px; color: var(--grey); }
+
+/* ===== Section 7: Pricing ===== */
+.pricing { text-align: center; }
+.pricing h2 { font-family: var(--font-head); font-weight: 700; font-size: 34px; color: var(--black); margin-bottom: 20px; }
+.pricing p { font-size: 16px; color: var(--grey); max-width: 500px; margin: 0 auto 32px; }
+.pricing .download-badges, .pricing .download-block { justify-content: center; }
+
+/* ===== Section 8: FAQ ===== */
+.faq { max-width: 700px; margin: 0 auto; padding: 90px 40px; }
+.faq h2 { font-family: var(--font-head); font-weight: 700; font-size: 34px; color: var(--black); text-align: center; margin-bottom: 40px; }
+.faq-item { border-bottom: 1px solid rgba(0,0,0,0.1); }
+.faq-q { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; cursor: pointer; font-size: 17px; font-weight: 600; color: var(--black); }
+.faq-icon { color: var(--gold); font-size: 20px; transition: transform 0.25s ease; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; font-size: 15px; color: var(--grey); }
+.faq-item.open .faq-a { max-height: 200px; padding-bottom: 20px; }
+
+/* ===== Section 9: Final CTA ===== */
+.final-cta { text-align: center; }
+.final-cta h2 { font-family: var(--font-head); font-weight: 700; font-size: 34px; color: var(--white); margin-bottom: 16px; }
+.final-cta p { font-size: 16px; color: var(--cream); margin-bottom: 32px; }
+.final-cta .download-badges, .final-cta .download-block { justify-content: center; }
+
+/* ===== Footer ===== */
+.footer { background: var(--footer-black); padding: 60px 40px 30px; text-align: center; }
+.footer-logo { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
+.footer-tagline { font-size: 13px; font-style: italic; color: var(--gold); margin-bottom: 24px; }
+.footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+.footer-links a { font-size: 13px; color: var(--cream); text-decoration: none; }
+.footer-links a:hover { color: var(--gold); }
+.footer-address { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+.footer-copy { font-size: 12px; color: var(--muted); }
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+    .header { padding: 16px 20px; }
+    .inner { padding: 60px 24px; }
+    .hero { flex-direction: column; padding: 60px 24px 40px; text-align: center; gap: 40px; }
+    .hero-text { max-width: 100%; }
+    .hero h1 { font-size: 30px; max-width: 100%; }
+    .hero-body { font-size: 14px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    .pill-cta { margin: 0 auto 26px; }
+    .download-block-hero { align-items: center; }
+    .reframe { flex-direction: column; text-align: center; }
+    .reframe-text { max-width: 100%; }
+    .reframe-body { margin: 0 auto; }
+    .feature-row, .feature-row.reverse { flex-direction: column; text-align: center; gap: 28px; margin-bottom: 60px; }
+    .feature-text { max-width: 100%; }
+    .hiw-steps { gap: 36px; }
+    h1 { font-size: 30px; }
+    h2, .reframe h2, .objection h2, .privacy h2, .hiw h2, .pricing h2, .faq h2, .final-cta h2 { font-size: 26px; }
+    .eyebrow, .hero-eyebrow { font-size: 13px; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+    <a href="v2.html" class="header-logo">
+        <img src="images/black-logo.png" alt="ALIFF — AI Stylist for Muslim Women and Modest Fashion">
+    </a>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
+<nav class="nav-menu" id="navMenu">
+    <a href="index.html">Home <span>→</span></a>
+    <a href="founder.html">Our Founder <span>→</span></a>
+    <a href="podcast.html">Podcast <span>→</span></a>
+</nav>
+
+<!-- ===== SECTION 1: HERO ===== -->
+<section class="hero sec-dark">
+    <div class="hero-text">
+        <p class="hero-eyebrow">Confidence Meets <em>Haya</em></p>
+        <h1>The AI Stylist for Muslim Women &amp; Modest Fashion</h1>
+        <p class="hero-body">No more standing in front of a full closet with nothing to wear. ALIFF builds modest outfits from the clothes you already own.</p>
+        <a href="#pricing" class="pill-cta">Free for 7 Days. Cancel Anytime.</a>
+        <div class="download-block download-block-hero js-download" data-qr="true"></div>
+    </div>
+    <div class="hero-visual">
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <img src="images/phone-screenshot.jpeg" alt="ALIFF app outfit result screen for Muslim women">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SECTION 2: REFRAME / PROBLEM ===== -->
+<section class="sec-ivory">
+    <div class="inner reframe">
+        <div class="reframe-text">
+            <h2>Modest doesn't mean invisible.</h2>
+            <p class="reframe-body">Most styling apps weren't built for modest fashion. ALIFF starts with your coverage and your style, not a workaround.</p>
+        </div>
+        <div class="reframe-visual">
+            <div class="garment-item">Hijab photo</div>
+            <div class="garment-item">Blazer photo</div>
+            <div class="garment-item">Trousers photo</div>
+            <div class="garment-item">Flats photo</div>
+            <div class="garment-item">Bag photo</div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SECTION 3: NUMBERED FEATURES ===== -->
+<section class="sec-ivory">
+    <div class="inner">
+        <p class="eyebrow features-eyebrow" style="text-align:center;">Four tools. One closet.</p>
+
+        <div class="feature-row">
+            <div class="feature-text">
+                <div class="feature-label">01</div>
+                <h3>Know Your Style</h3>
+                <p>ALIFF starts by learning you, coverage, hijab, body type, and taste, so every outfit fits from the first suggestion.</p>
+            </div>
+            <div class="feature-visual">
+                <img class="feature-shot" src="images/v2-section3-01-know-your-style.jpeg" alt="ALIFF onboarding screen asking your preferred coverage level and hijab preference">
+            </div>
+        </div>
+
+        <div class="feature-row reverse">
+            <div class="feature-text">
+                <div class="feature-label">02</div>
+                <h3>Digital Closet</h3>
+                <p>Add the clothes you own. ALIFF sorts them by category, color, and coverage.</p>
+            </div>
+            <div class="feature-visual">
+                <img class="feature-shot" src="images/v2-section3-02-digital-closet.jpeg" alt="ALIFF digital closet grid showing abaya, blazer, hijab, bag, and dresses">
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-text">
+                <div class="feature-label">03</div>
+                <h3>Coverage-First Styling</h3>
+                <p>Every outfit respects your modesty, built in, not adjusted after.</p>
+            </div>
+            <div class="feature-visual">
+                <img class="feature-shot" src="images/v2-section3-03-coverage-first-styling.jpeg" alt="ALIFF outfit suggestion showing coverage met details for sleeves, hem length, and fabric opacity">
+            </div>
+        </div>
+
+        <div class="feature-row reverse">
+            <div class="feature-text">
+                <div class="feature-label">04</div>
+                <h3>Your Stylist, ALIFF</h3>
+                <p>Ask what to wear. Get outfit ideas from your own wardrobe, matched to the occasion.</p>
+            </div>
+            <div class="feature-visual">
+                <img class="feature-shot" src="images/v2-section3-04-your-stylist.jpeg" alt="ALIFF style chat conversation suggesting a casual outfit from the user's own wardrobe">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SECTION 4: OBJECTION HANDLING ===== -->
+<section class="sec-dark">
+    <div class="inner objection">
+        <h2>This isn't about buying more.</h2>
+        <p>You already own the clothes. ALIFF finds new ways to wear them. No shopping. No trends pushed.</p>
+    </div>
+</section>
+
+<!-- ===== SECTION 5: PRIVACY / TRUST ===== -->
+<section class="sec-ivory">
+    <div class="inner privacy">
+        <h2>Your privacy is an Amanah.</h2>
+        <p class="privacy-fact">Never sold. Never used for advertising.</p>
+        <p class="privacy-fact">You decide what ALIFF sees.</p>
+        <p class="privacy-fact">Delete your account anytime, data removed within 90 days.</p>
+    </div>
+</section>
+
+<!-- ===== SECTION 6: HOW IT WORKS ===== -->
+<section class="sec-ivory">
+    <div class="inner hiw">
+        <h2>Start with a few pieces.</h2>
+        <div class="hiw-steps">
+            <div class="hiw-step">
+                <div class="hiw-num">1</div>
+                <h4>Add your pieces</h4>
+                <p>Start with what you wear most.</p>
+            </div>
+            <div class="hiw-step">
+                <div class="hiw-num">2</div>
+                <h4>Review your closet</h4>
+                <p>Confirm what ALIFF added.</p>
+            </div>
+            <div class="hiw-step">
+                <div class="hiw-num">3</div>
+                <h4>Get styled</h4>
+                <p>Get outfits, ask ALIFF, save your looks.</p>
+            </div>
+        </div>
+        <img class="hiw-shot" src="images/phone-screenshot.jpeg" alt="ALIFF home screen showing today's outfit suggestion">
+    </div>
+</section>
+
+<!-- ===== SECTION 7: PRICING ===== -->
+<section class="sec-ivory" id="pricing">
+    <div class="inner pricing">
+        <h2>Try it free. Stay if you love it.</h2>
+        <p>Every download comes with 7 days completely free. After that, ALIFF is $12.99/month, or $9.99/month billed annually as a Founding Member, locked in for as long as you stay.</p>
+        <div class="download-block download-block-center js-download" data-qr="false"></div>
+    </div>
+</section>
+
+<!-- ===== SECTION 8: FAQ ===== -->
+<section class="sec-ivory">
+    <div class="faq">
+        <h2>Before you download.</h2>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)"><span>Do I need to upload my whole closet at once?</span><span class="faq-icon">+</span></div>
+            <div class="faq-a"><p>No. Start with a few pieces and build over time.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)"><span>What does ALIFF actually do?</span><span class="faq-icon">+</span></div>
+            <div class="faq-a"><p>Organizes your wardrobe, builds outfits from what you own, and helps you decide what to wear.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)"><span>Is ALIFF only for hijabi women?</span><span class="faq-icon">+</span></div>
+            <div class="faq-a"><p>No. ALIFF works for any level of modest dressing, hijab or not.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)"><span>Is ALIFF a shopping app?</span><span class="faq-icon">+</span></div>
+            <div class="faq-a"><p>No. ALIFF styles what you already own, it's not a marketplace.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)"><span>Is there a free trial?</span><span class="faq-icon">+</span></div>
+            <div class="faq-a"><p>Yes, every download includes 7 days free.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)"><span>Can I delete my data?</span><span class="faq-icon">+</span></div>
+            <div class="faq-a"><p>Yes, anytime. Deleted data is fully removed within 90 days.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SECTION 9: FINAL CTA ===== -->
+<section class="sec-dark">
+    <div class="inner final-cta">
+        <h2>Your next favorite outfit is already in your closet.</h2>
+        <p>Download ALIFF and start styling what you own.</p>
+        <div class="download-block download-block-center js-download" data-qr="true"></div>
+    </div>
+</section>
+
+<!-- ===== SECTION 10: FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-logo">ALIFF</div>
+    <p class="footer-tagline">Modesty, Intelligently Styled.</p>
+    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contact.html">Support</a>
+        <a href="https://www.instagram.com/aliff.app" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.tiktok.com/@aliff.ai.stylist" target="_blank" rel="noopener noreferrer">TikTok</a>
+    </div>
+    <p class="footer-address">ALIFF LLC, 2701D W 15th Street PMB 2024, Plano, TX 75075</p>
+    <p class="footer-copy">© 2026 ALIFF. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('open');
+    document.getElementById('navOverlay').classList.toggle('open');
+}
+function toggleFaq(el) {
+    el.parentElement.classList.toggle('open');
+}
+
+(function() {
+    var APP_STORE_URL = "https://apps.apple.com/app/id6775791063";
+    var GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.aliff.app";
+    var QR_IMG = "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Faliff.app%2F%23download";
+
+    function isIOS() { return /iPhone|iPad|iPod/.test(navigator.userAgent); }
+    function isAndroid() { return /Android/.test(navigator.userAgent); }
+
+    function badgeApple() {
+        return '<a href="' + APP_STORE_URL + '" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="lazy" class="badge-apple"></a>';
+    }
+    function badgeGoogle() {
+        return '<a href="' + GOOGLE_PLAY_URL + '" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" loading="lazy" class="badge-google"></a>';
+    }
+
+    function render() {
+        document.querySelectorAll('.js-download').forEach(function(el) {
+            var showQr = el.getAttribute('data-qr') === 'true';
+            var badgesHtml, qrHtml = '';
+            if (isIOS()) {
+                badgesHtml = badgeApple();
+            } else if (isAndroid()) {
+                badgesHtml = badgeGoogle();
+            } else {
+                badgesHtml = badgeApple() + '<span class="badge-divider"></span>' + badgeGoogle();
+                if (showQr) {
+                    qrHtml = '<div class="download-qr-row"><img src="' + QR_IMG + '" alt="Scan to download ALIFF"><span>Scan to download</span></div>';
+                }
+            }
+            el.innerHTML = '<div class="download-badges">' + badgesHtml + '</div>' + qrHtml;
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', render);
+    } else {
+        render();
+    }
+})();
+</script>
+
+</body>
+</html>
