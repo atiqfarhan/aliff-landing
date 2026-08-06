@@ -255,7 +255,7 @@ a { color: inherit; }
     .header { padding: 12px 20px; }
     .header-logo img { height: 100px; }
     .inner { padding: 60px 24px; }
-    .hero { flex-direction: column; padding: 60px 24px 40px; text-align: center; gap: 40px; }
+    .hero { flex-direction: column; padding: 60px 24px 40px; text-align: center; gap: 24px; }
     .hero-text { max-width: 100%; }
     .hero h1 { font-size: 30px; max-width: 100%; }
     .hero-body { font-size: 14px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -282,7 +282,7 @@ a { color: inherit; }
 
 <header class="header">
     <a href="v2.html" class="header-logo">
-        <img src="images/black-logo.png" alt="ALIFF — AI Stylist for Muslim Women and Modest Fashion">
+        <img src="images/black-logo.png" alt="ALIFF — AI Stylist for Muslim Women and Modest Fashion" width="1563" height="1563" loading="eager">
     </a>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
@@ -309,7 +309,7 @@ a { color: inherit; }
         <div class="phone-frame">
             <div class="phone-notch"></div>
             <div class="phone-screen">
-                <img src="images/phone-screenshot.jpeg" alt="ALIFF app outfit result screen for Muslim women">
+                <img src="images/phone-screenshot.jpeg" alt="ALIFF app outfit result screen for Muslim women" width="700" height="838" loading="eager" fetchpriority="high">
             </div>
             <div class="phone-home"></div>
         </div>
@@ -345,7 +345,7 @@ a { color: inherit; }
                 <p>ALIFF starts by learning you, coverage, hijab, body type, and taste, so every outfit fits from the first suggestion.</p>
             </div>
             <div class="feature-visual">
-                <img class="feature-shot" src="images/v2-section3-01-know-your-style.jpeg" alt="ALIFF onboarding screen asking your preferred coverage level and hijab preference">
+                <img class="feature-shot" src="images/v2-section3-01-know-your-style.jpeg" alt="ALIFF onboarding screen asking your preferred coverage level and hijab preference" width="800" height="1249" loading="lazy">
             </div>
         </div>
 
@@ -356,7 +356,7 @@ a { color: inherit; }
                 <p>Add the clothes you own. ALIFF sorts them by category, color, and coverage.</p>
             </div>
             <div class="feature-visual">
-                <img class="feature-shot" src="images/v2-section3-02-digital-closet.jpeg" alt="ALIFF digital closet grid showing abaya, blazer, hijab, bag, and dresses">
+                <img class="feature-shot" src="images/v2-section3-02-digital-closet.jpeg" alt="ALIFF digital closet grid showing abaya, blazer, hijab, bag, and dresses" width="800" height="1252" loading="lazy">
             </div>
         </div>
 
@@ -367,7 +367,7 @@ a { color: inherit; }
                 <p>Every outfit respects your modesty, built in, not adjusted after.</p>
             </div>
             <div class="feature-visual">
-                <img class="feature-shot" src="images/v2-section3-03-coverage-first-styling.jpeg" alt="ALIFF outfit suggestion showing coverage met details for sleeves, hem length, and fabric opacity">
+                <img class="feature-shot" src="images/v2-section3-03-coverage-first-styling.jpeg" alt="ALIFF outfit suggestion showing coverage met details for sleeves, hem length, and fabric opacity" width="800" height="1250" loading="lazy">
             </div>
         </div>
 
@@ -378,7 +378,7 @@ a { color: inherit; }
                 <p>Ask what to wear. Get outfit ideas from your own wardrobe, matched to the occasion.</p>
             </div>
             <div class="feature-visual">
-                <img class="feature-shot" src="images/v2-section3-04-your-stylist.jpeg" alt="ALIFF style chat conversation suggesting a casual outfit from the user's own wardrobe">
+                <img class="feature-shot" src="images/v2-section3-04-your-stylist.jpeg" alt="ALIFF style chat conversation suggesting a casual outfit from the user's own wardrobe" width="800" height="1368" loading="lazy">
             </div>
         </div>
     </div>
@@ -433,7 +433,7 @@ a { color: inherit; }
             <div class="phone-frame">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                    <img src="images/phone-screenshot.jpeg" alt="ALIFF app outfit result screen for Muslim women">
+                    <img src="images/phone-screenshot.jpeg" alt="ALIFF app outfit result screen for Muslim women" width="700" height="838" loading="lazy">
                 </div>
                 <div class="phone-home"></div>
             </div>
@@ -536,7 +536,7 @@ function toggleFaq(el) {
             } else {
                 badgesHtml = badgeApple() + '<span class="hero-badge-divider"></span>' + badgeGoogle();
                 if (showQr) {
-                    qrRowHtml = '<div class="hero-download-qr-row"><img class="hero-download-qr" src="' + QR_IMG + '" alt="Scan to download ALIFF"><span class="hero-download-qr-caption">Scan to download</span></div>';
+                    qrRowHtml = '<div class="hero-download-qr-row"><img class="hero-download-qr" src="' + QR_IMG + '" alt="Scan to download ALIFF" width="180" height="180" loading="lazy"><span class="hero-download-qr-caption">Scan to download</span></div>';
                 }
             }
             var html = '<div class="hero-download-badges">' + badgesHtml + '</div>' + qrRowHtml;
