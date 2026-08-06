@@ -24,23 +24,22 @@
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { font-family: var(--font-body); line-height: 1.6; }
+body { font-family: var(--font-body); background: var(--black); line-height: 1.6; }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 
-/* ===== Header (reused site pattern) ===== */
+/* ===== Header (exact copy of index.html) ===== */
 .header {
-    padding: 20px 40px;
+    padding: 12px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1080px;
     margin: 0 auto;
-    background: var(--black);
 }
-.header-logo img { height: 34px; }
-.hamburger { width: 28px; height: 20px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer; }
-.hamburger span { display: block; height: 2px; background: var(--white); }
+.header-logo img { height: 190px; width: auto; display: block; }
+.hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 1001; position: relative; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--white); }
 .nav-menu {
     position: fixed; top: 0; right: -300px; width: 280px; height: 100vh;
     background: var(--footer-black); padding: 80px 32px 40px; transition: right 0.3s ease; z-index: 1000;
@@ -63,33 +62,121 @@ a { color: inherit; }
 .hero-eyebrow em { font-style: italic; }
 .hero h1 { font-family: var(--font-head); font-weight: 700; font-size: 44px; line-height: 1.15; color: var(--white); margin-bottom: 18px; max-width: 480px; }
 .hero-body { font-size: 16px; color: var(--cream); max-width: 420px; margin-bottom: 28px; }
-.pill-cta {
-    display: flex; align-items: center; justify-content: center; width: fit-content;
-    padding: 11px 24px; background: var(--black); border: 1.5px solid var(--gold); border-radius: 50px;
-    color: var(--white); font-weight: 600; font-size: 14px; text-decoration: none; margin-bottom: 26px;
+.hero-visual { flex: 0 1 auto; display: flex; justify-content: center; align-items: center; flex-direction: column; }
+.phone-frame {
+    width: 260px;
+    height: 540px;
+    background: #1a1a1a;
+    border-radius: 44px;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        inset 0 0 0 2px rgba(255,255,255,0.15),
+        0 0 0 1px rgba(255,255,255,0.1),
+        0 20px 60px rgba(0,0,0,0.6),
+        0 0 40px rgba(188,156,34,0.05);
+    animation: float 4s ease-in-out infinite;
 }
-.hero-visual { flex: 0 1 auto; display: flex; justify-content: center; }
-.phone-frame { width: 260px; height: 540px; background: #111; border-radius: 44px; padding: 14px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
-.phone-screen { width: 100%; height: 100%; border-radius: 30px; overflow: hidden; background: #000; }
-.phone-screen img { width: 100%; height: 100%; object-fit: cover; }
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+}
+.phone-screen { width: 100%; height: 100%; overflow: hidden; position: relative; background: #000; }
+.phone-screen img {
+    width: 100% !important;
+    height: 103% !important;
+    object-fit: cover !important;
+    object-position: 54% 15% !important;
+    margin: 0 !important;
+    transform: scale(1.19) !important;
+}
+.phone-home {
+    width: 120px; height: 4px; background: rgba(255,255,255,0.3); border-radius: 2px;
+    position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); z-index: 10;
+}
 
-/* ===== Store badges (shared component, 3 instances) ===== */
-.download-badges { display: flex; align-items: center; gap: 0; flex-wrap: wrap; }
-.download-badges .badge-apple { height: 50px; width: auto; padding: 0 14px; box-sizing: content-box; }
-.download-badges .badge-google { height: 66px; width: auto; padding: 0 14px; box-sizing: content-box; }
-.badge-divider { width: 1px; height: 34px; background: rgba(0,0,0,0.15); margin: 0 4px; }
-.sec-dark .badge-divider { background: rgba(255,255,255,0.2); }
-.download-qr-row { display: flex; flex-direction: column; align-items: center; margin-top: 14px; }
-.download-qr-row img { width: 84px; height: 84px; border-radius: 8px; background: #fff; padding: 4px; }
-.download-qr-row span { font-size: 12px; color: var(--muted); margin-top: 8px; }
-.download-block { display: inline-flex; flex-direction: column; align-items: center; }
-@media (max-width: 768px) {
-    .download-block-hero { align-items: flex-start; }
+/* ===== Store badges (exact copy of index.html, shared across 3 instances) ===== */
+.hero-pill-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto 24px auto;
+    padding: 10px 22px;
+    background: #1A1A1A;
+    border: 1px solid var(--gold);
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: none;
+    transition: background 0.3s ease;
 }
-.download-block-center { display: inline-flex; flex-direction: column; align-items: center; margin: 0 auto; }
-@media (max-width: 768px) {
-    .download-qr-row { display: none; }
+.hero-pill-cta:hover { background: #262626; }
+.hero-download-badges {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
 }
+.hero-download-badges .badge-apple {
+    height: 54px;
+    width: auto;
+    padding: 0 16px;
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+.hero-download-badges .badge-google {
+    height: 72px;
+    width: auto;
+    padding: 0 16px;
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+.hero-badge-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255,255,255,0.2);
+    margin: 0 4px;
+}
+.sec-ivory .hero-badge-divider { background: rgba(0,0,0,0.2); }
+.hero-download {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-download-qr-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+}
+.hero-download-qr {
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+    background: #fff;
+    padding: 4px;
+    box-sizing: border-box;
+}
+.hero-download-qr-caption {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 8px;
+}
+.sec-ivory .hero-download-qr-caption { color: rgba(0,0,0,0.5); }
+@media (max-width: 768px) {
+    .hero-download { display: block; }
+    .hero-pill-cta { width: auto; max-width: fit-content; }
+    .hero-download-badges { justify-content: center; }
+    .hero-download-badges .badge-apple { height: 48px; padding: 0 12px; }
+    .hero-download-badges .badge-google { height: 64px; padding: 0 12px; }
+    .hero-download-qr-row { display: none; }
+}
+.pricing .hero-download, .final-cta .hero-download { margin: 0 auto; }
 
 /* ===== Section 2: Reframe ===== */
 .reframe { display: flex; align-items: center; gap: 60px; }
@@ -109,8 +196,8 @@ a { color: inherit; }
 .feature-text h3 { font-family: var(--font-head); font-weight: 700; font-size: 24px; color: var(--black); margin-bottom: 12px; }
 .feature-text p { font-size: 15px; color: var(--grey); }
 .feature-visual { flex: 1; display: flex; justify-content: center; }
-.feature-shot { width: 100%; max-width: 300px; border-radius: 18px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
-.hiw-shot { width: 100%; max-width: 280px; border-radius: 18px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); margin-top: 40px; }
+.feature-shot { width: 100%; max-width: 300px; border-radius: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+.hiw-phone, .pricing-phone { margin: 0 auto 40px; }
 
 /* ===== Section 4: Objection ===== */
 .objection { text-align: center; }
@@ -137,7 +224,6 @@ a { color: inherit; }
 .pricing { text-align: center; }
 .pricing h2 { font-family: var(--font-head); font-weight: 700; font-size: 34px; color: var(--black); margin-bottom: 20px; }
 .pricing p { font-size: 16px; color: var(--grey); max-width: 500px; margin: 0 auto 32px; }
-.pricing .download-badges, .pricing .download-block { justify-content: center; }
 
 /* ===== Section 8: FAQ ===== */
 .faq { max-width: 700px; margin: 0 auto; padding: 90px 40px; }
@@ -153,7 +239,6 @@ a { color: inherit; }
 .final-cta { text-align: center; }
 .final-cta h2 { font-family: var(--font-head); font-weight: 700; font-size: 34px; color: var(--white); margin-bottom: 16px; }
 .final-cta p { font-size: 16px; color: var(--cream); margin-bottom: 32px; }
-.final-cta .download-badges, .final-cta .download-block { justify-content: center; }
 
 /* ===== Footer ===== */
 .footer { background: var(--footer-black); padding: 60px 40px 30px; text-align: center; }
@@ -167,14 +252,16 @@ a { color: inherit; }
 
 /* ===== Mobile ===== */
 @media (max-width: 768px) {
-    .header { padding: 16px 20px; }
+    .header { padding: 12px 20px; }
+    .header-logo img { height: 100px; }
     .inner { padding: 60px 24px; }
     .hero { flex-direction: column; padding: 60px 24px 40px; text-align: center; gap: 40px; }
     .hero-text { max-width: 100%; }
     .hero h1 { font-size: 30px; max-width: 100%; }
     .hero-body { font-size: 14px; max-width: 100%; margin-left: auto; margin-right: auto; }
-    .pill-cta { margin: 0 auto 26px; }
-    .download-block-hero { align-items: center; }
+    .phone-frame { width: 200px !important; height: 400px !important; border-radius: 36px !important; }
+    .phone-screen { border-radius: 28px !important; }
+    .phone-home { width: 100px !important; }
     .reframe { flex-direction: column; text-align: center; }
     .reframe-text { max-width: 100%; }
     .reframe-body { margin: 0 auto; }
@@ -184,6 +271,10 @@ a { color: inherit; }
     h1 { font-size: 30px; }
     h2, .reframe h2, .objection h2, .privacy h2, .hiw h2, .pricing h2, .faq h2, .final-cta h2 { font-size: 26px; }
     .eyebrow, .hero-eyebrow { font-size: 13px; }
+}
+@media (max-width: 380px) {
+    .phone-frame { width: 180px !important; height: 380px !important; }
+    .header-logo img { height: 80px !important; }
 }
 </style>
 </head>
@@ -211,14 +302,16 @@ a { color: inherit; }
         <p class="hero-eyebrow">Confidence Meets <em>Haya</em></p>
         <h1>The AI Stylist for Muslim Women &amp; Modest Fashion</h1>
         <p class="hero-body">No more standing in front of a full closet with nothing to wear. ALIFF builds modest outfits from the clothes you already own.</p>
-        <a href="#pricing" class="pill-cta">Free for 7 Days. Cancel Anytime.</a>
-        <div class="download-block download-block-hero js-download" data-qr="true"></div>
+        <a href="#pricing" class="hero-pill-cta">Free for 7 Days. Cancel Anytime.</a>
+        <div class="hero-download js-hero-download"></div>
     </div>
-    <div class="hero-visual">
+    <div class="hero-visual fade-in">
         <div class="phone-frame">
+            <div class="phone-notch"></div>
             <div class="phone-screen">
                 <img src="images/phone-screenshot.jpeg" alt="ALIFF app outfit result screen for Muslim women">
             </div>
+            <div class="phone-home"></div>
         </div>
     </div>
 </section>
@@ -330,16 +423,33 @@ a { color: inherit; }
                 <p>Get outfits, ask ALIFF, save your looks.</p>
             </div>
         </div>
-        <img class="hiw-shot" src="images/phone-screenshot.jpeg" alt="ALIFF home screen showing today's outfit suggestion">
+        <div class="hiw-phone">
+            <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                    <img src="images/phone-screenshot.jpeg" alt="ALIFF home screen showing today's outfit suggestion">
+                </div>
+                <div class="phone-home"></div>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- ===== SECTION 7: PRICING ===== -->
 <section class="sec-ivory" id="pricing">
     <div class="inner pricing">
+        <div class="pricing-phone">
+            <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                    <img src="images/phone-screenshot.jpeg" alt="ALIFF app outfit result screen for Muslim women">
+                </div>
+                <div class="phone-home"></div>
+            </div>
+        </div>
         <h2>Try it free. Stay if you love it.</h2>
         <p>Every download comes with 7 days completely free. After that, ALIFF is $12.99/month, or $9.99/month billed annually as a Founding Member, locked in for as long as you stay.</p>
-        <div class="download-block download-block-center js-download" data-qr="false"></div>
+        <div class="hero-download js-hero-download" data-qr="false"></div>
     </div>
 </section>
 
@@ -380,7 +490,7 @@ a { color: inherit; }
     <div class="inner final-cta">
         <h2>Your next favorite outfit is already in your closet.</h2>
         <p>Download ALIFF and start styling what you own.</p>
-        <div class="download-block download-block-center js-download" data-qr="true"></div>
+        <div class="hero-download js-hero-download" data-qr="true"></div>
     </div>
 </section>
 
@@ -423,28 +533,30 @@ function toggleFaq(el) {
         return '<a href="' + GOOGLE_PLAY_URL + '" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" loading="lazy" class="badge-google"></a>';
     }
 
-    function render() {
-        document.querySelectorAll('.js-download').forEach(function(el) {
-            var showQr = el.getAttribute('data-qr') === 'true';
-            var badgesHtml, qrHtml = '';
+    function renderHeroDownloads() {
+        document.querySelectorAll('.js-hero-download').forEach(function(el) {
+            var showQr = el.getAttribute('data-qr') !== 'false';
+            var badgesHtml;
+            var qrRowHtml = '';
             if (isIOS()) {
                 badgesHtml = badgeApple();
             } else if (isAndroid()) {
                 badgesHtml = badgeGoogle();
             } else {
-                badgesHtml = badgeApple() + '<span class="badge-divider"></span>' + badgeGoogle();
+                badgesHtml = badgeApple() + '<span class="hero-badge-divider"></span>' + badgeGoogle();
                 if (showQr) {
-                    qrHtml = '<div class="download-qr-row"><img src="' + QR_IMG + '" alt="Scan to download ALIFF"><span>Scan to download</span></div>';
+                    qrRowHtml = '<div class="hero-download-qr-row"><img class="hero-download-qr" src="' + QR_IMG + '" alt="Scan to download ALIFF"><span class="hero-download-qr-caption">Scan to download</span></div>';
                 }
             }
-            el.innerHTML = '<div class="download-badges">' + badgesHtml + '</div>' + qrHtml;
+            var html = '<div class="hero-download-badges">' + badgesHtml + '</div>' + qrRowHtml;
+            el.innerHTML = html;
         });
     }
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', render);
+        document.addEventListener('DOMContentLoaded', renderHeroDownloads);
     } else {
-        render();
+        renderHeroDownloads();
     }
 })();
 </script>
